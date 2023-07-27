@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Events from '/components/Events';
 
 export default function Home() {
   return (
@@ -10,7 +11,6 @@ export default function Home() {
           alt="Background Image"
           layout="fill"
           objectFit="cover"
-          className='w-5 h-5'
         />
       </div>
 
@@ -38,6 +38,11 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Absolute positioning for the Events component */}
+      <div className="absolute w-full top-[400px]">
+        <Events />
       </div>
     </main>
   );
