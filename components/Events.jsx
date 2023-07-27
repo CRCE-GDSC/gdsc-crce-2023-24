@@ -97,6 +97,7 @@ const Events = () => {
                                     src={event.imgSrc}
                                     alt={event.title}
                                     className='object-contain'
+                                    quality={100}
                                 />
                             </div>
                             <div className='px-3' id="events">
