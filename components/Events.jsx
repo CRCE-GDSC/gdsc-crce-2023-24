@@ -70,9 +70,10 @@ const Events = () => {
         >
             <motion.header 
                 className='section-header'
-                initial={{ opacity: 0, y: -30 }} // Initial animation values
-                animate={{ opacity: 1, y: 0 }} // Animate to these values
-                transition={{ duration: 0.5, delay: 0.2 }} // Animation duration with a slight delay
+                initial={{ opacity: 0, y: -80 }} // Initial animation values
+                animate={{ opacity: 2, y: 0 }} // Animate to these values
+                transition={{ duration: 2, delay: 0.5, ease: "linear" }} // Animation duration with a slight delay
+                
             >
                 <h3 className='font-bold text-lg py-10 text-center'>Events</h3>
                 <p className='text-center text-gray-600 font-semibold'>
@@ -85,10 +86,11 @@ const Events = () => {
                     {eventsData.map((event, index) => (
                         <motion.div
                             key={index}
-                            className='box max-w-md rounded overflow-hidden shadow-lg flex items-center justify-center hover:translate-y-5'
-                            initial={{ opacity: 0, y: 100 }} // Initial animation values
-                            animate={{ opacity: 1, y: 0 }} // Animate to these values
-                            transition={{ duration: 0.6, delay: index * 0.3 }} // Animation duration with a delay based on the card's index
+                            className='box max-w-md rounded overflow-hidden shadow-lg flex items-center justify-center mx-10'
+                            //initial={{ opacity: 0, y: 100 }} 
+                            animate={{ scale: 1.1}} 
+                            transition={{ duration: 1,  delay: index * 0.1, type: "spring", damping: 2 }} // Animation duration with a delay based on the card's index
+                            whileHover={{ y: -8 }} // Apply the upwards movement on hover
                         >
                             <div className='img'>
                                 <Image

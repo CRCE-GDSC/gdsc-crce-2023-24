@@ -24,7 +24,7 @@
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    margin: 0 10px 25px 10px;
+    margin: 0 35px 35px 35px;
     background: #fff;
     box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
     transition: all 0.3s ease-in-out;
@@ -73,7 +73,7 @@
   #services .description {
     font-size: 15px;
     margin-left: 25px;
-    line-height: 24px;
+    line-height: 20px;
     margin-bottom: 0;
   }
 
