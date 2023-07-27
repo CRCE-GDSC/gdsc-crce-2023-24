@@ -76,7 +76,7 @@ const Events = () => {
                                     className=''
                                 />
                             </div>
-                            <div className='px-3'>
+                            <div className='px-3' id="events">
                                 <a
                                     href={event.link}
                                     style={{ color: 'inherit', textDecoration: 'none' }}

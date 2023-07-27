@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 const RootLayout = ({children}) => {
   return (
-    <html lang='en'>
+    <html lang='en' className='scroll-smooth'>
         <body>
             <div className='main'>
                 <div className='gradient'/>

@@ -11,6 +11,12 @@
     }
 }
 
+@layer base {
+    html {
+      @apply scroll-smooth;
+    }
+  }
+
 /* Tailwind Styles */
 
 .app {
