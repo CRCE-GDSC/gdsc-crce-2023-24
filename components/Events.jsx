@@ -4,6 +4,13 @@ import "./Events.css"
 const Events = () => {
     const eventsData = [
         {
+            //imgSrc: Img2,
+            title: 'Bit n Built',
+            subtitle: 'Offline Hackathon - Domains: Web/App Dev, AI/ML , Blockchain & Open Innovation',
+            date: '28th January, 2023',
+            link: 'https://bitnbuild.netlify.app/',
+          },
+        {
           //imgSrc: Img4,
           title: 'Tech Talk',
           subtitle: 'Getting Started With Elastic Stack for SEO',
@@ -41,13 +48,7 @@ const Events = () => {
           date: '30th August, 2022',
           link: 'https://gdsc.community.dev/e/m89s4t/',
         },
-        {
-            //imgSrc: Img2,
-            title: 'Bit n Built',
-            subtitle: 'Offline Hackathon - Domains: Web/App Dev, AI/ML , Blockchain & Open Innovation',
-            date: '28th January, 2023',
-            link: 'https://bitnbuild.netlify.app/',
-          },
+        
       ];
 
     
@@ -81,7 +82,7 @@ const Events = () => {
                                     style={{ color: 'inherit', textDecoration: 'none' }}
                                     target='_blank'
                                 >
-                                    <h4 className='title font-semibold text-xl mt-2 '>
+                                    <h4 className='title font-bold text-xl mt-2 '>
                                         {event.title}
                                     </h4>
                                     <p className='description font-medium'>
