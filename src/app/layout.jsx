@@ -1,5 +1,6 @@
 import 'style/global.css';
 import Nav from 'components/Nav';
+import Events from 'components/Events';
 import { Analytics } from '@vercel/analytics/react';
 import { Inter } from 'next/font/google'
 
@@ -16,7 +17,8 @@ const RootLayout = ({children}) => {
               <Nav/>
                {children}
                <Analytics />
-                </main>
+               <Events />
+            </main>
         </body>
         </html>
   )
