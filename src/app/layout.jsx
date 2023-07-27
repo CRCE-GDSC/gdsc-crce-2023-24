@@ -4,6 +4,10 @@ import Events from 'components/Events';
 import { Analytics } from '@vercel/analytics/react';
 import { Inter } from 'next/font/google'
 
+export const metadata ={
+  title:"GDSC CRCE",
+  description:"Official site of GDSC FRCRE",
+}
 const inter = Inter({ subsets: ['latin'] })
 
 const RootLayout = ({children}) => {
