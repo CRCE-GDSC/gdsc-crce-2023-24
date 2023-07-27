@@ -60,6 +60,62 @@ const Team = () => {
             linkedIn:'',
             Instagram: '',
         },
+        {
+            name: 'Andre Nazareth',
+            imgSrc:"/../public/assets/team/andre.jpg",
+            position: 'AI/ML Lead',
+            linkedIn:'',
+            Instagram: '',
+        },
+        {
+            name: 'Ryan Valiaparambil',
+            imgSrc:"/../public/assets/team/Ryan AIML Co-Lead.jpeg",
+            position: 'AI/ML Co-Lead',
+            linkedIn:'',
+            Instagram: '',
+        },
+        {
+            name: 'Aditya Mahamuni',
+            imgSrc:"/../public/assets/team/aditya mahamuni.jpg",
+            position: 'Cloud Computing Lead',
+            linkedIn:'',
+            Instagram: '',
+        },
+        {
+            name: 'Omkar Satupe',
+            imgSrc:"/../public/assets/team/omkar.JPG",
+            position: 'Cloud Computing Co-Lead',
+            linkedIn:'',
+            Instagram: '',
+        },
+        {
+            name: 'Upmanyu Jha',
+            imgSrc:"/../public/assets/team/uj.jpg",
+            position: 'Cyber Security Lead',
+            linkedIn:'',
+            Instagram: '',
+        },
+        {
+            name: 'Glen Rodrigues',
+            imgSrc:"/../public/assets/team/glen.jpg",
+            position: 'Cyber Security Co-Lead',
+            linkedIn:'',
+            Instagram: '',
+        },
+        {
+            name: 'Mahek Intwala',
+            imgSrc:"/../public/assets/team/Mahek.jpg",
+            position: 'Graphic Design Lead',
+            linkedIn:'',
+            Instagram: '',
+        },
+        {
+            name: 'Aakarsh Sharma',
+            imgSrc:"/../public/assets/team/aakarsh.jpg",
+            position: 'Graphic Design Co-Lead',
+            linkedIn:'',
+            Instagram: '',
+        },
 
     ]
   return (
