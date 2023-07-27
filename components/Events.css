@@ -8,7 +8,7 @@
   .section-header p {
     text-align: center;
     margin: auto;
-    font-size: 15px;
+    font-size: 16px;
     padding-bottom: 60px;
     color: #556877;
     width: 50%;
@@ -31,7 +31,7 @@
   }
   
   #services .box:hover {
-    transform: translateY(-5px);
+    transform: translateY(-7px);
   }
   
   #services .box .right {
@@ -50,10 +50,10 @@
   
   #services .img img {
     transition: 0.5s;
-    width: 160px;
-    height: 160px;
     border-radius: 10px;
-    object-fit: cover;
+    max-width: 160px;
+    max-height: 160px;
+    
   }
   
   #services .title {
@@ -71,7 +71,7 @@
   }
   
   #services .description {
-    font-size: 14px;
+    font-size: 15px;
     margin-left: 25px;
     line-height: 24px;
     margin-bottom: 0;

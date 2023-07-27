@@ -10,6 +10,7 @@ export default function Home() {
           alt="Background Image"
           layout="fill"
           objectFit="cover"
+          className='w-5 h-5'
         />
       </div>
 
