@@ -27,7 +27,7 @@ const Nav = () => {
               <Link href='/' className='blue_link'>About Us</Link>
               <Link href='/' className='blue_link'>What We Do</Link>
               <Link href='#events' className='blue_link'>Events</Link>
-              <Link href='#team' className='blue_link'>Our Team</Link>
+              <Link href='/' className='blue_link'>Our Team</Link>
               <Link href='/' className='blue_link'>Contact Us</Link>
             </div>
           </nav>
