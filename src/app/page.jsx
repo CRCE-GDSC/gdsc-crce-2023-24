@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Events from '/components/Events';
 import OurTeam from '/components/OurTeam';
 import Whatwedo from '../../components/Whatwedo';
+import Link from 'next/link';
+
 export default function Home() {
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-between w-full bg-[fdfdfd]">
@@ -38,6 +40,13 @@ export default function Home() {
               <div className='flex rounded-md shadow-md bg-black text-white'></div>
             </div>
           </div>
+          <div className="flex justify-center items-center pt-10">
+      <Link href="/Team1">
+        <div className="rounded-full bg-blue-500 text-white py-2 px-4 cursor-pointer text-xl font-bold transform transition-all hover:scale-110 shadow-lg hover:shadow-xl">
+          Join Us
+        </div>
+      </Link>
+    </div>
         </div>
       </div>
 
