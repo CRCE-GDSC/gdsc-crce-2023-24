@@ -3,6 +3,7 @@ import Events from '/components/Events';
 import OurTeam from '/components/OurTeam';
 import Whatwedo from '../../components/Whatwedo';
 import Link from 'next/link';
+import AboutUs from '../../components/AboutUs';
 
 export default function Home() {
   return (
@@ -52,7 +53,7 @@ export default function Home() {
 
       {/* Absolute positioning for the Events component */}
       <div className="absolute w-full top-[400px]">
-
+        <AboutUs/>
         <Whatwedo />
         <Events />
         <OurTeam/>
