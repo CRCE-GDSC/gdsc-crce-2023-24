@@ -3,7 +3,7 @@ import React from 'react';
 const AboutUs = () => {
   return (
     <div className="container mx-auto">
- <h3 className="text-5xl font-bold text-black mb-6 text-center pb-10 bg-[#fdfdfd] max-sm:pt-10">About Us</h3>
+ <h3 className="text-5xl font-bold text-black mb-6 text-center pb-10 bg-[#fdfdfd] max-sm:pt-14">About Us</h3>
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
 
         {/* Card 1 */}
