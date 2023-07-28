@@ -1,0 +1,107 @@
+.section-header h3 {
+    font-size: 36px;
+    color: #283d50;
+    font-weight: 500;
+    position: relative;
+  }
+  
+  .section-header p {
+    text-align: center;
+    margin: auto;
+    font-size: 16px;
+    padding-bottom: 60px;
+    color: #556877;
+    width: 50%;
+  }
+  
+  
+  
+  #services {
+    background-color: rgba(122, 165, 239, 0.142);
+  }
+  
+  #services .box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0 35px 35px 35px;
+    background: #fff;
+    box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #services .box:hover {
+    transform: translateY(-7px);
+  }
+  
+  #services .box .right {
+    padding: 15px 10px 15px 0;
+    text-align: start;
+  }
+  
+  #services .box .right .title {
+    text-align: start;
+    width: 80%;
+  }
+  #services .box .right p {
+    text-align: start;
+    width: 80%;
+  }
+  
+  #services .img img {
+    transition: 0.5s;
+    border-radius: 10px;
+    max-width: 160px;
+    max-height: 160px;
+    
+  }
+  
+  #services .title {
+    margin-left: 35px;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+  #services .title a {
+    color: #111;
+  }
+  
+  #services .box:hover .title a {
+    color: #007bff;
+  }
+  
+  #services .description {
+    font-size: 15px;
+    margin-left: 25px;
+    line-height: 20px;
+    margin-bottom: 0;
+  }
+
+  
+  
+  @media (max-width: 600px) {
+    #services .description {
+      font-size: 12px;
+      margin-left: 25px;
+      line-height: normal;
+      margin-bottom: 0;
+    }
+    #services .title {
+      margin-left: 25px;
+      font-weight: 700;
+      margin-bottom: 7px;
+      font-size: 15px;
+    }
+    #services .img img {
+      transition: 0.5s;
+      width: 100px;
+      height: 110px;
+      border-radius: 10px;
+      object-fit: contain;
+    }
+    #services .box .right {
+      padding: 7px 7px 7px 0;
+    }
+  }
+
+  
