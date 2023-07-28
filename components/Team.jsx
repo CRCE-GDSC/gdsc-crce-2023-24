@@ -260,7 +260,7 @@ const Team = () => {
             linkedIn:'',
             Instagram: '',
         },
-<<<<<<< Updated upstream
+
         {
             name: 'Prof. Kalpana',
             imgSrc:"/../public/assets/team/kalpana.jpg",
@@ -506,10 +506,6 @@ const Team = () => {
             linkedIn:'https://www.linkedin.com/in/iqrakhan04/',
             Instagram: '',
         },
-        
-        
-=======
->>>>>>> Stashed changes
     ]
   return (
     <>  
