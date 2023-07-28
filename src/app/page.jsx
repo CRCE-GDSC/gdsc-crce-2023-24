@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Events from '/components/Events';
 import OurTeam from '/components/OurTeam';
-import Whatwedo from '../../components/ui/Whatwedo';
+import Whatwedo from '../../components/Whatwedo';
 export default function Home() {
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-between w-full bg-[fdfdfd]">
