@@ -2,13 +2,9 @@ import React from 'react';
 
 const AboutUs = () => {
   return (
-<<<<<<< Updated upstream
     <div className="container mx-auto scroll-mt-96"  id="about">
- <h3 className="text-5xl font-bold text-black mb-6 text-center pb-10 bg-[#fdfdfd] max-sm:pt-14">About Us</h3>
-=======
-    <div className="container mx-auto items-center justify-center">
-      <h3 className="text-5xl font-semibold text-gray-900 mb-6 text-center pb-10 bg-[#fdfdfd]">About Us</h3>
->>>>>>> Stashed changes
+        <h3 className="text-5xl font-bold text-black mb-6 text-center pb-10 bg-[#fdfdfd] max-sm:pt-14">About Us</h3>
+
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
 
         {/* Card 1 */}
@@ -29,8 +25,8 @@ const AboutUs = () => {
 
         {/* Card 2 */}
         <div className="rounded overflow-hidden shadow-lg feature-card p-5">
-          <div className="flex items-center justify-center w-10 h-10 bg-green-500 rounded-full mb-4 mx-4">
-            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <div className="flex items-center justify-center w-10 h-10 rounded-full mb-4 mx-4">
+            <svg className="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M22 12h-4l-3 9L9 3l-3 9H2" />
             </svg>
           </div>
@@ -45,8 +41,8 @@ const AboutUs = () => {
 
         {/* Card 3 */}
         <div className="rounded overflow-hidden shadow-lg feature-card p-5">
-          <div className="flex items-center justify-center w-10 h-10 bg-red-500 rounded-full mb-4 mx-4">
-            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <div className="flex items-center justify-center w-10 h-10  rounded-full mb-4 mx-4">
+            <svg className="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
           </div>
