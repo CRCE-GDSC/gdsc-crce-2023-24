@@ -2,7 +2,7 @@
 
 const Whatwedo = () => {
     return(
-      <div className="w-full bg-sky-50 px-12" id="what">
+      <div className="w-full bg-sky-50 px-12 scroll-mt-96" id="what">
         <h1 className="text-4xl xl:text-5xl flex justify-center p-8 font-semibold mt-10 text-center">What We Do</h1>
         <div className="flex justify-center">
             <p className="max-w-3xl text-center text-xl mb-10 text-gray-600 text-[16px]">GDSC CRCE boasts of a multifaceted community with members from various disciplines working together.

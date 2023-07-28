@@ -103,7 +103,7 @@ const Events = () => {
                                     object-fit='cover'
                                 />
                             </div>
-                            <div className='px-3 lg:m-2' id="events">
+                            <div className='px-3 lg:m-2 scroll-mt-96' id="events">
                                 <a
                                     href={event.link}
                                     style={{ color: 'inherit', textDecoration: 'none' }}
