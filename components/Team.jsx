@@ -300,11 +300,7 @@ const Team = () => {
         },
         {
             name: 'Bryce Miranda',
-<<<<<<< Updated upstream
-            imgSrc:"/../public/assets/team/Bryce.HEIC",
-=======
             imgSrc:"/../public/assets/team/Bryce.jpeg",
->>>>>>> Stashed changes
             position: 'Technical & PR Lead',
             linkedIn:'https://www.linkedin.com/in/bryce-miranda-b7a94a216/',
             Instagram: 'https://instagram.com/thestoryofbryce?igshid=MmIzYWVlNDQ5Yg==',
