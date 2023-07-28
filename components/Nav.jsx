@@ -18,8 +18,8 @@ const Nav = () => {
       </Link>
       <div className='flex pr-32 max-sm:hidden max-sm:pr-0'>
         <Link href='/' className='blue_link'>Home</Link>
-        <Link href='/' className='blue_link'>About Us</Link>
-        <Link href='/' className='blue_link'>What We Do</Link>
+        <Link href='#about' className='blue_link'>About Us</Link>
+        <Link href='#what' className='blue_link'>What We Do</Link>
         <Link href='#events' className='blue_link'>Events</Link>
         <Link href='#team' className='blue_link'>Our Team</Link>
         <Link href='/' className='blue_link'>Contact Us</Link>
