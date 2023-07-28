@@ -2,7 +2,6 @@ import 'style/global.css';
 import Nav from 'components/Nav';
 import { Analytics } from '@vercel/analytics/react';
 import { Inter } from 'next/font/google'
-import Whatwedo from '../../components/Whatwedo';
 
 export const metadata ={
   title:"GDSC CRCE",

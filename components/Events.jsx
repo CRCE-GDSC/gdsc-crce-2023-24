@@ -86,7 +86,7 @@ const Events = () => {
                     {eventsData.map((event, index) => (
                         <motion.div
                             key={index}
-                            className='box max-w-md rounded overflow-hidden shadow-lg flex items-center justify-center mx-10 cursor-pointer'
+                            className='box max-w-md rounded overflow-hidden shadow-lg flex items-center justify-center mx-10 cursor-pointer sm:mx-2'
                             //initial={{ opacity: 0, y: 100 }} 
                             animate={{ scale: 1.1}} 
                             transition={{ duration: 2, delay: index*0.1, type: "spring", damping: 2 }} // Animation duration with a delay based on the card's index
@@ -96,17 +96,20 @@ const Events = () => {
                                 <Image
                                     src={event.imgSrc}
                                     alt={event.title}
-                                    className='object-contain'
+                                    className='object-cover'
                                     quality={100}
+                                    width={500}
+                                    height={500}
+                                    object-fit='cover'
                                 />
                             </div>
-                            <div className='px-3' id="events">
+                            <div className='px-3 lg:m-2' id="events">
                                 <a
                                     href={event.link}
                                     style={{ color: 'inherit', textDecoration: 'none' }}
                                     target='_blank'
                                 >
-                                    <h4 className='title font-bold text-xl mt-2 text-gray-700'>
+                                    <h4 className='title font-bold text-xl text-gray-700'>
                                         {event.title}
                                     </h4>
                                     <p className='description font-medium'>
@@ -119,7 +122,7 @@ const Events = () => {
                                             {event.speaker}
                                             </p>
                                         ) : null}
-                                    <p className='description mb-5'>
+                                    <p className='description'>
                                         <b>Date: </b>
                                         {event.date}
                                     </p>
