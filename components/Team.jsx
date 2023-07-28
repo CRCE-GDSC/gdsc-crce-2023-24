@@ -447,7 +447,7 @@ const Team = () => {
         },
         {
             name: 'Susan Fernandes',
-            imgSrc:"/../public/assets/team/.jpeg",
+            imgSrc:"/../public/assets/team/susan.jpeg",
             position: 'GDSC Associate',
             linkedIn:'https://www.linkedin.com/in/susan-fernandes-3b6635256',
             Instagram: 'https://instagram.com/_susan_fernandes_?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D',
@@ -468,14 +468,14 @@ const Team = () => {
         },
         {
             name: 'Jefin John',
-            imgSrc:"/../public/assets/team/Jefin John.jpg",
+            imgSrc:"/../public/assets/team/Jefin.jpg",
             position: 'GDSC Associate',
             linkedIn:'https://www.linkedin.com/in/jefin-john-85996a1a6',
             Instagram: 'https://www.instagram.com/jefin3273/',
         },
         {
             name: 'Elita Gonsalves',
-            imgSrc:"/../public/assets/team/Elita Gonsalves.jpg",
+            imgSrc:"/../public/assets/team/Elita.jpg",
             position: 'GDSC Associate',
             linkedIn:'http://www.linkedin.com/in/elita-gonsalves-454679252',
             Instagram: 'https://www.instagram.com/elita_2215/',
@@ -496,7 +496,7 @@ const Team = () => {
         },
         {
             name: 'Iqra Khan',
-            imgSrc:"/../public/assets/team/iqra.jpg",
+            imgSrc:"/../public/assets/team/iqra.jpeg",
             position: 'GDSC Associate',
             linkedIn:'https://www.linkedin.com/in/iqrakhan04/',
             Instagram: '',
@@ -523,11 +523,14 @@ const Team = () => {
                                     <div className="flex justify-center -mt-[75px]">
                                         <Image 
                                             src={Member.imgSrc} 
-                                            className="mx-auto rounded-full shadow-lg w-[140px] h-[140px] hover:border-amber-100 hover:border-4 " 
+                                            className="mx-auto rounded-full shadow-lg w-[140px] h-[140px] hover:border-amber-100 hover:border-4" 
                                             alt="Avatar" 
-                                            width={100}
-                                            height={100}
+                                            
+                                            width={500}
+                                            height={500}
                                             quality={100}
+                                            
+                                            object-fit='cover'
                                         />
                                     </div>
                                 </div>
