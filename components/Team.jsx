@@ -272,7 +272,7 @@ const Team = () => {
         },
         {
             name: 'Shreya Sahay',
-            imgSrc:"/../public/assets/team/shreya.jpg",
+            imgSrc:"/../public/assets/team/Shreya.jpeg",
             position: 'Joint Lead',
             linkedIn:'https://www.linkedin.com/in/shreya-s-sahay-706490238',
             Instagram: 'https://www.instagram.com/sahay989/',
@@ -398,7 +398,7 @@ const Team = () => {
         },
         {
             name: "Angela D'Souza",
-            imgSrc:"/../public/assets/team/Angela Dsouza.jpg",
+            imgSrc:"/../public/assets/team/Angela.jpg",
             position: 'Head of Documentation',
             linkedIn:'https://www.linkedin.com/in/angela-dsouza-751a22249',
             Instagram: 'https://instagram.com/angela._.ds?igshid=MzNlNGNkZWQ4Mg==',
@@ -534,7 +534,7 @@ const Team = () => {
                                 <div className="p-6">
                                     <h5 className="mb-4 text-xl font-extrabold text-white">{Member.name}</h5>
                                     <p className="mb-6 font-semibold text-slate-300">{Member.position}</p>
-                                    { (Member.linkedIn && Member.Instagram) ?(
+                                    { (Member.linkedIn || Member.Instagram) ?(
                                         <ul className="mx-auto flex list-inside justify-center">
                                         {/*
                                             <a href="#!" className="px-2 text-slate-400 hover:text-white ">
