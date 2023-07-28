@@ -293,7 +293,7 @@ const Team = () => {
         },
         {
             name: 'Sahil Khan',
-            imgSrc:"/../public/assets/team/.jpg",
+            imgSrc:"/../public/assets/team/saahil.jpg",
             position: 'Management Co-Lead',
             linkedIn:'https://www.linkedin.com/in/sahilthk7/',
             Instagram: 'https://www.instagram.com/isaahiil/',
@@ -328,7 +328,7 @@ const Team = () => {
         },
         {
             name: 'Dhruv Mayekar',
-            imgSrc:"/../public/assets/team/",
+            imgSrc:"/../public/assets/team/dhruv.jpg",
             position: 'Graphic Design Co-Lead',
             linkedIn:'https://www.linkedin.com/in/dhruv-mayekar-3a1b35208',
             Instagram: 'https://instagram.com/dhruvv_mayekar?igshid=OGQ5ZDc2ODk2ZA==',
@@ -496,7 +496,7 @@ const Team = () => {
         },
         {
             name: 'Iqra Khan',
-            imgSrc:"/../public/assets/team/",
+            imgSrc:"/../public/assets/team/iqra.jpg",
             position: 'GDSC Associate',
             linkedIn:'https://www.linkedin.com/in/iqrakhan04/',
             Instagram: '',
