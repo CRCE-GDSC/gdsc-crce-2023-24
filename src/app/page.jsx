@@ -4,7 +4,6 @@ import OurTeam from '/components/OurTeam';
 import Whatwedo from '../../components/Whatwedo';
 import Link from 'next/link';
 import AboutUs from '../../components/AboutUs';
-import Footer from '../../components/Footer';
 
 export default function Home() {
   return (
@@ -58,7 +57,6 @@ export default function Home() {
         <Whatwedo />
         <Events />
         <OurTeam/>
-        <Footer/>
       </div>
     </main>
   );
