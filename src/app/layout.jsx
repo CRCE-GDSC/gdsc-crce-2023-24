@@ -1,5 +1,5 @@
 import 'style/global.css';
-import Nav from 'components/Nav';
+import Navbar from 'components/Navbar';
 import { Analytics } from '@vercel/analytics/react';
 import { Inter } from 'next/font/google'
 
@@ -17,7 +17,8 @@ const RootLayout = ({children}) => {
                 <div className='gradient'/>
             </div>
             <main className='app'>
-              <Nav/>
+            <Navbar/>
+
                {children}
                <Analytics />
                 </main>
