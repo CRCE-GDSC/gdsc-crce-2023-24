@@ -1,7 +1,10 @@
 import 'style/global.css';
-import Nav from 'components/Nav';
+// import Nav from 'components/Nav';
+
 import { Analytics } from '@vercel/analytics/react';
 import { Inter } from 'next/font/google'
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 
 export const metadata ={
   title:"GDSC CRCE",
@@ -17,10 +20,11 @@ const RootLayout = ({children}) => {
                 <div className='gradient'/>
             </div>
             <main className='app'>
-              <Nav/>
+              {/* <Nav/> */}
+              <Navbar/>
                {children}
                <Analytics />
-                
+              <Footer/>  
                 </main>
         </body>
         </html>
