@@ -88,7 +88,7 @@ const Navbar = () => {
           ""
         )}
       </div>
-      <div className="md:block hidden w-full">
+      <div className="md:block hidden sticky w-full">
         <div className="sticky lg:px-[100px] top-0 backdrop-blur-3xl z-10 mx-auto shadow-lg">
           <div className="flex w-full">
             <div className="flex lg:flex-1">

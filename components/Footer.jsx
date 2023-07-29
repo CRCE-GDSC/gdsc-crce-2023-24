@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="bg-base-300 lg:px-[120px]">
+    <div className="bottom-0 bg-base-300 lg:px-[120px]">
       <footer className="footer p-10 gap-7 text-base-content">
         <div className="max-w-[400px]">
           <h2 className="text-2xl">GDSC Community</h2>
