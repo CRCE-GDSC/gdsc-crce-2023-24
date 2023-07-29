@@ -463,7 +463,7 @@ const Team = () => {
         },
         {
             name: "Samuel D'Souza",
-            imgSrc:"/../public/assets/team/.jpg",
+            imgSrc:"",
             position: 'GDSC Associate',
             linkedIn:'',
             Instagram: '',

@@ -11,7 +11,6 @@ const Nav = () => {
             alt='logo'
             width={400}
             height={200}
-            layout="fixed"
             className='object-contain'
           />
         </div>

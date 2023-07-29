@@ -202,7 +202,7 @@ const Juniors24 = [
     },
     {
         name: "Samuel D'Souza",
-        imgSrc:"/../public/assets/team/.jpg",
+        imgSrc:"",
         position: 'GDSC Associate',
         linkedIn:'',
         Instagram: '',
