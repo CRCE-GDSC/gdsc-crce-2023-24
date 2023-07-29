@@ -50,7 +50,7 @@ const Footer = () => {
         </div>
         <div className="pl-10">
           <span className="text-lg uppercase font-semibold text-gray-600">Social</span>
-          <div className="flex flex-row">
+          <div className="flex flex-row" id="foot">
             <a className="p-2">
               <FaInstagram size={25}/>
             </a>
