@@ -30,11 +30,11 @@ export default function Home() {
       </div>
 
       {/* Content Container */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center z-10 ">
+      <div className="absolute inset-0 flex flex-col items-center justify-center z-10 sm:pt-32">
         {/* Your content goes here */}
-        <div className="container mx-auto p-8 text-white text-center relative top-[-250px] mt-48 pt-40">
-          <h1 className="text-7xl font-bold blue_gradient max-sm:text-5xl max-sm:pt-56 text-left">Welcome to <span className='google_gradient'>GDSC</span></h1>
-          <p className="text-3xl font-bold orange_gradient pt-12 text-left">
+        <div className="container mx-auto p-8 text-white text-center relative top-[-250px] mt-48 pt-40 xl:pl-20">
+          <h1 className="text-7xl font-bold blue_gradient max-sm:text-5xl max-sm:pt-56 text-left max-sm:text-center">Welcome to <span className='google_gradient'>GDSC</span></h1>
+          <p className="text-4xl max-sm:text-3xl font-bold orange_gradient pt-12 text-left">
             Get ready to delve into the World of Developers
           </p>
           {/* Add your other components here */}
