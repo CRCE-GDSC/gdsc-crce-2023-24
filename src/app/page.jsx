@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import Events from '/components/Events';
 import OurTeam from '/components/OurTeam';
 import Whatwedo from '../../components/Whatwedo';
 import Link from 'next/link';
 import AboutUs from '../../components/AboutUs';
 import Footer from '../../components/Footer';
+import Events from '../../components/Events';
 
 export default function Home() {
   return (

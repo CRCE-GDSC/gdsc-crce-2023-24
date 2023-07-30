@@ -1,13 +1,13 @@
 "use client"
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import "./Events.css"
 import Img1 from "../public/assets/Events/ideation.jpg"
 import Img2 from "../public/assets/Events/HackOver3.0.jpg"
 import Img3 from "../public/assets/Events/mathday.jpeg"
 import Img4 from "../public/assets/Events/webdev.png"
 import Img5 from "../public/assets/Events/seo.png"
 import Img6 from "../public/assets/Events/Bit-N-Build.jpg"
+
 
 const Events = () => {
     const eventsData = [
@@ -55,86 +55,56 @@ const Events = () => {
           speaker: 'Princeton Baretto',
           date: '30th August, 2022',
           link: 'https://gdsc.community.dev/e/m89s4t/',
-        },
-        
-      ];
+        }, 
+      ]
 
-    
-      return (
-        <motion.section 
-        id='services' 
-        className='section-bg w-full py-14'
-        initial={{ opacity: 0, y: 50 }} // Initial animation values
-        animate={{ opacity: 1, y: 0 }} // Animate to these values
-        transition={{ duration: 0.5 }} // Animation duration
-        >
-            <motion.header 
-                className='section-header'
-                initial={{ opacity: 0, y: -80 }} // Initial animation values
-                animate={{ opacity: 2, y: 0 }} // Animate to these values
-                transition={{ duration: 2, delay: 0.5, ease: "linear" }} // Animation duration with a slight delay
-                
+  return (
+    <motion.section id="services" className="bg-slate-100 py-16">
+      <div className="flex-1 justify-center items-center" >
+        <div className="text-center w-full">
+          <h3 className=' text-gray-700 font-semibold text-5xl mb-6 py-3'>Events</h3>
+          <p className="mx-2 text-gray-600 font-semibold text-center justify-center items-center lg:mx-auto max-w-full mb-4 lg:max-w-xl">
+            We conduct regular events including tech talks and workshops to make students familiar with the latest tech advancements and programs.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-14 justify-items-center mt-10 mx-auto lg:max-w-5xl ">
+          {eventsData.map((event, index) => (
+            <motion.div
+              key={index}
+              className="box card max-w-md rounded-lg shadow-lg flex items-center justify-center ml-2 cursor-pointer bg-white"
+              animate={{ scale: 1.1 }}
+              transition={{ duration: 2, delay: index * 0.1, type: "spring", damping: 2 }}
+              whileHover={{ y: -10 }}
             >
-                <h3 className='font-bold text-lg py-10 text-center'>Events</h3>
-                <p className='text-center text-gray-600 font-semibold '>
-                    We conduct regular events including tech talks and workshops to make
-                    students familiar with the latest tech advancements and programs.
-                </p>
-            </motion.header>
-            <div className='flex items-center justify-center'>
-                <div className='max-w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 justify-items-center'>
-                    {eventsData.map((event, index) => (
-                        <motion.div
-                            key={index}
-                            className='box card max-w-md rounded overflow-hidden shadow-lg flex items-center justify-center mx-10 cursor-pointer sm:mx-2'
-                            //initial={{ opacity: 0, y: 100 }} 
-                            animate={{ scale: 1.1}} 
-                            transition={{ duration: 2, delay: index*0.1, type: "spring", damping: 2 }} // Animation duration with a delay based on the card's index
-                            whileHover={{ y: -10 }} // Apply the upwards movement on hover
-                        >
-                            <div className='img'>
-                                <Image
-                                    src={event.imgSrc}
-                                    alt={event.title}
-                                    className='object-cover'
-                                    quality={100}
-                                    width={500}
-                                    height={500}
-                                    object-fit='cover'
-                                />
-                            </div>
-                            <div className='px-3 lg:m-2 scroll-mt-96' id="events">
-                                <a
-                                    href={event.link}
-                                    style={{ color: 'inherit', textDecoration: 'none' }}
-                                    target='_blank'
-                                >
-                                    <h4 className='title font-bold text-xl text-gray-700'>
-                                        {event.title}
-                                    </h4>
-                                    <p className='description font-medium'>
-                                        <b className='text-gray-600'>{event.subtitle}</b>
-                                    </p>
-                                    {/* Conditionally display the speaker */}
-                                        {event.speaker ? (
-                                            <p className='description font-semibold'>
-                                            <b>Speaker: </b>
-                                            {event.speaker}
-                                            </p>
-                                        ) : null}
-                                    <p className='description'>
-                                        <b>Date: </b>
-                                        {event.date}
-                                    </p>
-                                </a>
-                            </div>
-                        </motion.div>
-                    ))}
+              <div className="left">
+                <div className="h-[100px] w-[100px] lg:w-[160px] lg:h-[160px] rounded-lg ">
+                  <Image
+                    src={event.imgSrc}
+                    alt={event.title}
+                    className=" ml-2 lg:ml-0  h-[100px] w-[100px] lg:w-[160px] lg:h-[160px] rounded-lg"
+                    quality={100}
+                    width={500}
+                    height={500}
+                    object-fit='cover'
+                    
+                  />
                 </div>
-            </div>
-        </motion.section>
-    );
-};
-
+              </div>
+              <div className="right ml-4">
+                <a href={event.link} style={{ color: 'inherit', textDecoration: 'none' }} target="_blank">
+                  <h4 className="title font-bold text-xl text-gray-700">{event.title}</h4>
+                  <p className="description font-medium"><b>{event.subtitle}</b></p>
+                  {event.speaker && <p className="description font-semibold"><b>Speaker: </b>{event.speaker}</p>}
+                  <p className="description"><b>Date: </b>{event.date}</p>
+                </a>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </motion.section>
+  )
+}
 
 export default Events
