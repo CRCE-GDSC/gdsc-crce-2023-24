@@ -2,26 +2,17 @@
 
 const Whatwedo = () => {
     return(
-<<<<<<< Updated upstream
-      <div className="w-full bg-sky-50 px-12 scroll-mt-96" id="what">
-            <h3 className="text-gray-700 font-semibold text-5xl mb-6 py-3 font-poppins text-center">What We Do</h3>
-
-=======
       <div className="w-full bg-sky-50 px-12 scroll-mt-96 py-10" id="what">
-        <h1 className="text-4xl xl:text-5xl flex justify-center p-8 font-semibold mt-10 text-center">What We Do</h1>
->>>>>>> Stashed changes
+        <h3 className="text-4xl xl:text-5xl flex justify-center p-8  mt-10 text-center font-poppins text-gray-600">What We Do</h3>
+
         <div className="flex justify-center">
             <p className="max-w-3xl text-center text-xl mb-10 text-gray-600 text-[16px]">GDSC CRCE boasts of a multifaceted community with members from various disciplines working together.
             By joining GDSC CRCE students get to work with an exceptionally skilled group of developers, connect 
             with developers around the world, make projects,organized workshops and many more.</p>
         </div> 
-<<<<<<< Updated upstream
-        <h6 className="text-center text-3xl xl:text-4xl font-semibold font-poppins">We work on:</h6>
-          <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-10">
-=======
-        <h6 className="text-center text-3xl xl:text-4xl font-semibold">We work on:</h6>
+        <h6 className="text-center text-3xl xl:text-4xl font-poppins">We work on:</h6>
           <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-10 mb-2 max-w-4xl mx-auto">
->>>>>>> Stashed changes
+
 
             <div className="flex flex-col justify-center items-center ">
                <div className="box-border h-32 w-32 p-2 border-0 ... justify-center items-center">

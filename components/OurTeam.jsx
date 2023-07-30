@@ -4,7 +4,7 @@ import Link from 'next/link';
 const OurTeam = () => {
   return (
 
-    <div className="flex flex-col items-center bg-[#ecf2fd] mb-7 py-16 max-w-6xl lg:max-w-full">
+    <div className="flex flex-col items-center bg-white mb-7 py-16 max-w-6xl lg:max-w-full shadow-lg">
       <h2 className="text-5xl max-sm:text-3xl text-gray-700 mb-2 font-poppins">Get to know the Team</h2>
       <p className='mt-5 text-slate-500 text-center max-w-xl mx-6 font-poppins'>“Individually, we are one drop. Together, we are an ocean.” — Ryunosuke Satoro</p>
       <div className="flex gap-4 mt-8">

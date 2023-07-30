@@ -381,27 +381,7 @@ const Team = () => {
             linkedIn:'https://www.linkedin.com/in/rudalph-gonsalves-219463257/',
             Instagram: 'https://www.instagram.com/rudalphgonsalves/',
         },
-        {
-            name: 'Vijay Prajapati',
-            imgSrc:"/../public/assets/team/vijay.jpg",
-            position: 'Technical Advisor',
-            linkedIn:'https://www.linkedin.com/in/vijayyy/',
-            Instagram: 'https://www.instagram.com/v.i.j.a.y.y',
-        },
-        {
-            name: 'Rahul Bothra',
-            imgSrc:"/../public/assets/team/rahul.jpg",
-            position: 'Operational Advisor',
-            linkedIn:'https://www.linkedin.com/in/rahul-bothra-5506221b4',
-            Instagram: 'https://www.instagram.com/rahul_bothra_',
-        },
-        {
-            name: 'Deon Gracias',
-            imgSrc:"/../public/assets/team/deon.jpeg",
-            position: 'Postman Student Lead',
-            linkedIn:'https://www.linkedin.com/in/deongracias/',
-            Instagram: 'https://www.instagram.com/deon_gracias',
-        },
+        
     ]
 
     const Juniors24 = [
@@ -516,9 +496,10 @@ const Team = () => {
         <div className="container my-24 mx-auto md:px-6 bg-blue-100 max-w-full pt-10">
   
             <section className="mb-32 text-center">
-                <h2 className="mb-32 text-3xl font-bold mt-10 pt-10">
-                    Meet the <u className="text-primary text-blue-800 ">team</u>
+                <h2 className="mb-5 text-3xl font-bold mt-10 pt-10">
+                    Meet the <u className="text-primary text-blue-800 ">Team</u>
                 </h2>
+                <p className='text-center mb-32'>“Individually, we are one drop. Together, we are an ocean.” — Ryunosuke Satoro</p>
                 <h3 className='text-3xl font-semibold mb-10'>GDSC SENIOR CABINET 2022-23</h3>
                 <div className="grid gap-x-6 md:grid-cols-4 lg:gap-x-12 ">
                     {Seniors23.map((Member, index) =>(
@@ -639,13 +620,8 @@ const Team = () => {
                             </div>
                         </div>
                     ))}
-                </div>
-
-                
-
-                
+                </div>   
             </section>
-  
         </div>
     </>
   )

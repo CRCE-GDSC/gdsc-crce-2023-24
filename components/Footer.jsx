@@ -49,7 +49,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="md:pl-10 py-3">
-          <span className="text-lg uppercase font-semibold text-gray-600 ml-2">Social</span>
+          <span className="text-lg uppercase font-semibold text-gray-600 ml-4">Social</span>
           <div className="flex flex-row" id="foot">
             <a className="p-3">
               <FaInstagram size={35} className="text-violet-500 hover:text-white hover:bg-blue-400 rounded-xl"/>
