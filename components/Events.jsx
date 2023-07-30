@@ -62,7 +62,7 @@ const Events = () => {
     <motion.section id="services" className="bg-slate-100 py-16 scroll-mt-96">
       <div className="flex-1 justify-center items-center" >
         <div className="text-center w-full">
-          <h3 className=' text-gray-700 font-semibold text-5xl mb-6 py-3'>Events</h3>
+          <h3 className=' text-gray-700 font-semibold text-5xl mb-6 py-3 font-poppins'>Events</h3>
           <p className="mx-2 text-gray-600 font-semibold text-center justify-center items-center lg:mx-auto max-w-full mb-4 lg:max-w-xl">
             We conduct regular events including tech talks and workshops to make students familiar with the latest tech advancements and programs.
           </p>
@@ -91,7 +91,7 @@ const Events = () => {
                   />
                 </div>
               </div>
-              <div className="right ml-4">
+              <div className="right ml-4 scroll-mt-96" id="events">
                 <a href={event.link} style={{ color: 'inherit', textDecoration: 'none' }} target="_blank">
                   <h4 className="title font-bold lg:text-xl text-gray-700 ">{event.title}</h4>
                   <p className="description font-medium"><b>{event.subtitle}</b></p>

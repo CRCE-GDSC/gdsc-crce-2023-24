@@ -6,7 +6,7 @@ const Contact = () => {
     <section id="contact" className="bg-slate-100 py-16">
       <div className="container mx-auto">
         <div className="section-header font-bold text-gray-700 text-5xl text-center mb-10">
-          <h3>Contact Us</h3>
+          <h3 className="font-poppins">Contact Us</h3>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">

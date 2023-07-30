@@ -23,15 +23,15 @@ const Footer = () => {
             Home
           </Link>
           <br/>
-          <Link href="/" className="hover:text-blue-700">
+          <Link href="#events" className="hover:text-blue-700">
             Events
           </Link>
           <br/>
-          <Link href="/" className="hover:text-blue-700">
+          <Link href="#team" className="hover:text-blue-700">
             Our Team
           </Link>
           <br/>
-          <Link href="/" className="hover:text-blue-700">
+          <Link href="https://developers.google.com/community-guidelines" className="hover:text-blue-700">
             Community Guidelines
           </Link>
           <br/>
