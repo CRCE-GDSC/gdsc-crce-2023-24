@@ -76,7 +76,7 @@ const Events = () => {
                 
             >
                 <h3 className='font-bold text-lg py-10 text-center'>Events</h3>
-                <p className='text-center text-gray-600 font-semibold'>
+                <p className='text-center text-gray-600 font-semibold '>
                     We conduct regular events including tech talks and workshops to make
                     students familiar with the latest tech advancements and programs.
                 </p>

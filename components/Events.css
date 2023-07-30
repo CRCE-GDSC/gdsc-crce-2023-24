@@ -2,7 +2,6 @@
     font-size: 36px;
     color: #283d50;
     font-weight: 500;
-    position: relative;
   }
   
   .section-header p {
@@ -58,7 +57,7 @@
   
   #services .title {
     margin-left: 25px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     font-size: 18px;
   }
   
@@ -79,18 +78,22 @@
 
   
   
-  @media (max-width: 600px) {
+  @media (max-width: 640px) {
     #services .description {
       font-size: 12px;
       margin-left: 8px;
       line-height: normal;
       margin-bottom: 2;
     }
+    .section-header p {
+      max-width: 100%;
+    }
+
     #services .title {
       margin-left: 8px;
       font-weight: 700;
-      margin-bottom: 7px;
-      font-size: 15px;
+      margin-bottom: 2px;
+      font-size: 14px;
     }
     #services .img img {
       transition: 0.5s;
@@ -103,5 +106,6 @@
       padding: 7px 7px 7px 0;
     }
   }
+
 
   
