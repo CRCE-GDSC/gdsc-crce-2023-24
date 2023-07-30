@@ -5,6 +5,7 @@ import Link from 'next/link';
 import AboutUs from '../../components/AboutUs';
 import Footer from '../../components/Footer';
 import Events from '../../components/Events';
+import Contact from '../../components/Contact';
 
 export default function Home() {
   return (
@@ -33,8 +34,8 @@ export default function Home() {
       <div className="absolute inset-0 flex flex-col items-center justify-center z-10 sm:pt-32">
         {/* Your content goes here */}
         <div className="container mx-auto p-8 text-white text-center relative top-[-250px] mt-48 pt-40 xl:pl-20">
-          <h1 className="text-7xl font-bold blue_gradient max-sm:text-5xl max-sm:pt-56 text-left max-sm:text-center">Welcome to <span className='google_gradient'>GDSC</span></h1>
-          <p className="text-4xl max-sm:text-3xl font-bold orange_gradient pt-12 text-left">
+          <h1 className="text-7xl font-bold blue_gradient max-sm:text-5xl max-sm:pt-56 max-sm:text-center mt-20 text-center lg:text-left">Welcome to <span className='google_gradient'>GDSC</span></h1>
+          <p className="text-4xl max-sm:text-3xl font-bold orange_gradient pt-12 text-center lg:text-left ">
             Get ready to delve into the World of Developers
           </p>
           {/* Add your other components here */}
@@ -45,7 +46,7 @@ export default function Home() {
           </div>
           <div className="flex  pt-10">
               <Link href="https://gdsc.community.dev/fr-conceicao-rodrigues-college-of-engineering-mumbai/">
-                <div className="rounded-full text-start bg-blue-500 text-white py-2 px-4 cursor-pointer text-xl font-bold transform transition-all hover:scale-110 shadow-lg hover:shadow-xl">
+                <div className="rounded-full text-center bg-blue-500 text-white py-2 px-4 cursor-pointer text-xl font-bold transform transition-all hover:scale-110 shadow-lg hover:shadow-xl lg:text-left">
                   Join Us
                 </div>
               </Link>
@@ -59,6 +60,7 @@ export default function Home() {
         <Whatwedo />
         <Events />
         <OurTeam/>
+        <Contact />
         <Footer/>
       </div>
     </main>

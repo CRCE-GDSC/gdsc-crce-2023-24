@@ -59,7 +59,7 @@ const Events = () => {
       ]
 
   return (
-    <motion.section id="services" className="bg-slate-100 py-16">
+    <motion.section id="services" className="bg-slate-100 py-16 scroll-mt-96">
       <div className="flex-1 justify-center items-center" >
         <div className="text-center w-full">
           <h3 className=' text-gray-700 font-semibold text-5xl mb-6 py-3'>Events</h3>
@@ -68,21 +68,21 @@ const Events = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-14 justify-items-center mt-10 mx-auto lg:max-w-5xl ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-14 justify-items-center lg:mx-auto mx-2 mt-10 lg:max-w-5xl ">
           {eventsData.map((event, index) => (
             <motion.div
               key={index}
-              className="box card max-w-md rounded-lg shadow-lg flex items-center justify-center ml-2 cursor-pointer bg-white"
-              animate={{ scale: 1.1 }}
+              className="box max-w-md rounded-lg shadow-lg flex items-center justify-center mx-auto lg:ml-0 cursor-pointer bg-white p-2 lg:p-0"
+              animate={{ scale: 1 }}
               transition={{ duration: 2, delay: index * 0.1, type: "spring", damping: 2 }}
               whileHover={{ y: -10 }}
             >
               <div className="left">
-                <div className="h-[100px] w-[100px] lg:w-[160px] lg:h-[160px] rounded-lg ">
+                <div className="h-[110px] w-[110px] lg:w-[160px] lg:h-[160px] overflow-hidden rounded-lg mx-auto">
                   <Image
                     src={event.imgSrc}
                     alt={event.title}
-                    className=" ml-2 lg:ml-0  h-[100px] w-[100px] lg:w-[160px] lg:h-[160px] rounded-lg"
+                    className=" ml-2 lg:ml-0  h-[110px] w-[110px] lg:w-[160px] lg:h-[160px] rounded-lg"
                     quality={100}
                     width={500}
                     height={500}
@@ -93,7 +93,7 @@ const Events = () => {
               </div>
               <div className="right ml-4">
                 <a href={event.link} style={{ color: 'inherit', textDecoration: 'none' }} target="_blank">
-                  <h4 className="title font-bold text-xl text-gray-700">{event.title}</h4>
+                  <h4 className="title font-bold lg:text-xl text-gray-700 ">{event.title}</h4>
                   <p className="description font-medium"><b>{event.subtitle}</b></p>
                   {event.speaker && <p className="description font-semibold"><b>Speaker: </b>{event.speaker}</p>}
                   <p className="description"><b>Date: </b>{event.date}</p>

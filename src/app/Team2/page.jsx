@@ -1,9 +1,13 @@
 import React from 'react'
 import TeamNew from '../../../components/TeamNew'
+import Footer from "../../../components/Footer";
 
 const Team2 = () => {
   return (
-    <div><TeamNew/></div>
+    <div>
+      <TeamNew/>
+      <Footer />
+    </div>
   )
 }
 

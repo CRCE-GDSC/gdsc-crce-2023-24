@@ -1,9 +1,13 @@
+import Footer from "../../../components/Footer";
 import Team from "../../../components/Team";
-import React from 'react'
+
 
 const Team1 = () => {
   return (
-    <div><Team/></div>
+    <div>
+      <Team/>
+      <Footer />
+    </div>
   )
 }
 

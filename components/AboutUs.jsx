@@ -2,10 +2,10 @@ import React from 'react';
 
 const AboutUs = () => {
   return (
-    <div className="container mx-auto scroll-mt-96 xl:pt-96"  id="about">
-        <h3 className="text-5xl text-[#515e68] mb-6 text-center pb-10 bg-[#fdfdfd] max-sm:pt-14 max-sm:text-4xl max-sm:mb-0 font-medium ">About Us</h3>
+    <div className="container mx-auto scroll-mt-96 xl:py-16 mt-10"  id="about">
+        <h3 className="text-5xl text-[#515e68] mb-6 mt-6 text-center pb-10 bg-[#fdfdfd] max-sm:pt-14 max-sm:text-4xl max-sm:mb-0 font-medium ">About Us</h3>
 
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 mt-10">
 
         {/* Card 1 */}
         <div className="rounded overflow-hidden shadow-lg feature-card p-5">

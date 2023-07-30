@@ -49,16 +49,16 @@ const Footer = () => {
           </p>
         </div>
         <div className="md:pl-10 py-3">
-          <span className="text-lg uppercase font-semibold text-gray-600">Social</span>
+          <span className="text-lg uppercase font-semibold text-gray-600 ml-2">Social</span>
           <div className="flex flex-row" id="foot">
-            <a className="p-2">
-              <FaInstagram size={25}/>
+            <a className="p-3">
+              <FaInstagram size={35} className="text-violet-500 hover:text-white hover:bg-blue-400 rounded-xl"/>
             </a>
-            <a className="p-2">
-              <FaYoutube size={25}/>
+            <a className="p-3">
+              <FaYoutube size={35} className="text-red-600 hover:text-white hover:bg-blue-400 rounded-xl"/>
             </a>
-            <a className="p-2">
-              <FaTwitter size={25}/>
+            <a className="p-3">
+              <FaTwitter size={35} className="text-sky-500 hover:text-white hover:bg-blue-400 rounded-xl"/>
             </a>
           </div>
         </div>
