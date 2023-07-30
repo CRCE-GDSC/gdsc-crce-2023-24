@@ -40,14 +40,14 @@ const Navbar = () => {
         <Link
           href="/"
           onClick={handleNav}
-          className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-green-500 shadow-gray-400 m-3 p-3 cursor-pointer hover:scale-105 ease-in duration-200"
+          className="text-white w-[75%] flex justify-center items-center rounded-full shadow-lg bg-blue-500 shadow-gray-400 m-3 p-3 cursor-pointer hover:scale-105 ease-in duration-200"
         >
           Home
         </Link>
         <Link
           href="#about"
           onClick={handleNav}
-          className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-green-500 shadow-gray-400 m-3 p-3 cursor-pointer hover:scale-105 ease-in duration-200"
+          className="text-white w-[75%] flex justify-center items-center rounded-full shadow-lg bg-blue-500 shadow-gray-400 m-3 p-3 cursor-pointer hover:scale-105 ease-in duration-200"
         >
           About Us
         </Link>
@@ -55,7 +55,7 @@ const Navbar = () => {
         <Link
           href="#what"
           onClick={handleNav}
-          className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-green-500 shadow-gray-400 m-3 p-3 cursor-pointer hover:scale-105 ease-in duration-200"
+          className="text-white w-[75%] flex justify-center items-center rounded-full shadow-lg bg-blue-500 shadow-gray-400 m-3 p-3 cursor-pointer hover:scale-105 ease-in duration-200"
         >
           What we do
         </Link>
@@ -63,7 +63,7 @@ const Navbar = () => {
         <Link
           href="#events"
           onClick={handleNav}
-          className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-green-500 shadow-gray-400 m-3 p-3 cursor-pointer hover:scale-105 ease-in duration-200"
+          className="text-white w-[75%] flex justify-center items-center rounded-full shadow-lg bg-blue-500 shadow-gray-400 m-3 p-3 cursor-pointer hover:scale-105 ease-in duration-200"
         >
           Events
         </Link>
@@ -71,7 +71,7 @@ const Navbar = () => {
         <Link
           href="#team"
           onClick={handleNav}
-          className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-green-500 shadow-gray-400 m-3 p-3 cursor-pointer hover:scale-105 ease-in duration-200"
+          className="text-white w-[75%] flex justify-center items-center rounded-full shadow-lg bg-blue-500 shadow-gray-400 m-3 p-3 cursor-pointer hover:scale-105 ease-in duration-200"
         >
           Our Team
         </Link>
@@ -79,7 +79,7 @@ const Navbar = () => {
         <Link
           href="#foot"
           onClick={handleNav}
-          className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-green-500 shadow-gray-400 m-3 p-3 cursor-pointer hover:scale-105 ease-in duration-200"
+          className="text-white w-[75%] flex justify-center items-center rounded-full shadow-lg bg-blue-500 shadow-gray-400 m-3 p-3 cursor-pointer hover:scale-105 ease-in duration-200"
         >
           Contact Us
         </Link>

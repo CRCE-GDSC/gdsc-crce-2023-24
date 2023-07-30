@@ -55,7 +55,7 @@ export default function Home() {
       </div>
 
       {/* Absolute positioning for the Events component */}
-      <div className="absolute w-full top-[400px]">
+      <div className="absolute w-full top-[450px]">
         <AboutUs/>
         <Whatwedo />
         <Events />
