@@ -259,7 +259,7 @@ const TeamNew = () => {
                     <h2 className="mb-32 text-3xl font-bold mt-10 pt-10">
                         Meet the <u className="text-primary text-blue-800 ">team</u>
                     </h2>
-                    <h3 className='text-3xl font-semibold mb-10'>GDSC SENIOR CABINET 2022-23</h3>
+                    <h3 className='text-3xl font-semibold mb-10'>GDSC SENIOR CABINET 2023-24</h3>
                     <div className="grid gap-x-6 md:grid-cols-4 lg:gap-x-12 ">
                         {Seniors24.map((Member, index) =>(
                                 <div key={index} className="mb-24 md:mb-0 py-24">
@@ -320,7 +320,7 @@ const TeamNew = () => {
                         ))}
                     </div>
     
-                    <h3 className='text-3xl font-semibold mb-10'>GDSC JUNIOR CABINET 2022-23</h3>
+                    <h3 className='text-3xl font-semibold mb-10'>GDSC JUNIOR CABINET 2023-24</h3>
                     <div className="grid gap-x-6 md:grid-cols-4 lg:gap-x-12 ">
                         {Juniors24.map((Member, index) =>(
                                 <div key={index} className="mb-24 md:mb-0 py-24">

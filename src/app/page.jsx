@@ -8,16 +8,17 @@ import Footer from '../../components/Footer';
 
 export default function Home() {
   return (
-    <main className="relative flex max-h-screen flex-col items-center justify-between w-full bg-[fdfdfd] p-24">
+    <main className="relative flex max-h-screen flex-col items-center justify-between w-full bg-[fdfdfd]">
       {/* Background Image */}
-      <div className="min-h-[400px] w-full relative mx-10 max-sm:hidden">
-        <Image
-          src="/assets/DSC.gif"
-          alt="Background Image"
-          layout="fill"
-          objectFit="cover"
-        />
-      </div>
+      <div className="w-full relative max-sm:hidden" style={{ height: '50%', overflow: 'hidden' }}>
+  <Image
+    src="/assets/DSC3.gif"
+    alt="Background Image"
+    width={10000}
+    height={1}
+  />
+</div>
+
 
       <div className="min-h-[350px] w-[100%] relative mx-10 justify-center sm:hidden">
         <Image
@@ -32,7 +33,7 @@ export default function Home() {
       <div className="absolute inset-0 flex flex-col items-center justify-center z-10 ">
         {/* Your content goes here */}
         <div className="container mx-auto p-8 text-white text-center relative top-[-250px] mt-48 pt-40">
-          <h1 className="text-7xl font-bold blue_gradient max-sm:text-5xl max-sm:pt-40 text-left">Welcome to <span className='google_gradient'>GDSC</span></h1>
+          <h1 className="text-7xl font-bold blue_gradient max-sm:text-5xl max-sm:pt-56 text-left">Welcome to <span className='google_gradient'>GDSC</span></h1>
           <p className="text-3xl font-bold orange_gradient pt-12 text-left">
             Get ready to delve into the World of Developers
           </p>

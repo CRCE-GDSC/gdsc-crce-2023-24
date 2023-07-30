@@ -2,8 +2,8 @@ import React from 'react';
 
 const AboutUs = () => {
   return (
-    <div className="container mx-auto scroll-mt-96"  id="about">
-        <h3 className="text-5xl text-[#515e68] mb-6 text-center pb-10 bg-[#fdfdfd] max-sm:pt-14 max-sm:text-4xl max-sm:mb-0">About Us</h3>
+    <div className="container mx-auto scroll-mt-96 lg:pt-96"  id="about">
+        <h3 className="text-5xl text-[#515e68] mb-6 text-center pb-10 bg-[#fdfdfd] max-sm:pt-14 max-sm:text-4xl max-sm:mb-0 font-medium ">About Us</h3>
 
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
 
