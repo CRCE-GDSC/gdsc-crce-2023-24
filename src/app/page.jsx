@@ -19,12 +19,12 @@ export default function Home() {
         />
       </div>
 
-      <div className="min-h-[350px] w-[100%] relative mx-10 sm:hidden">
+      <div className="min-h-[350px] w-[100%] relative mx-10 justify-center sm:hidden">
         <Image
           src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjNuMDZvZHhvaTJ3dDI4MmZkMDdoeTdyaDhpNmF5aDNzNjZzdWlzeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/X328DXRD2BGbFOmLe1/giphy.gif"
           alt="Background Image"
-          layout="fill"
-          objectFit="cover"
+          width={700}
+          height={600}
         />
       </div>
 
