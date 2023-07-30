@@ -257,9 +257,10 @@ const TeamNew = () => {
             <div className="container my-24 mx-auto md:px-6 bg-blue-100 max-w-full pt-10">
       
                 <section className="mb-32 text-center">
-                    <h2 className="mb-32 text-3xl font-bold mt-10 pt-10">
+                    <h2 className="mb-5 text-3xl font-bold mt-10 pt-10">
                         Meet the <u className="text-primary text-blue-800 ">Team</u>
                     </h2>
+                    <p className='text-center mb-32'>“All we can do is our best. And sometimes the best that we can do... is to start over.” - Hayley Atwell.</p>
                     <h3 className='text-3xl font-semibold mb-10'>GDSC SENIOR CABINET 2023-24</h3>
                     <div className="grid gap-x-6 md:grid-cols-4 lg:gap-x-12 ">
                         {Seniors24.map((Member, index) =>(
@@ -380,13 +381,8 @@ const TeamNew = () => {
                                 </div>
                             </div>
                         ))}
-                    </div>
-    
-                    
-    
-                    
+                    </div>   
                 </section>
-      
             </div>
         </>
       )
