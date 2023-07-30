@@ -7,7 +7,7 @@ const Footer = () => {
     <div className="bg-sky-50 lg:px-[120px] mt-10">
       <footer className="container p-10 gap-7 text-base-content">
         <div className="grid md:grid-cols-5 grid-cols-1 ">
-        <div className="col-span-2 max-w-[350px]" >
+        <div className="md:col-span-2 max-w-[350px] py-3" >
           <h2 className="text-lg uppercase font-semibold text-gray-600">GDSC Community</h2>
           <p className="text-normal ">
             Helping students to bridge the gap between theory and practice. By
@@ -16,7 +16,7 @@ const Footer = () => {
             their community.
           </p>
         </div>
-        <div>
+        <div className="py-3">
           <span className="text-lg uppercase font-semibold text-gray-600">Useful Links</span>
           <br/>
           <Link href="/" className="hover:text-blue-700">
@@ -36,7 +36,7 @@ const Footer = () => {
           </Link>
           <br/>
         </div>
-        <div>
+        <div className="py-3">
           <span className="text-lg uppercase font-semibold text-gray-600">Contact Us</span>
           <p>
             Fr. Conceicao Rodrigues College Of Engineering <br/>
@@ -48,7 +48,7 @@ const Footer = () => {
             <span><strong>Email : </strong>crcegdsc@gmail.com</span>
           </p>
         </div>
-        <div className="pl-10">
+        <div className="md:pl-10 py-3">
           <span className="text-lg uppercase font-semibold text-gray-600">Social</span>
           <div className="flex flex-row" id="foot">
             <a className="p-2">
