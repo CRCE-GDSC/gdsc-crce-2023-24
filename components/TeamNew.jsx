@@ -10,7 +10,7 @@ const Seniors24 =[
     },
     {
         name: 'Arnav Pandita',
-        imgSrc:"/../public/assets/team/Arnav.jpg",
+        imgSrc:"/../public/assets/team/arnav3.jpeg",
         position: 'GDSC Lead',
         linkedIn:'http://linkedin.com/in/arnav-pandita-01355924a',
         Instagram: 'https://instagram.com/arnavp_21?igshid=OGQ5ZDc2ODk2ZA==',
@@ -24,7 +24,7 @@ const Seniors24 =[
     },
     {
         name: 'Sanket Mane',
-        imgSrc:"/../public/assets/team/Sanket.jpeg",
+        imgSrc:"/../public/assets/team/sanket3.jpeg",
         position: 'Head of Operations',
         linkedIn:'https://www.linkedin.com/in/sanketmane2323',
         Instagram: 'https://www.instagram.com/_sanket.mane23',
@@ -101,7 +101,7 @@ const Seniors24 =[
     },
     {
         name: 'Chhand Chaughule',
-        imgSrc:"/../public/assets/team/chhand.jpg",
+        imgSrc:"/../public/assets/team/chhand2.jpeg",
         position: 'Web Development Lead',
         linkedIn:'https://www.linkedin.com/in/chhand2808/',
         Instagram: 'https://www.instagram.com/chhand__2808/',

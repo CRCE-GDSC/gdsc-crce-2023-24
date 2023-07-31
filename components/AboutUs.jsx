@@ -15,10 +15,10 @@ const AboutUs = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
             </svg>
           </div>
-          <div className="font-bold text-2xl mb-3">
-            <h4 className="text-gray-500 mx-4">Concept of GDSC</h4>
+          <div className="font-poppins font-bold text-2xl mb-3">
+            <h4 className="text-gray-500 mx-4 font-poppins">Concept of GDSC</h4>
           </div>
-          <p className="text-gray-700 text-base mx-4">
+          <p className="text-gray-700 font-poppins text-base mx-4">
             The GDSC program is a grassroots channel through which Google provides
             development, mobile & web development skills for students, towards employability.
           </p>
@@ -31,10 +31,10 @@ const AboutUs = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M22 12h-4l-3 9L9 3l-3 9H2" />
             </svg>
           </div>
-          <div className="font-bold text-xl mb-2">
+          <div className="font-bold font-poppins text-xl mb-2">
             <h4 className="text-gray-500 mx-4">Why GDSC?</h4>
           </div>
-          <p className="text-gray-700 text-base mx-4">
+          <p className="text-gray-700 font-poppins text-base mx-4">
             For students to learn development skills, solve problems through technology
             and inspire them to be world class developers and change makers.
           </p>

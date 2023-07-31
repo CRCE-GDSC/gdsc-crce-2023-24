@@ -17,6 +17,9 @@
     html {
       @apply scroll-smooth;
     }
+    * {
+        font-family: "Poppins", sans-serif;
+    }
   }
 
 /* Tailwind Styles */
