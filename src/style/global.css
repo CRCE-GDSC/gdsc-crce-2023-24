@@ -59,6 +59,35 @@
           hsl(var(--gdsc-green)) 0px var(--border-offset) 0px calc(var(--border-size) * -1),
           hsl(var(--border)) 0px var(--border-offset);
       }
+
+      .x-shadow-red {
+        border-radius: 10px;
+        box-shadow: hsl(var(--border)) 0px 0px 0px var(--border-size) inset,
+          hsl(var(--gdsc-red)) calc(var(--border-offset) * -1) var(--border-offset) 0px calc(var(--border-size) * -1),
+          hsl(var(--border)) calc(var(--border-offset) * -1) var(--border-offset);
+      }
+
+      .x-shadow-yellow {
+        border-radius: 10px;
+        box-shadow: hsl(var(--border)) 0px 0px 0px var(--border-size) inset,
+          hsl(var(--gdsc-yellow)) calc(var(--border-offset) * -1) var(--border-offset) 0px calc(var(--border-size) * -1),
+          hsl(var(--border)) calc(var(--border-offset) * -1) var(--border-offset);
+      }
+
+      .x-shadow-blue {
+        border-radius: 10px;
+        box-shadow: hsl(var(--border)) 0px 0px 0px var(--border-size) inset,
+          hsl(var(--gdsc-blue)) calc(var(--border-offset) * -1) var(--border-offset) 0px calc(var(--border-size) * -1),
+          hsl(var(--border)) calc(var(--border-offset) * -1) var(--border-offset);
+      }
+
+      .x-shadow-green {
+        border-radius: 10px;
+        box-shadow: hsl(var(--border)) 0px 0px 0px var(--border-size) inset,
+          hsl(var(--gdsc-green)) calc(var(--border-offset) * -1) var(--border-offset) 0px calc(var(--border-size) * -1),
+          hsl(var(--border)) calc(var(--border-offset) * -1) var(--border-offset);
+      }
+      
   }
   
 

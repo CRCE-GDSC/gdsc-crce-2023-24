@@ -5,14 +5,14 @@ const AboutUs = () => {
 
     <div className="container mx-auto scroll-mt-96 xl:py-16 mt-10"  id="about">
         <div class="flex justify-center">
-  <h3 class="text-gray-700 text-5xl mb-6 py-3 px-4 font-poppins d-shadow-yellow text-center w-auto items-center justify-center">About Us</h3>
+  <h3 class="text-gray-700 text-5xl mb-6 py-3 px-4 font-poppins x-shadow-yellow text-center w-auto items-center justify-center">About Us</h3>
 </div>
 
 
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 mt-10">
 
         {/* Card 1 */}
-        <div className="rounded overflow-hidden shadow-lg feature-card p-5">
+        <div className="overflow-hidden feature-card p-5 d-shadow-red">
           <div className="flex items-center justify-center w-10 h-10  rounded-full mb-4 mx-4">
             <svg className="w-8 h-8 text-xl text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
