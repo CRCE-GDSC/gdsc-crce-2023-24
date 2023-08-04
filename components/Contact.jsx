@@ -10,8 +10,8 @@ const Contact = () => {
         <h2 className="mb-6 text-4xl tracking-tight font-semibold text-center text-gray-900 font-poppins">Contact Us</h2>
 
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-full mx-4">
-<div class="left">
-        <div class="map mb-4 mb-lg-0">
+<div className="left">
+        <div className="map mb-4 mb-lg-0">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.4410136005313!2d72.81818181433687!3d19.04433805791724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9410830616d%3A0x111b63353dbbce01!2sFr.%20Conceicao%20Rodrigues%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1660900113753!5m2!1sen!2sin"
             width="100%" height="345px"  allowfullscreen="" frameborder="0" loading="lazy"
