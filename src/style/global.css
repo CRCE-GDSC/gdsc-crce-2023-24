@@ -14,13 +14,53 @@
 }
 
 @layer base {
-    html {
-      @apply scroll-smooth;
+    :root {
+        --gdsc-red: 0 100% 50%;
+        --gdsc-blue: 240 100% 50%;
+        --gdsc-yellow: 60 100% 50%;
+        --gdsc-green: 120 100% 53%;
+    
+        --border: 0 0% 0%;
+        --border-size: 3px;
+        --border-offset: 10px;
+      html {
+        @apply scroll-smooth;
+      }
+      * {
+          font-family: "Poppins", sans-serif;
+      }
     }
-    * {
-        font-family: "Poppins", sans-serif;
-    }
+  
+    .d-shadow-red {
+        /* Main Styles */
+        border-radius: 10px;
+        box-shadow: hsl(var(--border)) 0px 0px 0px var(--border-size) inset,
+          hsl(var(--gdsc-red)) 0px var(--border-offset) 0px calc(var(--border-size) * -1),
+          hsl(var(--border)) 0px var(--border-offset);
+      }
+    
+      .d-shadow-yellow {
+        border-radius: 10px;
+        box-shadow: hsl(var(--border)) 0px 0px 0px var(--border-size) inset,
+          hsl(var(--gdsc-yellow)) 0px var(--border-offset) 0px calc(var(--border-size) * -1),
+          hsl(var(--border)) 0px var(--border-offset);
+      }
+    
+      .d-shadow-blue {
+        border-radius: 10px;
+        box-shadow: hsl(var(--border)) 0px 0px 0px var(--border-size) inset,
+          hsl(var(--gdsc-blue)) 0px var(--border-offset) 0px calc(var(--border-size) * -1),
+          hsl(var(--border)) 0px var(--border-offset);
+      }
+    
+      .d-shadow-green {
+        border-radius: 10px;
+        box-shadow: hsl(var(--border)) 0px 0px 0px var(--border-size) inset,
+          hsl(var(--gdsc-green)) 0px var(--border-offset) 0px calc(var(--border-size) * -1),
+          hsl(var(--border)) 0px var(--border-offset);
+      }
   }
+  
 
 /* Tailwind Styles */
 

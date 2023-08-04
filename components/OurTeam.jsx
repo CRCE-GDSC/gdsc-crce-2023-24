@@ -5,7 +5,10 @@ const OurTeam = () => {
   return (
 
     <div className="flex flex-col items-center bg-white mb-7 py-16 max-w-6xl lg:max-w-full shadow-lg">
-      <h2 className="text-5xl max-sm:text-3xl text-gray-700 mb-2 font-poppins">Get to know the Team</h2>
+      <div class="flex justify-center">
+  <h3 class="text-gray-700 text-5xl mb-6 py-3 px-4 font-poppins d-shadow-blue text-center w-auto items-center justify-center">Get to know the Team</h3>
+</div>
+
       <p className='mt-5 text-slate-500 text-center max-w-xl mx-6 font-poppins'>“Individually, we are one drop. Together, we are an ocean.” — Ryunosuke Satoro</p>
       <div className="flex gap-4 mt-8">
         <div className="text-center px-6">

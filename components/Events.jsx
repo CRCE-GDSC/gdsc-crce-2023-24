@@ -62,7 +62,10 @@ const Events = () => {
     <motion.section id="services" className="bg-slate-100 py-16 scroll-mt-96">
       <div className="flex-1 justify-center items-center" >
         <div className="text-center w-full">
-          <h3 className=' text-gray-700  text-5xl mb-6 py-3 font-poppins'>Events</h3>
+        <div class="flex justify-center">
+  <h3 class="text-gray-700 text-5xl mb-6 py-3 font-poppins d-shadow-red text-center w-56 items-center justify-center">Events</h3>
+        </div>
+
           <p className="mx-2 text-gray-600  text-center justify-center items-center lg:mx-auto max-w-full mb-6 lg:max-w-xl ">
             We conduct regular events including tech talks and workshops to make students familiar with the latest tech advancements and programs.
           </p>
