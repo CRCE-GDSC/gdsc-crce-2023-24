@@ -5,11 +5,11 @@ const AboutUs = () => {
 
     <div className="container mx-auto scroll-mt-96 xl:py-16 mt-10"  id="about">
         <div class="flex justify-center">
-  <h3 class="text-gray-700 text-5xl mb-6 py-3 px-4 font-poppins x-shadow-yellow text-center w-auto items-center justify-center">About Us</h3>
+  <h3 class="text-gray-700 max-xl:text-5xl max-md:text-4xl max-sm:text-3xl max-sm:pl-2 mb-6 py-3 px-4 font-poppins x-shadow-yellow text-center w-auto items-center justify-center">About Us</h3>
 </div>
 
 
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 mt-10">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 mt-10 max-sm:px-2">
 
         {/* Card 1 */}
         <div className="overflow-hidden feature-card p-5 d-shadow-blue">
