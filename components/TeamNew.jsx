@@ -267,7 +267,7 @@ const TeamNew = () => {
                                 <div key={index} className="mb-24 md:mb-0 py-24">
                                 <div
                                     
-                                    className="block h-full rounded-lg mx-4 bg-amber-50 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] hover:bg-orange-50 hover:translate-y-5">
+                                    className="block h-full rounded-lg mx-4 bg-amber-50 d-shadow-green hover:bg-orange-50 hover:translate-y-5">
                                     <div className="flex justify-center">
                                         <div className="flex justify-center -mt-[75px]">
                                             <Image 
@@ -328,7 +328,7 @@ const TeamNew = () => {
                                 <div key={index} className="mb-24 md:mb-0 py-24">
                                 <div
                                     
-                                    className="block h-full rounded-lg mx-4 bg-amber-50 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] hover:bg-orange-50 hover:translate-y-5">
+                                    className="block h-full rounded-lg mx-4 bg-amber-50 d-shadow-red hover:bg-orange-50 hover:translate-y-5">
                                     <div className="flex justify-center">
                                         <div className="flex justify-center -mt-[75px]">
                                             <Image 

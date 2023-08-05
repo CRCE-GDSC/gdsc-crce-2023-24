@@ -63,7 +63,7 @@ const Events = () => {
       <div className="flex-1 justify-center items-center" >
         <div className="text-center w-full">
         <div class="flex justify-center">
-  <h3 class="text-gray-700 text-5xl mb-6 py-3 font-poppins d-shadow-red text-center w-56 items-center justify-center">Events</h3>
+  <h3 class="text-gray-700 text-5xl mb-6 py-3 font-poppins x-shadow-red text-center w-56 items-center justify-center">Events</h3>
         </div>
 
           <p className="mx-2 text-gray-600  text-center justify-center items-center lg:mx-auto max-w-full mb-6 lg:max-w-xl ">
@@ -71,21 +71,21 @@ const Events = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 justify-items-center lg:mx-auto mx-2 mt-10 lg:max-w-4xl ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 justify-items-center lg:mx-auto mx-2 mt-10 lg:max-w-4xl max-sm:pl-1 max-lg:pl-2">
           {eventsData.map((event, index) => (
             <motion.div
               key={index}
-              className="box max-w-md rounded-lg shadow-lg flex items-center justify-center mx-auto lg:ml-0 cursor-pointer bg-white p-2 lg:p-0"
+              className="box max-w-md x-shadow-red flex items-center justify-center mx-auto lg:ml-0 cursor-pointer bg-white p-2 lg:p-0 "
               animate={{ scale: 1 }}
               transition={{ duration: 2, delay: index * 0.1, type: "spring", damping: 2 }}
               whileHover={{ y: -10 }}
             >
               <div className="left">
-                <div className="h-[110px] w-[110px] lg:w-[160px] lg:h-[160px] overflow-hidden rounded-lg mx-auto">
+                <div className="h-[110px] w-[110px] lg:w-[150px] lg:h-[150px] overflow-hidden rounded-lg mx-auto">
                   <Image
                     src={event.imgSrc}
                     alt={event.title}
-                    className=" ml-2 lg:ml-0  h-[110px] w-[110px] lg:w-[160px] lg:h-[160px] rounded-lg"
+                    className=" ml-2 lg:ml-0  h-[110px] w-[110px] lg:w-[150px] lg:h-[147px] rounded-lg lg:pt-1 lg:pl-1"
                     quality={100}
                     width={500}
                     height={500}

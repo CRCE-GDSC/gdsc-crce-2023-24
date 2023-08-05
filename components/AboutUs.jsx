@@ -18,7 +18,7 @@ const AboutUs = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
             </svg>
           </div>
-          <div className="font-poppins font-bold text-2xl mb-3">
+          <div className="font-poppins font-bold text-xl mb-3">
             <h4 className="text-gray-500 mx-4 font-poppins">Concept of GDSC</h4>
           </div>
           <p className="text-gray-700 font-poppins text-base mx-4">
