@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main className="relative flex max-h-screen flex-col items-center justify-between w-full bg-[fdfdfd]">
       {/* Background Image */}
-      <div className="w-full relative max-sm:hidden" style={{ height: '50%', overflow: 'hidden' }}>
+      <div className="w-full relative max-sm:hidden min-h-screen">
   <Image
     src="/assets/DSC3.gif"
     alt="Background Image"
@@ -55,7 +55,7 @@ export default function Home() {
       </div>
 
       {/* Absolute positioning for the Events component */}
-      <div className="absolute w-full top-[450px]">
+      <div className="w-full max-sm:pt-562">
         <AboutUs/>
         <Whatwedo />
         <Events />
