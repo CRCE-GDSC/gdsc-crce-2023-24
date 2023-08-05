@@ -15,10 +15,10 @@
 
 @layer base {
     :root {
-        --gdsc-red: 0 100% 50%;
-        --gdsc-blue: 240 100% 50%;
-        --gdsc-yellow: 60 100% 50%;
-        --gdsc-green: 120 100% 53%;
+        --gdsc-red: 4 90% 58%;
+        --gdsc-blue: 217 89% 61%;
+        --gdsc-yellow: 45 100% 58%;
+        --gdsc-green: 136 53% 43%;
     
         --border: 0 0% 0%;
         --border-size: 3px;

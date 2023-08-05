@@ -12,7 +12,7 @@ const AboutUs = () => {
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 mt-10">
 
         {/* Card 1 */}
-        <div className="overflow-hidden feature-card p-5 d-shadow-red">
+        <div className="overflow-hidden feature-card p-5 d-shadow-blue">
           <div className="flex items-center justify-center w-10 h-10  rounded-full mb-4 mx-4">
             <svg className="w-8 h-8 text-xl text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
@@ -28,7 +28,7 @@ const AboutUs = () => {
         </div>
 
         {/* Card 2 */}
-        <div className="rounded overflow-hidden shadow-lg feature-card p-5">
+        <div className="overflow-hidden d-shadow-green feature-card p-5">
           <div className="flex items-center justify-center w-10 h-10 rounded-full mb-4 mx-4">
             <svg className="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M22 12h-4l-3 9L9 3l-3 9H2" />
@@ -44,7 +44,7 @@ const AboutUs = () => {
         </div>
 
         {/* Card 3 */}
-        <div className="rounded overflow-hidden shadow-lg feature-card p-5">
+        <div className="overflow-hidden d-shadow-red feature-card p-5">
           <div className="flex items-center justify-center w-10 h-10  rounded-full mb-4 mx-4">
             <svg className="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
