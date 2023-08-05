@@ -4,7 +4,7 @@ const Whatwedo = () => {
     return(
       <div className="w-full bg-sky-50 px-12 scroll-mt-96 py-10" id="what">
 <div class="flex justify-center">
-  <h3 class="text-gray-700 max-xl:text-5xl max-md:text-4xl max-sm:text-3xl max-sm:pl-2 mb-6 py-3 px-4 font-poppins x-shadow-green text-center w-auto items-center justify-center">What We Do</h3>
+  <h3 class="text-gray-700 xl:text-5xl max-md:text-4xl max-sm:text-3xl max-sm:pl-2 mb-6 py-3 px-4 font-poppins x-shadow-green text-center w-auto items-center justify-center">What We Do</h3>
 </div>
 
 

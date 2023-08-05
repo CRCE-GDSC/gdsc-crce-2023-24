@@ -63,7 +63,7 @@ const Events = () => {
       <div className="flex-1 justify-center items-center" >
         <div className="text-center w-full">
         <div class="flex justify-center">
-  <h3 class="text-gray-700 max-xl:text-5xl max-md:text-4xl max-sm:text-3xl max-sm:pl-2 mb-6 py-3 font-poppins x-shadow-red text-center w-56 items-center justify-center">Events</h3>
+  <h3 class="text-gray-700 xl:text-5xl max-md:text-4xl max-sm:text-3xl max-sm:pl-2 mb-6 py-3 font-poppins x-shadow-red text-center w-56 items-center justify-center">Events</h3>
         </div>
 
           <p className="mx-2 text-gray-600  text-center justify-center items-center lg:mx-auto max-w-full mb-6 lg:max-w-xl ">

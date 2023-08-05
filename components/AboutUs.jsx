@@ -5,7 +5,7 @@ const AboutUs = () => {
 
     <div className="container mx-auto scroll-mt-96 xl:py-16 mt-10"  id="about">
         <div class="flex justify-center">
-  <h3 class="text-gray-700 max-xl:text-5xl max-md:text-4xl max-sm:text-3xl max-sm:pl-2 mb-6 py-3 px-4 font-poppins x-shadow-yellow text-center w-auto items-center justify-center">About Us</h3>
+  <h3 class="text-gray-700 xl:text-5xl max-md:text-4xl max-sm:text-3xl mb-6 py-3 px-4 font-poppins x-shadow-yellow text-center w-auto items-center justify-center">About Us</h3>
 </div>
 
 
