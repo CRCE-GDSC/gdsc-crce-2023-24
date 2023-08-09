@@ -11,17 +11,20 @@ export default function Home() {
   return (
     <main className="relative flex max-h-screen flex-col items-center justify-between w-full bg-[fdfdfd]">
       {/* Background Image */}
-      <div className="w-full relative max-sm:hidden min-h-fit">
-  <Image
-    src="/assets/DSC3.gif"
-    alt="Background Image"
-    width={10000}
-    height={1}
-  />
+      <div className="container z-shadow-yellow mt-36 px-4 py-1 max-md:hidden">
+  <div className="w-full relative max-sm:hidden min-h-fit">
+    <Image
+      src="/assets/DSC3.gif"
+      alt="Background Image"
+      width={10000}
+      height={1}
+    />
+  </div>
 </div>
 
 
-      <div className="min-h-[350px] w-[100%] relative mx-10 justify-center sm:hidden">
+
+      <div className="min-h-[350px] w-[100%] relative mx-10 justify-center md:hidden">
         <Image
           src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjNuMDZvZHhvaTJ3dDI4MmZkMDdoeTdyaDhpNmF5aDNzNjZzdWlzeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/X328DXRD2BGbFOmLe1/giphy.gif"
           alt="Background Image"

@@ -23,6 +23,9 @@
         --border: 0 0% 0%;
         --border-size: 3px;
         --border-offset: 10px;
+        --border-offset2: 20px;
+
+
       html {
         @apply scroll-smooth;
       }
@@ -86,6 +89,13 @@
         box-shadow: hsl(var(--border)) 0px 0px 0px var(--border-size) inset,
           hsl(var(--gdsc-green)) calc(var(--border-offset) * -1) var(--border-offset) 0px calc(var(--border-size) * -1),
           hsl(var(--border)) calc(var(--border-offset) * -1) var(--border-offset);
+      }
+
+      .z-shadow-yellow {
+        border-radius: 10px;
+        box-shadow: hsl(var(--border)) 0px 0px 0px var(--border-size) inset,
+          hsl(var(--gdsc-yellow)) calc(var(--border-offset2) * -1) var(--border-offset2) 0px calc(var(--border-size) * -1),
+          hsl(var(--border)) calc(var(--border-offset2) * -1) var(--border-offset2);
       }
       
   }
