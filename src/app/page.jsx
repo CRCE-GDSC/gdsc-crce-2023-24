@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import OurTeam from '/components/OurTeam';
+import OurTeam from '../../components/OurTeam';
 import Whatwedo from '../../components/Whatwedo';
 import Link from 'next/link';
 import AboutUs from '../../components/AboutUs';
@@ -36,7 +36,7 @@ export default function Home() {
       {/* Content Container */}
       <div className="absolute inset-0 flex flex-col items-center justify-center z-10 sm:pt-32 ">
         {/* Your content goes here */}
-        <div className="container mx-auto p-8 text-white text-center relative top-[-250px] mt-48 pt-40 xl:pl-20">
+        <div className="container mx-auto p-8 text-white text-center relative xl:top-[-250px] max-xl:top-[-300px] max-lg:top-[-130px] max-sm:top-[-250px] mt-48 pt-40 xl:pl-20">
           <h1 className="text-7xl font-bold blue_gradient max-sm:text-6xl max-sm:pt-56 max-sm:text-center mt-20 text-center lg:text-left">Welcome to GDSC</h1>
           <p className="text-4xl max-sm:text-3xl font-poppins font-semibold orange_gradient pt-12 text-center lg:text-left max-w-xl max-lg:text-center max-lg:justify-center">
             Get ready to delve into the World of Developers
