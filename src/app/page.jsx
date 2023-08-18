@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import { Icons } from '../../components/icons'
+import { auth } from '../../lib/firebase'
 import OurTeam from '../../components/OurTeam'
 import Whatwedo from '../../components/Whatwedo'
 import Link from 'next/link'
