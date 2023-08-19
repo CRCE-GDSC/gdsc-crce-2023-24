@@ -19,7 +19,7 @@ const Profile = () => {
     {
       eventname: 'C Programming Workshop',
       eventpreview: '/assets/team/alvin.jpg',
-      eventstatus: 'Attended',
+      eventstatus: 'Not Attended',
       eventpoints: '25',
     },
   ]
@@ -46,43 +46,43 @@ const Profile = () => {
         <div
           class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
         >
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#FFCA28] dark:text-white">
             Name of the card
           </h5>
           <p class="font-normal text-gray-700 dark:text-gray-400">
-            descriptio of the card
+            description of the card
           </p>
         </div>
 
         <div
           class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
         >
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#4285F4] dark:text-white">
             Name of the card
           </h5>
           <p class="font-normal text-gray-700 dark:text-gray-400">
-            descriptio of the card
+            description of the card
           </p>
         </div>
 
         <div
           class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
         >
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#F44336] dark:text-white">
             Name of the card
           </h5>
           <p class="font-normal text-gray-700 dark:text-gray-400">
-            descriptio of the card
+            description of the card
           </p>
         </div>
       </div>
 
       <div className="mt-5 mx-5">
-        <h1 className="text-lg font-semibold ">Events</h1>
+        <h1 className="text-lg font-semibold ">Event Status</h1>
 
         <div class="relative overflow-x-auto">
           <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <thead class="text-xs text-[#FFCA28] uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
                 <th scope="col" class="px-6 py-3">
                   Event name
@@ -103,15 +103,17 @@ const Profile = () => {
                 <tr key={index} class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                   <th
                     scope="row"
-                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                    class="px-6 py-4 font-medium text-[#4285F4] whitespace-nowrap dark:text-white"
                   >
                     {values.eventname}
                   </th>
                   <td class="px-6 py-4">
                     <img src={values.eventpreview} alt="" height={40} width={40}/>
                   </td>
-                  <td class="px-6 py-4">{values.eventstatus}</td>
-                  <td class="px-6 py-4">{values.eventpoints}</td>
+                  <td className={`px-6 py-4 ${values.eventstatus === 'Attended' ? 'text-[#35A853]' : 'text-[#F44336]'} dark:text-white`}>
+                    {values.eventstatus}
+                  </td>
+                  <td class="px-6 py-4 text-[#35A853]">{values.eventpoints}</td>
                 </tr>
               ))}
             </tbody>
