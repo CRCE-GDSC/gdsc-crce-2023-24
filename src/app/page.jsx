@@ -71,6 +71,14 @@ export default function Home() {
                 Sign in
               </button>
             )}
+            {user && (
+              <button
+                className="rounded-full text-center bg-blue-500 text-white py-2 px-6 cursor-pointer text-xl font-bold transform transition-all hover:scale-110 shadow-lg hover:shadow-xl lg:text-left"
+                onClick={() => auth.signOut()}
+              >
+                Sign out
+              </button>
+            )}
           </div>
         </div>
       </div>
