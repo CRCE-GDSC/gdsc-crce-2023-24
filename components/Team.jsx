@@ -267,7 +267,7 @@ const Team = () => {
   
             <section className="mb-32 text-center">
                 <h2 className="mb-5 text-3xl font-bold mt-10 pt-10">
-                    Meet the <u className="text-primary text-blue-800 ">Team</u>
+                    Meet the <u className="text-blue-800 ">Team</u>
                 </h2>
                 <p className='text-center mb-32'>“Individually, we are one drop. Together, we are an ocean.” — Ryunosuke Satoro</p>
                 <h3 className='text-3xl font-semibold mb-10'>GDSC SENIOR CABINET 2022-23</h3>
