@@ -4,7 +4,8 @@ module.exports = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    "./node_modules/flowbite/**/*.js"
+    "./node_modules/flowbite/**/*.js",
+    "./node_modules/flowbite-react/**/*.js",
   ],
   theme: {
     extend: {
@@ -20,7 +21,7 @@ module.exports = {
       },
     },
   },
-  plugins: [require("daisyui", 'flowbite/plugin')],
+  plugins: [require("daisyui"), require('flowbite/plugin')],
   daisyui: {
     themes: ["light"],
   },
