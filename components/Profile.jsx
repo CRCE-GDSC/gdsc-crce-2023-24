@@ -49,7 +49,7 @@ const Profile = () => {
         ))}
       </div>
 
-      <div className="grid md:grid-cols-3 gap-3">
+      <div className="grid md:grid-cols-3 gap-3 mt-6">
         <div className="overflow-hidden d-shadow-yellow feature-card p-5">
           <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#FFCA28] dark:text-white">
             YOUR POINTS
@@ -78,23 +78,24 @@ const Profile = () => {
         </div>
       </div>
 
-      <div className="mt-5 mx-5">
+     
+      <div className="mt-8 mx-5">
         <h1 className="text-lg font-semibold ">Event Status</h1>
-
+        <div className='mt-4'>
         <div class="relative overflow-x-auto">
-          <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+          <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border border-black">
             <thead class="text-xs text-[#FFCA28] uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class="px-6 py-3  border-b border-gray-200 dark:border-gray-700">
                   Event name
                 </th>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class="px-6 py-3 border-b border-gray-200 dark:border-gray-700">
                   Preview
                 </th>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class="px-6 py-3 border-b border-gray-200 dark:border-gray-700">
                   Status
                 </th>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class="px-6 py-3 border-b border-gray-200 dark:border-gray-700">
                   Points
                 </th>
               </tr>
@@ -111,29 +112,19 @@ const Profile = () => {
                   >
                     {values.eventname}
                   </th>
-                  <td class="px-6 py-4">
-                    <img
-                      src={values.eventpreview}
-                      alt=""
-                      height={40}
-                      width={40}
-                    />
+                  <td class="px-6 py-4 border-b border-gray-200 dark:border-gray-700">
+                  <Image src={values.eventpreview} alt="" height={40} width={40} layout="fixed"/>
                   </td>
-                  <td
-                    className={`px-6 py-4 ${
-                      values.eventstatus === 'Attended'
-                        ? 'text-[#35A853]'
-                        : 'text-[#F44336]'
-                    } dark:text-white`}
-                  >
+                  <td className={`px-6 py-4  border-b border-gray-200 dark:border-gray-700 ${values.eventstatus === 'Attended'? 'text-[#35A853]': 'text-[#F44336]' } dark:text-white`} >
                     {values.eventstatus}
                   </td>
-                  <td class="px-6 py-4 text-[#35A853]">{values.eventpoints}</td>
+                  <td class="px-6 py-4 border-b border-gray-200 dark:border-gray-700 text-[#35A853]">{values.eventpoints}</td>
                 </tr>
-              ))}
+              ))} 
             </tbody>
           </table>
-        </div>
+        </div> 
+      </div>
       </div>
     </div>
   )
