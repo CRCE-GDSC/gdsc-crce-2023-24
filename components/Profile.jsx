@@ -43,38 +43,39 @@ const Profile = () => {
       </div>
 
       <div className="grid md:grid-cols-3 gap-3">
-        <div
-          class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
-        >
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#FFCA28] dark:text-white">
-            Name of the card
-          </h5>
-          <p class="font-normal text-gray-700 dark:text-gray-400">
-            description of the card
-          </p>
+
+        <div className="overflow-hidden d-shadow-yellow feature-card p-5">
+
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#FFCA28] dark:text-white">
+              YOUR POINTS
+            </h5>
+            <p class="font-normal text-gray-700 dark:text-gray-400">
+              description of the card
+            </p>
+          
         </div>
 
-        <div
-          class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
-        >
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#4285F4] dark:text-white">
-            Name of the card
-          </h5>
-          <p class="font-normal text-gray-700 dark:text-gray-400">
-            description of the card
-          </p>
+        <div className="overflow-hidden feature-card p-5 d-shadow-blue">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#4285F4] dark:text-white">
+              Name of the card
+            </h5>
+            <p class="font-normal text-gray-700 dark:text-gray-400">
+              description of the card
+            </p>
+          
         </div>
 
-        <div
-          class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
-        >
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#F44336] dark:text-white">
-            Name of the card
-          </h5>
-          <p class="font-normal text-gray-700 dark:text-gray-400">
-            description of the card
-          </p>
+
+        <div className="overflow-hidden d-shadow-red feature-card p-5">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#F44336] dark:text-white">
+              LEADER BOARD
+            </h5>
+            <p class="font-normal text-gray-700 dark:text-gray-400">
+              description of the card
+            </p>
+          
         </div>
+
       </div>
 
       <div className="mt-5 mx-5">
