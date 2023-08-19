@@ -1,6 +1,8 @@
+'use client'
 import Image from 'next/image'
 import { Icons } from '../../components/icons'
 import { auth } from '../../lib/firebase'
+import { useAuthState, useSignInWithGoogle } from 'react-firebase-hooks/auth'
 import OurTeam from '../../components/OurTeam'
 import Whatwedo from '../../components/Whatwedo'
 import Link from 'next/link'
@@ -10,6 +12,9 @@ import Events from '../../components/Events'
 import Contact from '../../components/Contact'
 
 export default function Home() {
+  const [user, loading, error] = useAuthState(auth)
+  const [signInWithGoogle] = useSignInWithGoogle(auth)
+
   return (
     <main className="relative flex max-h-screen flex-col items-center justify-between w-full bg-[fdfdfd]">
       {/* Background Image */}
@@ -50,11 +55,22 @@ export default function Home() {
             </div>
           </div>
           <div className="flex pt-10 max-sm:items-center max-lg:justify-center">
-            <Link href="https://gdsc.community.dev/fr-conceicao-rodrigues-college-of-engineering-mumbai/">
+            <Link
+              href="https://gdsc.community.dev/fr-conceicao-rodrigues-college-of-engineering-mumbai/"
+              className="pr-4"
+            >
               <div className="rounded-full text-center bg-blue-500 text-white py-2 px-6 cursor-pointer text-xl font-bold transform transition-all hover:scale-110 shadow-lg hover:shadow-xl lg:text-left">
                 Join Us
               </div>
             </Link>
+            {(loading || !user) && (
+              <button
+                className="rounded-full text-center bg-blue-500 text-white py-2 px-6 cursor-pointer text-xl font-bold transform transition-all hover:scale-110 shadow-lg hover:shadow-xl lg:text-left"
+                onClick={() => signInWithGoogle()}
+              >
+                Sign in
+              </button>
+            )}
           </div>
         </div>
       </div>
