@@ -4,13 +4,14 @@ module.exports = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./node_modules/flowbite/**/*.js"
   ],
   theme: {
     extend: {
       fontFamily: {
         satoshi: ['"Satoshi"', 'sans-serif'],
         inter: ['"Inter"', 'sans-serif'],
-        poppins: ['"Poppins"','sans-serif'],
+        poppins: ['"Poppins"', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -19,7 +20,7 @@ module.exports = {
       },
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui", 'flowbite/plugin')],
   daisyui: {
     themes: ["light"],
   },
