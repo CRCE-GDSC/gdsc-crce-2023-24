@@ -3,11 +3,11 @@ import React from 'react'
 const AboutUs = () => {
   return (
     <div
-      className="container mx-auto scroll-mt-96 xl:py-16 max-md:mt-32 p-4"
+      className="container mx-auto scroll-mt-96 xl:py-16 p-4 max-sm:mt-0"
       id="about"
     >
       <div className="flex justify-center">
-        <h3 className="text-gray-700 text-5xl max-lg:text-4xl max-md:text-4xl max-sm:text-3xl mb-6 py-3 px-4 font-poppins x-shadow-yellow text-center w-auto items-center justify-center max-sm:mt-56">
+        <h3 className="text-gray-700 text-5xl max-lg:text-4xl max-md:text-4xl max-sm:text-3xl mb-6 py-3 px-4 font-poppins x-shadow-yellow text-center w-auto items-center justify-center max-sm:mt-0">
           About Us
         </h3>
       </div>

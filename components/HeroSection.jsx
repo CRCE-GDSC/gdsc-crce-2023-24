@@ -10,12 +10,12 @@ const HeroSection = () => {
   const [signInWithGoogle] = useSignInWithGoogle(auth)
   return (
     <div className="flex justify-center items-center">
-      <div className="container z-shadow-yellow mt-36 px-4 py-1 max-sm:hidden sm:mb-20">
+      <div className="container z-shadow-yellow mt-36 px-4 py-1 max-sm:hidden sm:mb-20 max-sm:mb-0">
         <div className="w-full max-sm:hidden min-h-[640px] bg-[url('/assets/DSC3.gif')] max-sm:bg-[url('/assets/DSC3.gif')] ">
           <div className=" flex flex-col z-10">
             {/* Your content goes here */}
-            <div className="mx-auto p-8 text-white text-left">
-              <h1 className="text-7xl font-bold blue_gradient max-sm:text-6xl max-sm:pt-56 max-sm:text-center mt-20 text-center lg:text-left">
+            <div className="mx-24 p-8 text-white text-left">
+              <h1 className="text-7xl font-bold blue_gradient max-sm:text-6xl max-sm:pt-56 text-left max-sm:text-center mt-20">
                 Welcome to GDSC
               </h1>
               <p className="text-4xl max-sm:text-3xl font-poppins font-semibold orange_gradient pt-12 text-center lg:text-left max-w-xl max-lg:text-center max-lg:justify-center">
@@ -62,9 +62,9 @@ const HeroSection = () => {
           height={600}
         />
       </div>
-      <div className="absolute inset-0 flex flex-col items-center justify-center z-10 sm:pt-32 md:hidden">
+      <div className="absolute inset-0 flex flex-col items-center justify-center z-10 sm:pt-32 sm:hidden">
         {/* Your content goes here */}
-        <div className="container mx-auto p-8 text-white text-center relative xl:top-[-250px] max-xl:top-[-300px] max-lg:top-[-130px] max-sm:top-[-250px] mt-48 pt-40 xl:pl-20">
+        <div className="container mx-auto p-8 text-white text-center relative max-sm:top-[-250px] mt-48 pt-40 xl:pl-20">
           <h1 className="text-7xl font-bold blue_gradient max-sm:text-6xl max-sm:pt-56 max-sm:text-center mt-20 text-center lg:text-left">
             Welcome to GDSC
           </h1>
