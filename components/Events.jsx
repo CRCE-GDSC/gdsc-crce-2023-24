@@ -108,6 +108,7 @@ const Events = () => {
                   style={{ color: 'inherit', textDecoration: 'none' }}
                   target="_blank"
                 >
+                  <div className="p-1">
                   <h4 className="title font-bold lg:text-xl text-gray-700 ">
                     {event.title}
                   </h4>
@@ -124,6 +125,7 @@ const Events = () => {
                     <b>Date: </b>
                     {event.date}
                   </p>
+                  </div>
                 </a>
               </div>
             </motion.div>

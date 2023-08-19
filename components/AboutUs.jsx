@@ -3,7 +3,7 @@ import React from 'react'
 const AboutUs = () => {
   return (
     <div
-      className="container mx-auto scroll-mt-96 xl:py-16 max-md:mt-32 p-2"
+      className="container mx-auto scroll-mt-96 xl:py-16 max-md:mt-32 p-4"
       id="about"
     >
       <div className="flex justify-center">
