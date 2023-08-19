@@ -4,7 +4,9 @@ const Whatwedo = () => {
     return(
       <div className="w-full bg-sky-50 px-12 scroll-mt-96 py-10" id="what">
 <div className="flex justify-center">
-  <h3 className="text-gray-700 text-5xl max-lg:text-4xl max-md:text-4xl max-sm:text-3xl max-sm:pl-2 mb-6 py-3 px-4 font-poppins x-shadow-green text-center w-auto items-center justify-center">What We Do</h3>
+  <h3 className="text-gray-700 text-5xl max-lg:text-4xl max-md:text-4xl max-sm:text-3xl max-sm:pl-2 mb-9 py-3 px-4 font-poppins x-shadow-green text-center w-auto items-center justify-center ">
+      What We Do
+</h3>
 </div>
 
 
@@ -14,7 +16,7 @@ const Whatwedo = () => {
             with developers around the world, make projects,organized workshops and many more.</p>
         </div> 
         <h6 className="text-center text-3xl xl:text-4xl font-poppins">We work on:</h6>
-          <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-10 mb-2 max-w-4xl mx-auto">
+          <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-10 mb-2 max-w-4xl mx-auto">
 
 
             <div className="flex flex-col justify-center items-center ">

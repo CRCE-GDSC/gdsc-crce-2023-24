@@ -75,7 +75,7 @@ const Events = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 justify-items-center lg:mx-auto mx-2 mt-10 lg:max-w-4xl max-sm:pl-1 max-lg:pl-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-16 justify-items-center lg:mx-auto mx-2 mt-10 lg:max-w-4xl max-sm:pl-1 max-lg:pl-2">
           {eventsData.map((event, index) => (
             <motion.div
               key={index}

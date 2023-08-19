@@ -66,7 +66,7 @@ const Contact = () => {
                 <div className="text-center">
                   <button
                     type="submit"
-                    className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-blue-700 sm:w-fit hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-primary-300 "
+                    className="py-3 px-5 rounded-full text-sm font-medium text-center text-white  bg-blue-700 sm:w-fit hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-primary-300 "
                   >
                     Send message
                   </button>
