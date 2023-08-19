@@ -3,10 +3,13 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import { AiOutlineMenu } from 'react-icons/ai'
 import Image from 'next/image'
+import { LogOut, UserIcon } from 'lucide-react'
 import { useAuthState } from 'react-firebase-hooks/auth'
+
 import { auth } from '../lib/firebase'
 
 const Navbar = () => {
+  const [user, loading, error] = useAuthState(auth)
   const [nav, setNav] = useState(false)
 
   const handleNav = () => {
@@ -126,6 +129,17 @@ const Navbar = () => {
                 <Link href="#foot" className="py-6 blue_link">
                   Contact Us
                 </Link>
+                {user && (
+                  <div className="rounded-full flex items-center justify-center">
+                    <Image
+                      src={user.photoURL}
+                      alt="User photo"
+                      height={60}
+                      width={60}
+                      className="rounded-full"
+                    />
+                  </div>
+                )}
               </div>
             </div>
           </div>
