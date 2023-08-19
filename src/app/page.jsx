@@ -19,12 +19,11 @@ export default function Home() {
 
   return (
     <main className="relative flex max-h-screen flex-col items-center justify-between w-full bg-[fdfdfd]">
-      
-      
-
       {/* Absolute positioning for the Events component */}
-      <div className="w-full ">
-        <HeroSection />
+      <div className="w-full">
+        <div className="min-h-screen">
+          <HeroSection />
+        </div>
         <AboutUs />
         <Whatwedo />
         <Events />
