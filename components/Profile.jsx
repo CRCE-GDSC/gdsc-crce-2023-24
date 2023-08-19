@@ -27,12 +27,8 @@ const Profile = () => {
     <div className="mt-16 pt-10">
       <div class="w-full mx-auto bg-white rounded-lg">
         {user.map((values, index) => (
-          <div class="flex flex-col items-center pb-10">
-            <img
-              class="w-24 h-24 mb-3 rounded-full shadow-lg"
-              src={values.userimg}
-              alt="User image"
-            />
+          <div key = {index} class="flex flex-col items-center pb-10">
+            <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src={values.userimg} alt="User image"/>
             <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">
               {values.username}
             </h5>
@@ -104,7 +100,7 @@ const Profile = () => {
             </thead>
             <tbody>
               {events.map((values, index) => (
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <tr key={index} class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                   <th
                     scope="row"
                     class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
@@ -112,12 +108,7 @@ const Profile = () => {
                     {values.eventname}
                   </th>
                   <td class="px-6 py-4">
-                    <img
-                      src={values.eventpreview}
-                      alt=""
-                      height={40}
-                      width={40}
-                    />
+                    <img src={values.eventpreview} alt="" height={40} width={40}/>
                   </td>
                   <td class="px-6 py-4">{values.eventstatus}</td>
                   <td class="px-6 py-4">{values.eventpoints}</td>
