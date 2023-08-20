@@ -25,6 +25,7 @@ const HeroSection = () => {
 
               <div className="flex pt-10 max-sm:items-center max-lg:justify-center">
                 <Link
+                  target='_blank'
                   href="https://gdsc.community.dev/fr-conceicao-rodrigues-college-of-engineering-mumbai/"
                   className="pr-4"
                 >

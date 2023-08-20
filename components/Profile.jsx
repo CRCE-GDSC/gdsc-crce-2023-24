@@ -95,7 +95,7 @@ const Profile = ({ userDisplayName, paramsUserName, userProfilePic, userEmail })
               class="font-inter text-3xl text-black dark:text-gray-400"
             >
               <p>Rank: {values.userranking}</p>
-              <p>{values.username}</p>
+              <p>{userDisplayName}</p>
             </div>
           ))}
           
