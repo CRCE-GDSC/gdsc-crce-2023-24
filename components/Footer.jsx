@@ -68,7 +68,7 @@ const Footer = () => {
               Social
             </span>
             <div className="flex flex-row" id="foot">
-              <a className="p-3">
+              <a className="p-3" href='https://www.instagram.com/gdsc_crce/' target='_blank'>
                 <FaInstagram
                   size={35}
                   className="text-violet-500 hover:text-white hover:bg-blue-400 rounded-xl"

@@ -15,9 +15,8 @@ export default function Page({ params }) {
   }, [user])
 
   return (
-    <div className="pt-24">
-      My name:{user.displayName} {params.userName}
-      <Profile />
+    <div className="pt-20">
+      <Profile userDisplayName={user.displayName} paramsUserName={params.userName} userProfilePic={user.photoURL} userEmail={user.email} />
     </div>
   )
 }

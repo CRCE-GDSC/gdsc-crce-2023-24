@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-const Profile = () => {
+const Profile = ({ userDisplayName, paramsUserName, userProfilePic, userEmail }) => {
   const user = [
     {
       userimg: '/assets/team/alvin.jpg',
@@ -32,25 +32,25 @@ const Profile = () => {
   )
 
   return (
-    <div className="mt-16 pt-10">
+    <div className="mt-5 pt-10">
       <div class="w-full mx-auto bg-white rounded-lg">
         {user.map((values, index) => (
           <div key={index} class="flex flex-col items-center pb-10">
             <Image
               class="w-24 h-24 mb-3 rounded-full shadow-lg"
-              src={values.userimg}
+              src={userProfilePic}
               alt="User image"
               width={60}
               height={60}
             />
             <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">
-              {values.username}
+              {userDisplayName}
             </h5>
             <span class="text-sm text-[#F44336] dark:text-gray-400 uppercase ">
               {values.userclass}
             </span>
             <span class="text-sm text-gray-500 dark:text-gray-400">
-              {values.useremail}
+              {userEmail}
             </span>
           </div>
         ))}

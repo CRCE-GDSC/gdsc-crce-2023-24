@@ -15,15 +15,6 @@ const OurTeam = () => {
         Satoro
       </p>
       <div className="flex gap-4 mt-8">
-        <div className="text-center px-6">
-          <Link
-            href="/Team2"
-            className="rounded-full bg-blue-500 text-white py-2 px-8 transition-all hover:bg-green-500 cursor-pointer text-xl font-bold"
-          >
-            Team
-          </Link>
-          <p className="mt-3 text-gray-500">2023-2024</p>
-        </div>
         <div className="text-center px-6 scroll-mt-96" id="team">
           <Link
             href="/Team1"
@@ -32,6 +23,15 @@ const OurTeam = () => {
             Team
           </Link>
           <p className="mt-3 text-gray-500">2022-2023</p>
+        </div>
+        <div className="text-center px-6">
+          <Link
+            href="/Team2"
+            className="rounded-full bg-blue-500 text-white py-2 px-8 transition-all hover:bg-green-500 cursor-pointer text-xl font-bold"
+          >
+            Team
+          </Link>
+          <p className="mt-3 text-gray-500">2023-2024</p>
         </div>
       </div>
     </div>

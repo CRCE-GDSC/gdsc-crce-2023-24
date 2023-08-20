@@ -220,3 +220,17 @@
   .google_gradient {
     @apply bg-gradient-to-r from-red-600 to-green-600 via-yellow-500 bg-clip-text text-transparent;
   }
+
+  .text-5xl{
+    font-weight: bold;
+  }
+
+  .p-4{
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .py-16{
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
