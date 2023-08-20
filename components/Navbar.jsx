@@ -131,6 +131,8 @@ const Navbar = () => {
                 </Link>
                 {user && (
                   <div className="rounded-full flex items-center justify-center">
+                    <a href={`/MyProfile/${user.displayName}`}>
+                    <div>
                     <Image
                       src={user.photoURL}
                       alt="User photo"
@@ -138,13 +140,8 @@ const Navbar = () => {
                       width={60}
                       className="rounded-full"
                     />
-                    <div>Hello {user.displayName}</div>
-                    <Link
-                      className="rounded-full text-center bg-blue-500 text-white py-2 px-6 cursor-pointer text-xl font-bold transform transition-all hover:scale-110 shadow-lg hover:shadow-xl lg:text-left"
-                      href={`/MyProfile/${user.displayName}`}
-                    >
-                      My Profile
-                    </Link>
+                    </div>
+                    </a>
                   </div>
                 )}
               </div>
