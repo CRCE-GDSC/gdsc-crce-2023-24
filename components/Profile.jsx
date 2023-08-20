@@ -1,6 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 
+
+
 const Profile = () => {
   const user = [
     {
@@ -8,6 +10,7 @@ const Profile = () => {
       username: 'Alvin Dsouza',
       userclass: 'SE Comps A',
       useremail: 'alvindsouza2204@gmail.com',
+      userranking: 4
     },
   ]
   const events = [
@@ -24,6 +27,10 @@ const Profile = () => {
       eventpoints: '25',
     },
   ]
+
+
+  const totalEventPoints = events.reduce((sum, event) => sum + parseInt(event.eventpoints), 0);
+
   return (
     <div className="mt-16 pt-10">
       <div class="w-full mx-auto bg-white rounded-lg">
@@ -49,53 +56,81 @@ const Profile = () => {
         ))}
       </div>
 
-      <div className="grid md:grid-cols-3 gap-3 mt-6">
-        <div className="overflow-hidden d-shadow-yellow feature-card p-5">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#FFCA28] dark:text-white">
+      <div className="grid md:grid-cols-3 gap-8 mt-6">
+        <div className="overflow-hidden x-shadow-yellow feature-card p-5 h-[150px] max-w-[18rem]">
+          <h5 class="font-inter font-bold mb-2 text-3xl tracking-tight text-[#FFCA28] dark:text-white">
             YOUR POINTS
+            
           </h5>
-          <p class="font-normal text-gray-700 dark:text-gray-400">
-            description of the card
+        
+          <p className="font-inter text-3xl text-black dark:text-gray-400">
+            <strong className="font-bold">{totalEventPoints}</strong> Points
           </p>
+          <div>
+          <Image
+      src="/assets/MyProfile/image_2023-08-01_153529169-removebg-preview 1.png"
+      alt="Profile Image"
+      width={50}
+      height={50}
+      style={{  bottom: '0', right: '0' }}    />
+    </div>
+          
         </div>
 
-        <div className="overflow-hidden feature-card p-5 d-shadow-blue">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#4285F4] dark:text-white">
+        <div className="overflow-hidden feature-card p-5 x-shadow-blue h-[150px] max-w-[18rem]">
+          <h5 class="font-inter font-bold mb-2 text-3xl tracking-tight text-[#4285F4] dark:text-white">
             Name of the card
           </h5>
-          <p class="font-normal text-gray-700 dark:text-gray-400">
+          <p class="font-inter text-3xl text-black dark:text-gray-400">
             description of the card
           </p>
         </div>
 
-        <div className="overflow-hidden d-shadow-red feature-card p-5">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#F44336] dark:text-white">
+        <div  className="overflow-hidden x-shadow-red feature-card p-5 h-[150px] max-w-[18rem]">
+          <h5 class="font-inter font-bold mb-2 text-3xl tracking-tight text-[#F44336] dark:text-white">
             LEADER BOARD
           </h5>
-          <p class="font-normal text-gray-700 dark:text-gray-400">
-            description of the card
-          </p>
+          {user.map((values, index) => (
+            <div key={index} class="font-inter text-3xl text-black dark:text-gray-400">
+           <p>
+             Rank: {values.userranking}
+           </p>
+            <p>
+              {values.username}
+            </p>
+            
+    </div>
+  ))}
+   <div className=" bottom-3 right-5">
+    <Image
+      src="/assets/MyProfile/Mask group.png"
+      alt="Leader Board Image"
+      width={50}
+      height={50}
+      style={{ bottom: '3', right: '6' }}
+    />
+  </div>
         </div>
       </div>
 
      
       <div className="mt-8 mx-5">
         <h1 className="text-lg font-semibold ">Event Status</h1>
-        <div className='mt-4'>
-        <div class="relative overflow-x-auto">
-          <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border border-black">
-            <thead class="text-xs text-[#FFCA28] uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <div className='mt-4 x-shadow-blue'>
+        <div class="relative overflow-x-auto ">
+          <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border border-black rounded-xl">
+            <thead class="text-xl text-[#FFCA28] uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
-                <th scope="col" class="px-6 py-3  border-b border-gray-200 dark:border-gray-700">
+                <th scope="col" class="px-6 py-3 border-b dark:border-gray-700 text-lg border-r border-black">
                   Event name
                 </th>
-                <th scope="col" class="px-6 py-3 border-b border-gray-200 dark:border-gray-700">
+                <th scope="col" class="px-6 py-3 border-b dark:border-gray-700 text-lg flex justify-center items-center border-r border-black">
                   Preview
                 </th>
-                <th scope="col" class="px-6 py-3 border-b border-gray-200 dark:border-gray-700">
+                <th scope="col" class="px-6 py-3 border-b text-center border-r text-lg border-black">
                   Status
                 </th>
-                <th scope="col" class="px-6 py-3 border-b border-gray-200 dark:border-gray-700">
+                <th scope="col" class="px-6 py-3 border-b text-center text-lg border-black">
                   Points
                 </th>
               </tr>
@@ -104,21 +139,21 @@ const Profile = () => {
               {events.map((values, index) => (
                 <tr
                   key={index}
-                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                  class="bg-white border-b border-black dark:bg-gray-800 dark:border-gray-700"
                 >
                   <th
                     scope="row"
-                    class="px-6 py-4 font-medium text-[#4285F4] whitespace-nowrap dark:text-white"
+                    class="px-6 py-4 font-medium border-black text-[#4285F4] whitespace-nowrap dark:text-white text-lg border-r  "
                   >
                     {values.eventname}
                   </th>
-                  <td class="px-6 py-4 border-b border-gray-200 dark:border-gray-700">
+                  <td class="px-6 py-4 border-b border-black dark:border-gray-700 text-lg flex justify-center items-center border-r">
                   <Image src={values.eventpreview} alt="" height={40} width={40} layout="fixed"/>
                   </td>
-                  <td className={`px-6 py-4  border-b border-gray-200 dark:border-gray-700 ${values.eventstatus === 'Attended'? 'text-[#35A853]': 'text-[#F44336]' } dark:text-white`} >
+                  <td className={`px-6 py-4 border-r text-center text-lg border-b border-black dark:border-gray-700 ${values.eventstatus === 'Attended'? 'text-[#35A853]': 'text-[#F44336]' } dark:text-white`} >
                     {values.eventstatus}
                   </td>
-                  <td class="px-6 py-4 border-b border-gray-200 dark:border-gray-700 text-[#35A853]">{values.eventpoints}</td>
+                  <td class="px-6 py-4 border-b text-center border-black dark:border-gray-700 text-[#35A853] text-lg">{values.eventpoints}</td>
                 </tr>
               ))} 
             </tbody>
