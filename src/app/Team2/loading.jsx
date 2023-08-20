@@ -1,6 +1,6 @@
-import { Icons } from './icons'
+import { Icons } from '../../../components/icons'
 
-export function LoadingPage() {
+export function Loading() {
   return (
     <div className="container flex flex-col gap-4 py-12 px-20 border rounded-xl items-center justify-center min-h-screen">
       <Icons.loader className="animate-spin w-12 h-12" />{' '}
@@ -8,3 +8,5 @@ export function LoadingPage() {
     </div>
   )
 }
+
+export default Loading
