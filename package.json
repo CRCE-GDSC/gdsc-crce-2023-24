@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@material-tailwind/react": "^2.1.0",
     "@opentelemetry/api": "^1.4.1",
     "@opentelemetry/instrumentation": "^0.41.2",
     "@opentelemetry/resources": "^1.15.2",

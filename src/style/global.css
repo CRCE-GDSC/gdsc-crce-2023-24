@@ -102,7 +102,7 @@
   
 
 /* Tailwind Styles */
-
+@layer components{
 .app {
     @apply relative z-10 flex justify-center items-center flex-col;
 }
@@ -220,3 +220,4 @@
   .google_gradient {
     @apply bg-gradient-to-r from-red-600 to-green-600 via-yellow-500 bg-clip-text text-transparent;
   }
+}
