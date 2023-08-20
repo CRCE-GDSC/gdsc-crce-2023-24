@@ -16,7 +16,12 @@ export default function Page({ params }) {
 
   return (
     <div className="pt-20">
-      <Profile userDisplayName={user.displayName} paramsUserName={params.userName} userProfilePic={user.photoURL} userEmail={user.email} />
+      <Profile
+        userDisplayName={user.displayName}
+        paramsUserName={params.userName}
+        userProfilePic={user.photoURL}
+        userEmail={user.email}
+      />
     </div>
   )
 }

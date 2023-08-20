@@ -32,7 +32,7 @@ const Profile = ({ userDisplayName, paramsUserName, userProfilePic, userEmail })
   )
 
   return (
-    <div className="mt-5 pt-10">
+    <div>
       <div class="w-full mx-auto bg-white rounded-lg">
         {user.map((values, index) => (
           <div key={index} class="flex flex-col items-center pb-10">
@@ -55,8 +55,8 @@ const Profile = ({ userDisplayName, paramsUserName, userProfilePic, userEmail })
           </div>
         ))}
       </div>
-
-      <div className="grid md:grid-cols-3 gap-8 mt-6">
+      <div className='w-[75%] mx-auto'>
+      <div className="grid md:grid-cols-2 gap-8 mt-6">
         <div className="relative overflow-hidden x-shadow-yellow feature-card p-5 h-[150px] max-w-[18rem]">
           <h5 class="font-inter font-bold mb-2 text-3xl tracking-tight text-[#FFCA28] dark:text-white">
             YOUR POINTS
@@ -74,15 +74,6 @@ const Profile = ({ userDisplayName, paramsUserName, userProfilePic, userEmail })
               height={150}
             />
           </div>
-        </div>
-
-        <div className="overflow-hidden feature-card p-5 x-shadow-blue h-[150px] max-w-[18rem]">
-          <h5 class="font-inter font-bold mb-2 text-3xl tracking-tight text-[#4285F4] dark:text-white">
-            Name of the card
-          </h5>
-          <p class="font-inter text-3xl text-black dark:text-gray-400">
-            description of the card
-          </p>
         </div>
 
         <div className="relative overflow-hidden x-shadow-red feature-card p-5 h-[150px] max-w-[18rem]">
@@ -107,6 +98,7 @@ const Profile = ({ userDisplayName, paramsUserName, userProfilePic, userEmail })
               height={75}
             />
         </div>
+      </div>
       </div>
 
       <div className="my-8 mx-5">
