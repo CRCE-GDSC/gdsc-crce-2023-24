@@ -138,6 +138,13 @@ const Navbar = () => {
                       width={60}
                       className="rounded-full"
                     />
+                    <div>Hello {user.displayName}</div>
+                    <Link
+                      className="rounded-full text-center bg-blue-500 text-white py-2 px-6 cursor-pointer text-xl font-bold transform transition-all hover:scale-110 shadow-lg hover:shadow-xl lg:text-left"
+                      href={`/MyProfile/${user.displayName}`}
+                    >
+                      My Profile
+                    </Link>
                   </div>
                 )}
               </div>
