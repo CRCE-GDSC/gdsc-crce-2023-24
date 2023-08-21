@@ -28,7 +28,7 @@ const Navbar = () => {
       const userRef = doc(db, 'users', user.uid)
       setDoc(
         userRef,
-        { userName: user.displayName, photoURL: user.photoURL },
+        { userName: user.displayName, userImage: user.photoURL },
         { merge: true }
       )
     }
