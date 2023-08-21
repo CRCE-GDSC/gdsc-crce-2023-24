@@ -10,7 +10,7 @@ const HeroSection = () => {
   const [signInWithGoogle] = useSignInWithGoogle(auth)
   return (
     <div className="flex justify-center items-center">
-      <div className="container z-shadow-yellow mt-36 px-4 py-1 max-sm:hidden sm:mb-20 max-sm:mb-0">
+      <div className="container z-shadow-yellow mt-36 px-1 py-1 max-sm:hidden sm:mb-20 max-sm:mb-0">
         <div className="w-full max-sm:hidden min-h-[640px] bg-[url('/assets/DSC3.gif')] max-sm:bg-[url('/assets/DSC3.gif')] ">
           <div className=" flex flex-col z-10">
             {/* Your content goes here */}
@@ -25,7 +25,7 @@ const HeroSection = () => {
 
               <div className="flex pt-10 max-sm:items-center max-lg:justify-center">
                 <Link
-                  target='_blank'
+                  target="_blank"
                   href="https://gdsc.community.dev/fr-conceicao-rodrigues-college-of-engineering-mumbai/"
                   className="pr-4"
                 >
