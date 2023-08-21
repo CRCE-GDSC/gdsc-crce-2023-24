@@ -9,33 +9,33 @@ const HeroSection = () => {
   const [user, loading, error] = useAuthState(auth)
   const [signInWithGoogle] = useSignInWithGoogle(auth)
   return (
-    <div className="flex justify-center items-center">
-      <div className="container z-shadow-yellow mt-36 px-4 py-1 max-sm:hidden sm:mb-20 max-sm:mb-0">
-        <div className="w-full max-sm:hidden min-h-[640px] bg-[url('/assets/DSC3.gif')] max-sm:bg-[url('/assets/DSC3.gif')] ">
-          <div className=" flex flex-col z-10">
+    <div className="flex items-center justify-center">
+      <div className="z-shadow-yellow container mt-36 px-1 py-1 max-sm:mb-0 max-sm:hidden sm:mb-20">
+        <div className="min-h-[640px] w-full bg-[url('/assets/DSC3.gif')] max-sm:hidden max-sm:bg-[url('/assets/DSC3.gif')] ">
+          <div className=" z-10 flex flex-col">
             {/* Your content goes here */}
-            <div className="mx-24 p-8 text-white text-left">
-              <h1 className="text-7xl font-bold blue_gradient max-sm:text-6xl max-sm:pt-56 text-left max-sm:text-center mt-20">
+            <div className="mx-24 p-8 text-left text-white">
+              <h1 className="blue_gradient mt-20 text-left text-7xl font-bold max-sm:pt-56 max-sm:text-center max-sm:text-6xl">
                 Welcome to GDSC
               </h1>
-              <p className="text-4xl max-sm:text-3xl font-poppins font-semibold orange_gradient pt-12 text-center lg:text-left max-w-xl max-lg:text-center max-lg:justify-center">
+              <p className="orange_gradient max-w-xl pt-12 text-center font-poppins text-4xl font-semibold max-lg:justify-center max-lg:text-center max-sm:text-3xl lg:text-left">
                 Get ready to delve into the World of Developers
               </p>
               {/* Add your other components here */}
 
-              <div className="flex pt-10 max-sm:items-center max-lg:justify-center">
+              <div className="flex pt-10 max-lg:justify-center max-sm:items-center">
                 <Link
-                  target='_blank'
+                  target="_blank"
                   href="https://gdsc.community.dev/fr-conceicao-rodrigues-college-of-engineering-mumbai/"
                   className="pr-4"
                 >
-                  <div className="rounded-full text-center bg-blue-500 text-white py-2 px-6 cursor-pointer text-xl font-bold transform transition-all hover:scale-110 shadow-lg hover:shadow-xl lg:text-left">
+                  <div className="transform cursor-pointer rounded-full bg-blue-500 px-6 py-2 text-center text-xl font-bold text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl lg:text-left">
                     Join Us
                   </div>
                 </Link>
                 {(loading || !user) && (
                   <button
-                    className="rounded-full text-center bg-blue-500 text-white py-2 px-6 cursor-pointer text-xl font-bold transform transition-all hover:scale-110 shadow-lg hover:shadow-xl lg:text-left"
+                    className="transform cursor-pointer rounded-full bg-blue-500 px-6 py-2 text-center text-xl font-bold text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl lg:text-left"
                     onClick={() => signInWithGoogle()}
                   >
                     Sign in
@@ -43,7 +43,7 @@ const HeroSection = () => {
                 )}
                 {user && (
                   <button
-                    className="rounded-full text-center bg-blue-500 text-white py-2 px-6 cursor-pointer text-xl font-bold transform transition-all hover:scale-110 shadow-lg hover:shadow-xl lg:text-left"
+                    className="transform cursor-pointer rounded-full bg-blue-500 px-6 py-2 text-center text-xl font-bold text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl lg:text-left"
                     onClick={() => auth.signOut()}
                   >
                     Sign out
@@ -63,33 +63,33 @@ const HeroSection = () => {
           height={600}
         />
       </div>
-      <div className="absolute inset-0 flex flex-col items-center justify-center z-10 sm:pt-32 sm:hidden">
+      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center sm:hidden sm:pt-32">
         {/* Your content goes here */}
-        <div className="container mx-auto p-8 text-white text-center relative max-sm:top-[-250px] mt-48 pt-40 xl:pl-20">
-          <h1 className="text-7xl font-bold blue_gradient max-sm:text-6xl max-sm:pt-56 max-sm:text-center mt-20 text-center lg:text-left">
+        <div className="container relative mx-auto mt-48 p-8 pt-40 text-center text-white max-sm:top-[-250px] xl:pl-20">
+          <h1 className="blue_gradient mt-20 text-center text-7xl font-bold max-sm:pt-56 max-sm:text-center max-sm:text-6xl lg:text-left">
             Welcome to GDSC
           </h1>
-          <p className="text-4xl max-sm:text-3xl font-poppins font-semibold orange_gradient pt-12 text-center lg:text-left max-w-xl max-lg:text-center max-lg:justify-center">
+          <p className="orange_gradient max-w-xl pt-12 text-center font-poppins text-4xl font-semibold max-lg:justify-center max-lg:text-center max-sm:text-3xl lg:text-left">
             Get ready to delve into the World of Developers
           </p>
           {/* Add your other components here */}
           <div className="flex-row">
             <div className="container">
-              <div className="flex rounded-md shadow-md bg-black text-white"></div>
+              <div className="flex rounded-md bg-black text-white shadow-md"></div>
             </div>
           </div>
-          <div className="flex pt-10 max-sm:items-center max-lg:justify-center">
+          <div className="flex pt-10 max-lg:justify-center max-sm:items-center">
             <Link
               href="https://gdsc.community.dev/fr-conceicao-rodrigues-college-of-engineering-mumbai/"
               className="pr-4"
             >
-              <div className="rounded-full text-center bg-blue-500 text-white py-2 px-6 cursor-pointer text-xl font-bold transform transition-all hover:scale-110 shadow-lg hover:shadow-xl lg:text-left">
+              <div className="transform cursor-pointer rounded-full bg-blue-500 px-6 py-2 text-center text-xl font-bold text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl lg:text-left">
                 Join Us
               </div>
             </Link>
             {(loading || !user) && (
               <button
-                className="rounded-full text-center bg-blue-500 text-white py-2 px-6 cursor-pointer text-xl font-bold transform transition-all hover:scale-110 shadow-lg hover:shadow-xl lg:text-left"
+                className="transform cursor-pointer rounded-full bg-blue-500 px-6 py-2 text-center text-xl font-bold text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl lg:text-left"
                 onClick={() => signInWithGoogle()}
               >
                 Sign in
@@ -97,7 +97,7 @@ const HeroSection = () => {
             )}
             {user && (
               <button
-                className="rounded-full text-center bg-blue-500 text-white py-2 px-6 cursor-pointer text-xl font-bold transform transition-all hover:scale-110 shadow-lg hover:shadow-xl lg:text-left"
+                className="transform cursor-pointer rounded-full bg-blue-500 px-6 py-2 text-center text-xl font-bold text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl lg:text-left"
                 onClick={() => auth.signOut()}
               >
                 Sign out

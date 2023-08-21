@@ -1,16 +1,38 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { AiOutlineMenu } from 'react-icons/ai'
 import Image from 'next/image'
 import { LogOut, UserIcon } from 'lucide-react'
 import { useAuthState } from 'react-firebase-hooks/auth'
-
+import { db } from '../lib/firebase'
+import {
+  getDocs,
+  doc,
+  setDoc,
+  collection,
+  deleteDoc,
+  query,
+  updateDoc,
+} from 'firebase/firestore'
 import { auth } from '../lib/firebase'
+import { getFirestore } from 'firebase/firestore'
+import { useCollectionData } from 'react-firebase-hooks/firestore'
 
 const Navbar = () => {
   const [user, loading, error] = useAuthState(auth)
   const [nav, setNav] = useState(false)
+
+  useEffect(() => {
+    if (user) {
+      const userRef = doc(db, 'users', user.uid)
+      setDoc(
+        userRef,
+        { userName: user.displayName, userImage: user.photoURL },
+        { merge: true }
+      )
+    }
+  }, [user])
 
   const handleNav = () => {
     setNav(!nav)
@@ -132,15 +154,15 @@ const Navbar = () => {
                 {user && (
                   <div className="rounded-full flex items-center justify-center">
                     <a href={`/MyProfile/${user.displayName}`}>
-                    <div>
-                    <Image
-                      src={user.photoURL}
-                      alt="User photo"
-                      height={40}
-                      width={40}
-                      className="rounded-full"
-                    />
-                    </div>
+                      <div>
+                        <Image
+                          src={user.photoURL}
+                          alt="User photo"
+                          height={40}
+                          width={40}
+                          className="rounded-full"
+                        />
+                      </div>
                     </a>
                   </div>
                 )}
