@@ -39,10 +39,10 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="fixed top-0 left-0 z-50 w-full bg-white flex-between gap-x-1 md:px-0 max-sm:px-0 max-sm:justify-center max-md:px-0">
-      <div className="md:hidden fixed left-0 bg-white w-full top-0 z-50">
+    <nav className="flex-between fixed left-0 top-0 z-50 w-full gap-x-1 bg-white max-md:px-0 max-sm:justify-center max-sm:px-0 md:px-0">
+      <div className="fixed left-0 top-0 z-50 w-full bg-white md:hidden">
         <div className="flex shadow-lg">
-          <div className="flex lg:flex-1 md:hidden m-3">
+          <div className="m-3 flex md:hidden lg:flex-1">
             <span className="sr-only">GDSC CRCE</span>
             <Link href="/">
               <Image
@@ -57,22 +57,37 @@ const Navbar = () => {
           <AiOutlineMenu
             size={20}
             onClick={handleNav}
-            className="absolute top-4 right-4 z-[99] md:hidden cursor-pointer"
+            className="absolute right-4 top-4 z-[99] cursor-pointer md:hidden"
           />
+          {user && (
+            <div className="absolute right-11 top-2 z-[99] flex cursor-pointer items-center justify-center rounded-full md:hidden">
+              <a href={`/MyProfile/${user.displayName}`}>
+                <div>
+                  <Image
+                    src={user.photoURL}
+                    alt="User photo"
+                    height={40}
+                    width={40}
+                    className="rounded-full"
+                  />
+                </div>
+              </a>
+            </div>
+          )}
         </div>
         {nav ? (
-          <div className="fixed h-screen w-full bg-white flex flex-col justify-center items-center z-20">
+          <div className="fixed z-20 flex h-screen w-full flex-col items-center justify-center bg-white">
             <Link
               href="/"
               onClick={handleNav}
-              className="text-white w-[75%] flex justify-center items-center rounded-full shadow-lg bg-blue-500 shadow-gray-400 m-3 p-3 cursor-pointer hover:scale-105 ease-in duration-200"
+              className="m-3 flex w-[75%] cursor-pointer items-center justify-center rounded-full bg-blue-500 p-3 text-white shadow-lg shadow-gray-400 duration-200 ease-in hover:scale-105"
             >
               Home
             </Link>
             <Link
               href="#about"
               onClick={handleNav}
-              className="text-white w-[75%] flex justify-center items-center rounded-full shadow-lg bg-blue-500 shadow-gray-400 m-3 p-3 cursor-pointer hover:scale-105 ease-in duration-200"
+              className="m-3 flex w-[75%] cursor-pointer items-center justify-center rounded-full bg-blue-500 p-3 text-white shadow-lg shadow-gray-400 duration-200 ease-in hover:scale-105"
             >
               About Us
             </Link>
@@ -80,7 +95,7 @@ const Navbar = () => {
             <Link
               href="#what"
               onClick={handleNav}
-              className="text-white w-[75%] flex justify-center items-center rounded-full shadow-lg bg-blue-500 shadow-gray-400 m-3 p-3 cursor-pointer hover:scale-105 ease-in duration-200"
+              className="m-3 flex w-[75%] cursor-pointer items-center justify-center rounded-full bg-blue-500 p-3 text-white shadow-lg shadow-gray-400 duration-200 ease-in hover:scale-105"
             >
               What we do
             </Link>
@@ -88,7 +103,7 @@ const Navbar = () => {
             <Link
               href="#events"
               onClick={handleNav}
-              className="text-white w-[75%] flex justify-center items-center rounded-full shadow-lg bg-blue-500 shadow-gray-400 m-3 p-3 cursor-pointer hover:scale-105 ease-in duration-200"
+              className="m-3 flex w-[75%] cursor-pointer items-center justify-center rounded-full bg-blue-500 p-3 text-white shadow-lg shadow-gray-400 duration-200 ease-in hover:scale-105"
             >
               Events
             </Link>
@@ -96,7 +111,7 @@ const Navbar = () => {
             <Link
               href="#team"
               onClick={handleNav}
-              className="text-white w-[75%] flex justify-center items-center rounded-full shadow-lg bg-blue-500 shadow-gray-400 m-3 p-3 cursor-pointer hover:scale-105 ease-in duration-200"
+              className="m-3 flex w-[75%] cursor-pointer items-center justify-center rounded-full bg-blue-500 p-3 text-white shadow-lg shadow-gray-400 duration-200 ease-in hover:scale-105"
             >
               Our Team
             </Link>
@@ -104,7 +119,7 @@ const Navbar = () => {
             <Link
               href="#foot"
               onClick={handleNav}
-              className="text-white w-[75%] flex justify-center items-center rounded-full shadow-lg bg-blue-500 shadow-gray-400 m-3 p-3 cursor-pointer hover:scale-105 ease-in duration-200"
+              className="m-3 flex w-[75%] cursor-pointer items-center justify-center rounded-full bg-blue-500 p-3 text-white shadow-lg shadow-gray-400 duration-200 ease-in hover:scale-105"
             >
               Contact Us
             </Link>
@@ -113,14 +128,14 @@ const Navbar = () => {
           ''
         )}
       </div>
-      <div className="md:block hidden sticky top-0 w-full">
-        <div className="sticky lg:px-[100px] top-0 bg-white z-10 mx-auto shadow-lg">
+      <div className="sticky top-0 hidden w-full md:block">
+        <div className="sticky top-0 z-10 mx-auto bg-white shadow-lg lg:px-[100px]">
           <div className="flex w-full">
             <div className="flex lg:flex-1">
               <span className="sr-only">GDSC CRCE</span>
               <Link
                 href="/"
-                className="flex gap-2 flex-center pl-1 max-sm:gap-0 max-sm:hidden"
+                className="flex-center flex gap-2 pl-1 max-sm:hidden max-sm:gap-0"
               >
                 <Image
                   src="/assets/GDSC_CRCE.png"
@@ -133,26 +148,26 @@ const Navbar = () => {
             </div>
             <div className="hidden md:flex md:gap-x-3">
               <div className="flex max-sm:hidden">
-                <Link href="/" className="py-6 blue_link">
+                <Link href="/" className="blue_link py-6">
                   Home
                 </Link>
-                <Link href="#about" className="py-6 blue_link">
+                <Link href="#about" className="blue_link py-6">
                   About Us
                 </Link>
-                <Link href="#what" className="py-6 blue_link">
+                <Link href="#what" className="blue_link py-6">
                   What We Do
                 </Link>
-                <Link href="#events" className="py-6 blue_link">
+                <Link href="#events" className="blue_link py-6">
                   Events
                 </Link>
-                <Link href="#team" className="py-6 blue_link">
+                <Link href="#team" className="blue_link py-6">
                   Our Team
                 </Link>
-                <Link href="#foot" className="py-6 blue_link">
+                <Link href="#foot" className="blue_link py-6">
                   Contact Us
                 </Link>
                 {user && (
-                  <div className="rounded-full flex items-center justify-center">
+                  <div className="flex items-center justify-center rounded-full">
                     <a href={`/MyProfile/${user.displayName}`}>
                       <div>
                         <Image

@@ -208,7 +208,7 @@
 }
 
 .blue_link {
-    @apply text-black px-2 text-base pl-5 pr-5 mt-2 hover:text-blue-600 font-inter
+    @apply text-black px-2 text-base pl-5 pr-5 mt-2 hover:text-blue-600 font-poppins
   }
 
 @media (max-width: 640px) {
