@@ -1,8 +1,28 @@
 import React from 'react'
 import Image from 'next/image'
+
 import { Bold } from 'lucide-react'
 
-const Profile = ({ userDisplayName, paramsUserName, userProfilePic, userEmail }) => {
+async function getImageFromAPI(apiUrl) {
+  try {
+    const response = await fetch(apiUrl);
+    
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    
+    const blob = await response.blob(); // Convert the response to a Blob
+    
+    const imageURL = URL.createObjectURL(blob); // Create a URL for the Blob
+    
+    return imageURL; // Return the URL of the image
+  } catch (error) {
+    console.error('Error fetching image:', error);
+    return null;
+  }
+}
+
+const Profile = ({ userDisplayName, paramsUserName, userProfilePic, userEmail, userUID }) => {
   const user = [
     {
       userimg: '/assets/team/alvin.jpg',
@@ -14,6 +34,18 @@ const Profile = ({ userDisplayName, paramsUserName, userProfilePic, userEmail })
     },
     
   ]
+  
+  const apiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${userUID}`; // Replace with the actual API URL
+  const imageElement = document.getElementById('imageElement'); // Replace with your HTML element ID
+  
+  getImageFromAPI(apiUrl)
+  .then(imageURL => {
+    if (imageURL) {
+      // Set the image source
+      // imageElement.src = imageURL;
+    }
+  });
+
   const events = [
     {
       eventname: 'Web Dev Workshop',
@@ -84,7 +116,7 @@ const Profile = ({ userDisplayName, paramsUserName, userProfilePic, userEmail })
         ))}
       </div>
       <div className='w-[75%] mx-auto'>
-        <div className="grid md:grid-cols-2 gap-8 mt-6">
+        <div className="grid md:grid-cols-2 gap-8 mt-6 justify-center">
           <div className="relative overflow-hidden x-shadow-yellow feature-card p-5 h-[150px] max-w-[18rem]">
             <h5 class="font-inter font-bold mb-2 text-3xl tracking-tight text-[#FFCA28] dark:text-white">
               YOUR TAGS
@@ -132,8 +164,8 @@ const Profile = ({ userDisplayName, paramsUserName, userProfilePic, userEmail })
       <div className="my-10 mx-7">
         <h1 className="text-2xl font-semibold ">Event Status</h1>
         <div className="mt-4 x-shadow-blue">
-         <div class="relative overflow-x-auto">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border border-black rounded-xl">
+         <div class="relative overflow-x-auto rounded-xl">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 rounded-xl border-2 overflow-hidden">
     <thead class="text-xl text-[#FFCA28] uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
       <tr>
         <th

@@ -246,3 +246,9 @@
   .text-5xl{
     padding: 1.5rem;
   }
+
+  .flipped {
+    transform: rotateY(180deg);
+    transition: transform 0.5s ease; /* Add a transition for smooth animation */
+  }
+  

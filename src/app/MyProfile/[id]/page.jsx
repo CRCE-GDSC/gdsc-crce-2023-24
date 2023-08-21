@@ -21,6 +21,7 @@ export default function Page({ params }) {
         paramsUserName={params.userName}
         userProfilePic={user.photoURL}
         userEmail={user.email}
+        userUID={user.uid}
       />
     </div>
   )

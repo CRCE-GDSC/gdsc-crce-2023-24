@@ -5,7 +5,7 @@ const OurTeam = () => {
   return (
     <div className="flex flex-col items-center bg-white mb-7 py-16 max-w-6xl lg:max-w-full shadow-lg">
       <div className="flex justify-center">
-        <h3 className="text-gray-700 text-5xl max-lg:text-4xl max-md:text-4xl max-sm:text-3xl max-sm:pl-2 mb-6 py-3 px-4 font-poppins x-shadow-blue text-center w-auto items-center justify-center">
+        <h3 className="text-gray-700 text-5xl max-lg:text-4xl max-md:text-4xl max-sm:text-3xl max-sm:pl-6 mb-6 py-3 px-4 font-poppins x-shadow-blue text-center w-auto items-center justify-center">
           The Team
         </h3>
       </div>

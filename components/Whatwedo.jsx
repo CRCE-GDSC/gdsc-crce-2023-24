@@ -2,7 +2,7 @@ const Whatwedo = () => {
   return (
     <div className="w-full scroll-mt-96 bg-sky-50 px-12 py-10" id="what">
       <div className="flex justify-center">
-        <h3 className="x-shadow-green mb-9 w-auto items-center justify-center px-4 py-3 text-center font-poppins text-5xl text-gray-700 max-lg:text-4xl max-md:text-4xl max-sm:pl-2 max-sm:text-3xl ">
+        <h3 className="x-shadow-green mb-9 w-auto items-center justify-center px-4 py-3 text-center font-poppins text-5xl text-gray-700 max-lg:text-4xl max-md:text-4xl max-sm:pl-6 max-sm:text-3xl ">
           What We Do
         </h3>
       </div>
