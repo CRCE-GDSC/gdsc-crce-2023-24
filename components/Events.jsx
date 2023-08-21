@@ -12,7 +12,7 @@ const Events = () => {
   const eventsData = [
     {
       imgSrc: Img6,
-      title: 'Bit n Built',
+      title: 'Bit n Build',
       subtitle:
         'Offline Hackathon - Domains: Web/App Dev, AI/ML , Blockchain & Open Innovation',
       date: '28th January, 2023',

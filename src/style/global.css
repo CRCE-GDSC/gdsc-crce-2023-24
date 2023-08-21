@@ -234,3 +234,15 @@
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
   }
+
+  .color-class-insta{
+    color: deeppink;
+  }
+
+  .color-class-Ln{
+    color: blue;
+  }
+
+  .text-5xl{
+    padding: 1.5rem;
+  }
