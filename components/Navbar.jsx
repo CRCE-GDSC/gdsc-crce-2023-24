@@ -26,7 +26,11 @@ const Navbar = () => {
   useEffect(() => {
     if (user) {
       const userRef = doc(db, 'users', user.uid)
-      setDoc(userRef, { userName: user.displayName }, { merge: true })
+      setDoc(
+        userRef,
+        { userName: user.displayName, photoURL: user.photoURL },
+        { merge: true }
+      )
     }
   }, [user])
 
