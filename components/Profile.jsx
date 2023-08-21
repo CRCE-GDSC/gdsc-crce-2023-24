@@ -233,7 +233,7 @@ const Profile = ({ userDisplayName, paramsUserName, userProfilePic, userEmail })
 </div> */} 
 
         {/* LeaderBoard */}
-        <h1 className='font-bold text-2xl'>Leaderboard</h1><br/>
+        <h1 className="mx-7 text-2xl font-semibold ">Leaderboard</h1><br/>
         <div className='w-[75%] mx-auto'>
 
         {/* Top three cards */}
