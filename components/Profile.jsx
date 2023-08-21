@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import { Bold } from 'lucide-react'
 
 const Profile = ({ userDisplayName, paramsUserName, userProfilePic, userEmail }) => {
   const user = [
@@ -105,14 +106,13 @@ const Profile = ({ userDisplayName, paramsUserName, userProfilePic, userEmail })
 
           <div className="relative overflow-hidden x-shadow-red feature-card p-5 h-[150px] max-w-[18rem] ml-auto">
   <h5 class="font-inter font-bold mb-2 text-3xl tracking-tight text-[#F44336] dark:text-white">
-    LEADER BOARD
+    LEADERBOARD
   </h5>
   {user.map((values, index) => (
     <div key={index} class="font-inter text-3xl text-black dark:text-gray-400">
       <div className="flex justify-between items-center">
         <div>
-          <p>Rank: {values.userranking}</p>
-          <p>Name: {userDisplayName}</p>
+          <p className='font-semibold'>Rank: {values.userranking}</p>
         </div>
       </div>
     </div>
