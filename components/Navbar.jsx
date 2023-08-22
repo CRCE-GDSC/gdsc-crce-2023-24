@@ -61,7 +61,7 @@ const Navbar = () => {
           />
           {user && (
             <div className="absolute right-11 top-2 z-[99] flex cursor-pointer items-center justify-center rounded-full md:hidden">
-              <a href={`/MyProfile/${user.displayName}`}>
+              <a href="/MyProfile">
                 <div>
                   <Image
                     src={user.photoURL}
@@ -168,7 +168,7 @@ const Navbar = () => {
                 </Link>
                 {user && (
                   <div className="flex items-center justify-center rounded-full">
-                    <a href={`/MyProfile/${user.displayName}`}>
+                    <a href="/MyProfile">
                       <div>
                         <Image
                           src={user.photoURL}
