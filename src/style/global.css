@@ -247,8 +247,26 @@
     padding: 1.5rem;
   }
 
-  .flipped {
-    transform: rotateY(180deg);
-    transition: transform 0.5s ease; /* Add a transition for smooth animation */
+
+  .image-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
   }
   
+  .img-1,
+  .img-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .img-2 {
+    opacity: 0;
+    transform: scale(0);
+  }

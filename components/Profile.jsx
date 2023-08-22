@@ -36,13 +36,13 @@ const Profile = ({ userDisplayName, paramsUserName, userProfilePic, userEmail, u
   ]
   
   const apiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${userUID}`; // Replace with the actual API URL
-  const imageElement = document.getElementById('imageElement'); // Replace with your HTML element ID
+  const imageElement = document.getElementById('img-2'); // Replace with your HTML element ID
   
   getImageFromAPI(apiUrl)
   .then(imageURL => {
     if (imageURL) {
       // Set the image source
-      // imageElement.src = imageURL;
+      imageElement.src = imageURL;
     }
   });
 
@@ -96,13 +96,10 @@ const Profile = ({ userDisplayName, paramsUserName, userProfilePic, userEmail, u
       <div class="w-full mx-auto bg-white rounded-lg">
         {user.map((values, index) => (
           <div key={index} class="flex flex-col items-center pb-10">
-            <Image
-              class="w-24 h-24 mb-3 rounded-full shadow-lg"
-              src={userProfilePic}
-              alt="User image"
-              width={60}
-              height={60}
-            />
+            <div id='img-cont' class="image-container">
+            <img src={userProfilePic} class='img-1' id='img-1'/>
+            <img src="https://images.unsplash.com/photo-1682687982167-d7fb3ed8541d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw2fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=600&q=60" class='img-2' id='img-2'/>
+            </div>
             <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">
               {userDisplayName}
             </h5>
@@ -360,5 +357,25 @@ const Profile = ({ userDisplayName, paramsUserName, userProfilePic, userEmail, u
     
   )
 }
+
+const container = document.getElementById('img-cont');
+const img_1 = document.getElementById('img-1');
+const img_2 = document.getElementById('img-2');
+
+img_1.onclick = function () {
+  img_1.style.transform = 'scale(0)';
+  img_2.style.transform = 'scale(1)';
+  img_2.style.opacity = '1';
+  img_1.style.opacity = '0';
+  container.style.borderRadius = '0';
+  img_2.style.borderRadius = '0';
+};
+
+img_2.onclick = function () {
+  img_2.style.transform = 'scale(0)';
+  img_1.style.transform = 'scale(1)';
+  img_1.style.opacity = '1';
+  img_2.style.opacity = '0';
+};
 
 export default Profile
