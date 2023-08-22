@@ -82,10 +82,10 @@ const Events = () => {
               className="box max-w-md x-shadow-red flex items-center justify-center mx-auto lg:ml-0 cursor-pointer bg-white p-2 lg:p-0 "
               animate={{ scale: 1 }}
               transition={{
-                duration: 2,
-                delay: index * 0.1,
+                duration: 1,
+                delay: index * 0.01,
                 type: 'spring',
-                damping: 2,
+                damping: 10,
               }}
               whileHover={{ y: -10 }}
             >
@@ -108,20 +108,20 @@ const Events = () => {
                   style={{ color: 'inherit', textDecoration: 'none' }}
                   target="_blank"
                 >
-                  <div className="p-1">
-                  <h4 className="title font-bold lg:text-xl text-gray-700 ">
+                  <div className="p-0.5 lg:p-1.5">
+                  <h4 className=" font-bold lg:text-xl text-gray-700 ">
                     {event.title}
                   </h4>
-                  <p className="description font-medium">
+                  <p className="description font-medium text-[12px] lg:text-[14px]">
                     <b>{event.subtitle}</b>
                   </p>
                   {event.speaker && (
-                    <p className="description font-semibold">
-                      <b>Speaker: </b>
+                    <p className="description font-semibold text-[10px] lg:text-[14px]">
+                      <b className="lg:text-[14px]">Speaker: </b>
                       {event.speaker}
                     </p>
                   )}
-                  <p className="description">
+                  <p className="description text-[12px] lg:text-[14px]">
                     <b>Date: </b>
                     {event.date}
                   </p>

@@ -4,41 +4,41 @@ import { FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa'
 
 const Footer = () => {
   return (
-    <div className="bg-sky-50 lg:px-[20px]">
-      <footer className="p-5 gap-2 text-base-content">
+    <div className="bg-blue-500 lg:px-[20px]">
+      <footer className="p-10 gap-2 text-base-content">
         <div className="grid md:grid-cols-4 grid-cols-1 ">
-          <div className="max-w-[350px] py-3 mr-5">
-            <h2 className="text-lg uppercase font-semibold text-gray-600">
+          <div className="max-w-[350px] py-3 mr-2">
+            <h2 className="text-lg uppercase font-semibold text-white">
               GDSC Community
             </h2>
-            <p className="text-normal">
+            <p className="text-normal text-gray-100">
               Helping students to bridge the gap between theory and practice. By
               joining a GDSC, students grow their knowledge in a peer-to-peer
               learning environment and build solutions for local businesses and
               their community.
             </p>
           </div>
-          <div className="py-3">
-            <span className="text-lg uppercase font-semibold text-gray-600">
+          <div className="py-3 lg:ml-10 ">
+            <span className="text-lg uppercase font-semibold text-white">
               Useful Links
             </span>
             
             <div className="grid">
-            <Link href="/" className="hover:text-blue-700">
+            <Link href="/" className="text-slate-100 hover:underline">
               Home
             </Link>
             
-            <Link href="#events" className="hover:text-blue-700">
+            <Link href="#events" className="text-slate-100 hover:underline">
               Events
             </Link>
             
-            <Link href="#team" className="hover:text-blue-700">
+            <Link href="#team" className="text-slate-100 hover:underline">
               Our Team
             </Link>
             
             <Link
               href="https://developers.google.com/community-guidelines"
-              className="hover:text-blue-700"
+              className="text-slate-100 hover:underline"
             >
               Community Guidelines
             </Link>
@@ -46,25 +46,25 @@ const Footer = () => {
             
           </div>
           <div className="py-3">
-            <span className="text-lg uppercase font-semibold text-gray-600">
+            <span className="text-lg uppercase font-semibold text-white">
               Contact Us
             </span>
-            <p className="mb-2">
+            <p className="mb-2 text-gray-100">
               Fr. Conceicao Rodrigues College Of Engineering 
               Bandra (W), Mumbai-400051 Maharashtra, India
             </p>
-            <div className="grid grid-cols-1">
-              <span>
-                <strong>Phone : </strong>+91 9769406063
+            <div className="grid grid-cols-1 px-2">
+              <span className="text-gray-100">
+                <strong className="text-white">Phone : </strong>+91 9769406063
               </span>
               
-              <span>
-                <strong>Email : </strong>crcegdsc@gmail.com
+              <span className="text-gray-100">
+                <strong className="text-white">Email : </strong>crcegdsc@gmail.com
               </span>
             </div>
           </div>
           <div className="md:pl-10 py-3">
-            <span className="text-lg uppercase font-semibold text-gray-600 ">
+            <span className="text-lg uppercase font-semibold text-white ">
               Social
             </span>
             <div className="flex flex-row" id="foot">

@@ -22,7 +22,7 @@ const Contact = () => {
             </div>
 
             <div className="right">
-              <form action="#" className="space-y-8">
+              <form action="#" className="space-y-3">
                 <div className="">
                   <input
                     type="text"
@@ -52,7 +52,7 @@ const Contact = () => {
                   <input
                     type="text"
                     id="subject"
-                    className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-full border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 mb-2"
+                    className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-full border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 mb-5"
                     placeholder="Subject"
                     required
                   />
