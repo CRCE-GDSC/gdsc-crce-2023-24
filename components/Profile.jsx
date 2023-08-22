@@ -62,7 +62,7 @@ const Profile = ({
   const LeaderBoardCard = ({ username, userranking, totalEventTags, rank }) => {
     return (
       <div className="mt-6 grid gap-8 md:grid-cols-1">
-        <div className="x-shadow-green feature-card relative overflow-hidden p-5">
+        <div className="x-shadow-gray feature-card relative overflow-hidden p-5">
           <div className="flex items-start justify-between">
             <h5 className="font-inter text-3xl font-bold tracking-tight text-black dark:text-white">
               Name: {username}
