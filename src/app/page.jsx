@@ -1,6 +1,9 @@
+'use client'
 import Image from 'next/image'
 import { Icons } from '../../components/icons'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
 import OurTeam from '../../components/OurTeam'
 import Whatwedo from '../../components/Whatwedo'
@@ -11,18 +14,84 @@ import Contact from '../../components/Contact'
 import HeroSection from '../../components/HeroSection'
 
 export default function Home() {
+  const [ref1, inView1] = useInView({
+    threshold: 0,
+    triggerOnce: false,
+  })
+  const [ref2, inView2] = useInView({
+    threshold: 0,
+    triggerOnce: false,
+  })
+  const [ref3, inView3] = useInView({
+    threshold: 0,
+    triggerOnce: false,
+  })
+  const [ref4, inView4] = useInView({
+    threshold: 0,
+    triggerOnce: false,
+  })
+  const [ref5, inView5] = useInView({
+    threshold: 0,
+    triggerOnce: false,
+  })
+
+  const variants = {
+    visible: { opacity: 1, scale: 1 },
+    hidden: { opacity: 0, scale: 0.65 },
+  }
+
   return (
-    <main className="relative flex max-h-screen flex-col items-center justify-between w-full bg-[fdfdfd]">
+    <main className="relative flex max-h-screen w-full flex-col items-center justify-between bg-[fdfdfd]">
       {/* Absolute positioning for the Events component */}
       <div className="w-full">
         <div className="min-h-screen">
           <HeroSection />
         </div>
-        <AboutUs />
-        <Whatwedo />
-        <Events />
-        <OurTeam />
-        <Contact />
+        <motion.div
+          animate={inView1 ? 'visible' : 'hidden'}
+          variants={variants}
+          exit="hidden"
+          transition={{ duration: 0.5 }}
+          ref={ref1}
+        >
+          <AboutUs />
+        </motion.div>
+        <motion.div
+          animate={inView2 ? 'visible' : 'hidden'}
+          variants={variants}
+          exit="hidden"
+          transition={{ duration: 0.5 }}
+          ref={ref2}
+        >
+          <Whatwedo />
+        </motion.div>
+        <motion.div
+          animate={inView3 ? 'visible' : 'hidden'}
+          variants={variants}
+          exit="hidden"
+          transition={{ duration: 0.5 }}
+          ref={ref3}
+        >
+          <Events />
+        </motion.div>
+        <motion.div
+          animate={inView4 ? 'visible' : 'hidden'}
+          variants={variants}
+          exit="hidden"
+          transition={{ duration: 0.5 }}
+          ref={ref4}
+        >
+          <OurTeam />
+        </motion.div>
+        <motion.div
+          animate={inView5 ? 'visible' : 'hidden'}
+          variants={variants}
+          exit="hidden"
+          transition={{ duration: 0.5 }}
+          ref={ref5}
+        >
+          <Contact />
+        </motion.div>
         <Footer />
       </div>
     </main>
