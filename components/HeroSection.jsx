@@ -9,9 +9,9 @@ const HeroSection = () => {
   const [user, loading, error] = useAuthState(auth)
   const [signInWithGoogle] = useSignInWithGoogle(auth)
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center px-6">
       <div className="z-shadow-yellow container mt-36 px-1 py-1 max-sm:mb-0 max-sm:hidden sm:mb-20">
-        <div className="min-h-[640px] w-full bg-[url('/assets/DSC3.gif')] max-sm:hidden max-sm:bg-[url('/assets/DSC3.gif')] ">
+        <div className="min-h-[640px] w-full bg-[url('/assets/DSC3.gif')] bg-cover bg-right max-sm:hidden max-sm:bg-[url('/assets/DSC3.gif')] ">
           <div className=" z-10 flex flex-col">
             {/* Your content goes here */}
             <div className="mx-24 p-8 text-left text-white">
