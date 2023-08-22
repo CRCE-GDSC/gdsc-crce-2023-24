@@ -19,6 +19,7 @@
         --gdsc-blue: 217 89% 61%;
         --gdsc-yellow: 45 100% 58%;
         --gdsc-green: 136 53% 43%;
+        --gdsc-gray: 0 0% 76%;
     
         --border: 0 0% 0%;
         --border-size: 3px;
@@ -89,6 +90,13 @@
         box-shadow: hsl(var(--border)) 0px 0px 0px var(--border-size) inset,
           hsl(var(--gdsc-green)) calc(var(--border-offset) * -1) var(--border-offset) 0px calc(var(--border-size) * -1),
           hsl(var(--border)) calc(var(--border-offset) * -1) var(--border-offset);
+      }
+
+      .x-shadow-gray {
+            border-radius: 10px;
+            box-shadow: hsl(var(--border)) 0px 0px 0px var(--border-size) inset,
+              hsl(var(--gdsc-gray)) calc(var(--border-offset) * -1) var(--border-offset) 0px calc(var(--border-size) * -1),
+              hsl(var(--border)) calc(var(--border-offset) * -1) var(--border-offset);
       }
 
       .z-shadow-yellow {

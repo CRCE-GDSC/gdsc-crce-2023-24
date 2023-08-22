@@ -72,7 +72,7 @@ const Profile = ({ userDisplayName, paramsUserName, userProfilePic, userEmail, u
   const LeaderBoardCard = ({username,userranking,totalEventTags,rank}) => {
     return (
       <div className="grid md:grid-cols-1 gap-8 mt-6">
-<div className="relative overflow-hidden x-shadow-green feature-card p-5">
+<div className="relative overflow-hidden x-shadow-gray feature-card p-5">
         <div className="flex justify-between items-start">
           <h5 className="font-inter font-bold text-3xl tracking-tight text-black dark:text-white">
             Name: {username}
@@ -358,24 +358,24 @@ const Profile = ({ userDisplayName, paramsUserName, userProfilePic, userEmail, u
   )
 }
 
-const container = document.getElementById('img-cont');
-const img_1 = document.getElementById('img-1');
-const img_2 = document.getElementById('img-2');
+// const container = document.getElementById('img-cont');
+// const img_1 = document.getElementById('img-1');
+// const img_2 = document.getElementById('img-2');
 
-img_1.onclick = function () {
-  img_1.style.transform = 'scale(0)';
-  img_2.style.transform = 'scale(1)';
-  img_2.style.opacity = '1';
-  img_1.style.opacity = '0';
-  container.style.borderRadius = '0';
-  img_2.style.borderRadius = '0';
-};
+// img_1.onclick = function () {
+//   img_1.style.transform = 'scale(0)';
+//   img_2.style.transform = 'scale(1)';
+//   img_2.style.opacity = '1';
+//   img_1.style.opacity = '0';
+//   container.style.borderRadius = '0';
+//   img_2.style.borderRadius = '0';
+// };
 
-img_2.onclick = function () {
-  img_2.style.transform = 'scale(0)';
-  img_1.style.transform = 'scale(1)';
-  img_1.style.opacity = '1';
-  img_2.style.opacity = '0';
-};
+// img_2.onclick = function () {
+//   img_2.style.transform = 'scale(0)';
+//   img_1.style.transform = 'scale(1)';
+//   img_1.style.opacity = '1';
+//   img_2.style.opacity = '0';
+// };
 
 export default Profile
