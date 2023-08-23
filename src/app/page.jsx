@@ -18,14 +18,7 @@ export default function Home() {
     threshold: 0,
     triggerOnce: false,
   })
-  const [ref2, inView2] = useInView({
-    threshold: 0,
-    triggerOnce: false,
-  })
-  const [ref3, inView3] = useInView({
-    threshold: 0,
-    triggerOnce: false,
-  })
+
   const [ref4, inView4] = useInView({
     threshold: 0,
     triggerOnce: false,
@@ -56,24 +49,11 @@ export default function Home() {
         >
           <AboutUs />
         </motion.div>
-        <motion.div
-          animate={inView2 ? 'visible' : 'hidden'}
-          variants={variants}
-          exit="hidden"
-          transition={{ duration: 0.5 }}
-          ref={ref2}
-        >
-          <Whatwedo />
-        </motion.div>
-        <motion.div
-          animate={inView3 ? 'visible' : 'hidden'}
-          variants={variants}
-          exit="hidden"
-          transition={{ duration: 0.5 }}
-          ref={ref3}
-        >
-          <Events />
-        </motion.div>
+
+        <Whatwedo />
+
+        <Events />
+
         <motion.div
           animate={inView4 ? 'visible' : 'hidden'}
           variants={variants}
