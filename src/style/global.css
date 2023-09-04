@@ -278,3 +278,20 @@
     opacity: 0;
     transform: scale(0);
   }
+
+
+  .profile_form_label{
+    padding: 1rem;
+    margin: 1rem;
+    font-weight: 600;
+  }
+
+  .profile_input_style{
+    border: 1px solid darkblue;   /* Border color */
+    border-radius: 10px;          /* Border radius for curved corners */
+    padding: 5px;                 /* Padding for inner content */
+    font-size: 16px;              /* Font size */
+    background-color: #f0f0f0;    /* Background color */
+    color: #333;                 /* Text color */
+    width: 100%; 
+  }

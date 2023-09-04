@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Image from 'next/image'
 
 import { Bold } from 'lucide-react'
@@ -78,6 +78,86 @@ const Profile = ({
       </div>
     )
   }
+
+  let completed = 50
+
+  const containerStyles = {
+    height: 30,
+    width: '80%',
+    backgroundColor: "#e0e0de",
+    borderRadius: 50,
+    // border: '1px solid #333',
+    margin: 50,
+    marginTop: 10,
+    marginBottom: 20,
+  }
+
+  const fillerStyles = {
+    height: '100%',
+    width: `${completed}%`,
+    background: 'linear-gradient(to right, #3498db, #2ecc71)', // Blue color gradient
+    borderRadius: 'inherit',
+    textAlign: 'right',
+  }
+
+  const labelStyles = {
+    padding: 5,
+    color: 'white',
+    fontWeight: 'bold',
+    marginRight: '1rem',
+  }
+
+  const headerStyles = {
+    margin: '30px 10px 10px 50px',
+    padding: '10px',
+    fontSize: 'larger',
+    fontWeight: '600',
+    width: '160px',
+  }
+
+  const [showForm, setShowForm] = useState(false);
+  const [formData, setFormData] = useState({
+    selectedClass: '',   // Dropdown value
+    college: '',         // College input value
+    mobileNo: '',        // Mobile No. input value
+  });
+
+  const handleButtonClick = () => {
+    setShowForm((prevShowForm) => !prevShowForm); // Toggle the showForm state
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+  
+    if (formData.selectedClass === '' || formData.college === '' || formData.selectedClass === '---' || formData.college === '---') {
+      alert('Please select a valid class and college.'); // You can use a more user-friendly notification method
+      return; // Prevent further processing if validation fails
+    }
+
+    // Validate the mobile number length
+    if (formData.mobileNo.length !== 10) {
+      alert('Please enter a 10-digit mobile number.'); // You can use a more user-friendly notification method
+      return; // Prevent further processing if validation fails
+    }
+  
+    setShowForm(false);
+    // Access the form data in formData object
+    console.log(formData);
+    // Reset the form fields to their initial state
+    setFormData({
+      selectedClass: '', // Reset dropdown value
+      college: '',       // Reset college input
+      mobileNo: '',      // Reset mobile no. input
+    });
+  };
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
   return (
     <div>
       <div className="mx-auto w-full rounded-lg bg-white">
@@ -137,6 +217,89 @@ const Profile = ({
           </div>
         ))}
       </div>
+
+      <h2 style={headerStyles}>Profile Status</h2>
+      <div style={containerStyles}>
+        <div style={fillerStyles}>
+          <span style={labelStyles}>{`${completed}%`}</span>
+        </div>
+      </div>
+      <button style={{ backgroundColor: 'blue',padding: '10px',marginLeft: '3rem' , color: 'white', margin: '10px', border: '1px solid darkblue', borderRadius: '20px',}} onClick={handleButtonClick} >{showForm ? 'Hide Form' : 'Complete Profile'}</button>
+
+      {showForm && (
+        <form onSubmit={handleFormSubmit}>
+          <label className='profile_form_label'>
+            Class:
+            <br />
+            <select
+              name="selectedClass"
+              value={formData.selectedClass}
+              onChange={handleInputChange}
+              className='profile_input_style'
+              required
+            >
+              <option value="---">---</option>
+              <option value="FE COMPS A">FE COMPS A</option>
+              <option value="FE COMPS B">FE COMPS B</option>
+              <option value="FE AI/DS">FE AI/DS</option>
+              <option value="FE ECS">FE ECS</option>
+              <option value="FE MECH">FE MECH</option>
+              <option value="SE COMPS A">SE COMPS A</option>
+              <option value="SE COMPS B">SE COMPS B</option>
+              <option value="SE AI/DS">SE AI/DS</option>
+              <option value="SE ECS">SE ECS</option>
+              <option value="SE MECH">SE MECH</option>
+              <option value="TE COMPS A">TE COMPS A</option>
+              <option value="TE COMPS B">TE COMPS B</option>
+              <option value="TE AI/DS">TE AI/DS</option>
+              <option value="TE ECS">TE ECS</option>
+              <option value="TE MECH">TE MECH</option>
+              <option value="BE COMPS A">BE COMPS A</option>
+              <option value="BE COMPS B">BE COMPS B</option>
+              <option value="BE AI/DS">BE AI/DS</option>
+              <option value="BE ECS">BE ECS</option>
+              <option value="BE MECH">BE MECH</option>
+            </select>
+          </label>
+
+          <br />
+          <hr />
+          <label className='profile_form_label'>
+            College:
+            <br />
+            <select
+              name="college"
+              value={formData.college}
+              onChange={handleInputChange}
+              className='profile_input_style'
+              required
+            >
+              <option value="---">---</option>
+              <option value="Fr. CRCE">Fr. CRCE</option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+
+          <br />
+          <hr />
+          <label className='profile_form_label'>
+            Mobile No:
+            <br />
+            <input
+              type="text"
+              name="mobileNo"
+              value={formData.mobileNo}
+              onChange={handleInputChange}
+              className='profile_input_style'
+              required
+            />
+          </label>
+
+          <button type="submit">Submit</button>
+        </form>
+      )}
+      
+
       <div className="mx-auto w-[75%]">
         <div className="mt-6 grid justify-center gap-8 md:grid-cols-2">
           <div className="x-shadow-yellow feature-card relative h-[150px] max-w-[18rem] overflow-hidden p-5">
