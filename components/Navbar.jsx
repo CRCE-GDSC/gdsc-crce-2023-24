@@ -6,6 +6,8 @@ import Image from 'next/image'
 import { LogOut, UserIcon } from 'lucide-react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { db } from '../lib/firebase'
+import { increment } from 'firebase/firestore'
+
 import {
   getDocs,
   doc,
@@ -31,6 +33,11 @@ const Navbar = () => {
         { userName: user.displayName, userImage: user.photoURL },
         { merge: true }
       )
+      getDocs(collection(db, 'users', user.uid, 'tags')).then((snapshot) => {
+        if (snapshot.empty) {
+          updateDoc(doc(db, 'users', user.uid), { tags: increment(0) })
+        }
+      })
     }
   }, [user])
 
