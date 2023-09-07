@@ -22,13 +22,7 @@ async function getImageFromAPI(apiUrl) {
   }
 }
 
-const Profile = ({
-  userDisplayName,
-  paramsUserName,
-  userProfilePic,
-  userEmail,
-  userUID,
-}) => {
+const Profile = ({ userDisplayName, userProfilePic, userEmail, userUID }) => {
   const [topUsers, setTopUsers] = useState([])
   useEffect(() => {
     async function fetchTopUsers() {
@@ -39,7 +33,7 @@ const Profile = ({
     fetchTopUsers()
   }, [])
 
-  const user = [
+  const user2 = [
     {
       userimg: '/assets/team/alvin.jpg',
       username: 'Alvin Dsouza',
@@ -69,25 +63,25 @@ const Profile = ({
     (sum, event) => sum + parseInt(event.eventTags),
     0
   )
-  const LeaderBoardCard = ({ username, userranking, totalEventTags, rank }) => {
-    return (
-      <div className="mt-6 grid gap-8 md:grid-cols-1">
-        <div className="x-shadow-gray feature-card relative overflow-hidden p-5">
-          <div className="flex items-start justify-between">
-            <h5 className="font-inter text-3xl font-bold tracking-tight text-black dark:text-white">
-              Name: {username}
-            </h5>
-            <h5 className="font-inter text-3xl font-bold tracking-tight text-black dark:text-white">
-              Rank: {rank}
-            </h5>
-          </div>
-          <p className="font-inter text-3xl text-black dark:text-gray-400">
-            Tags: {totalEventTags}
-          </p>
-        </div>
-      </div>
-    )
-  }
+  // const LeaderBoardCard = ({ username, userranking, totalEventTags, rank }) => {
+  //   return (
+  //     <div className="mt-6 grid gap-8 md:grid-cols-1">
+  //       <div className="x-shadow-gray feature-card relative overflow-hidden p-5">
+  //         <div className="flex items-start justify-between">
+  //           <h5 className="font-inter text-3xl font-bold tracking-tight text-black dark:text-white">
+  //             Name: {username}
+  //           </h5>
+  //           <h5 className="font-inter text-3xl font-bold tracking-tight text-black dark:text-white">
+  //             Rank: {rank}
+  //           </h5>
+  //         </div>
+  //         <p className="font-inter text-3xl text-black dark:text-gray-400">
+  //           Tags: {totalEventTags}
+  //         </p>
+  //       </div>
+  //     </div>
+  //   )
+  // }
 
   let completed = 50
 
@@ -176,7 +170,7 @@ const Profile = ({
   return (
     <div>
       <div className="mx-auto w-full rounded-lg bg-white">
-        {user.map((values, index) => (
+        {user2.map((values, index) => (
           <div key={index} className="flex flex-col items-center pb-10">
             <div id="img-cont" className="image-container">
               <img
@@ -352,7 +346,7 @@ const Profile = ({
             <h5 className="mb-2 font-inter text-3xl font-bold tracking-tight text-[#F44336] dark:text-white">
               LEADERBOARD
             </h5>
-            {user.map((values, index) => (
+            {user2.map((values, index) => (
               <div
                 key={index}
                 className="font-inter text-3xl text-black dark:text-gray-400"
@@ -449,31 +443,6 @@ const Profile = ({
           </div>
         </div>
       </div>
-
-      {/* <div className="relative overflow-hidden x-shadow-red feature-card p-5 h-[150px] max-w-[18rem]">
-  <h5 className="font-inter font-bold mb-2 text-3xl tracking-tight text-[#F44336] dark:text-white">
-    LEADER BOARD
-  </h5>
-  {/* This is a comment-> Loop through the top 10 users */}
-
-      {/* {user.slice(0, 10).map((values, index) => (
-    <div
-      key={index}
-      className="font-inter text-3xl text-black dark:text-gray-400"
-    >
-      <p>Rank: {index + 1}</p>
-      <p>{values.username}</p>
-    </div>
-  ))}
-
-  <Image
-    src="/assets/MyProfile/Maskgroup.png"
-    alt="Leader Board Image"
-    className="absolute bottom-1 right-1"
-    width={75}
-    height={75}
-  />
-</div> */}
 
       {/* LeaderBoard */}
       <h1 className="mx-7 text-2xl font-semibold ">Leaderboard</h1>
