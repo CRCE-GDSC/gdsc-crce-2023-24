@@ -7,15 +7,15 @@ import { LogOut, UserIcon } from 'lucide-react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { db } from '../lib/firebase'
 import { increment } from 'firebase/firestore'
-
 import {
   getDocs,
+  getDoc,
   doc,
   setDoc,
-  collection,
   deleteDoc,
   query,
   updateDoc,
+  collection,
 } from 'firebase/firestore'
 import { auth } from '../lib/firebase'
 import { getFirestore } from 'firebase/firestore'
@@ -26,19 +26,28 @@ const Navbar = () => {
   const [nav, setNav] = useState(false)
 
   useEffect(() => {
-    if (user) {
-      const userRef = doc(db, 'users', user.uid)
-      setDoc(
-        userRef,
-        { userName: user.displayName, userImage: user.photoURL },
-        { merge: true }
-      )
-      getDocs(collection(db, 'users', user.uid, 'tags')).then((snapshot) => {
-        if (snapshot.empty) {
-          updateDoc(doc(db, 'users', user.uid), { tags: increment(0) })
+    async function fetchData() {
+      if (user) {
+        const userRef = doc(db, 'users', user.uid)
+        setDoc(
+          userRef,
+          { userName: user.displayName, userImage: user.photoURL },
+          { merge: true }
+        )
+        const tagsRef = doc(db, 'users', user.uid)
+        try {
+          const doc = await getDoc(tagsRef)
+
+          if (!doc.tags) {
+            await setDoc(userRef, { tags: '0' }, { merge: true })
+          }
+        } catch (e) {
+          console.error(e)
         }
-      })
+      }
     }
+
+    fetchData()
   }, [user])
 
   const handleNav = () => {

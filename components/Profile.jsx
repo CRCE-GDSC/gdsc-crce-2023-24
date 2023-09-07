@@ -1,8 +1,8 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
-
+import { useEffect } from 'react'
 import { Bold } from 'lucide-react'
-
+import { getTopUsers } from '@src/app/MyProfile/data/page'
 async function getImageFromAPI(apiUrl) {
   try {
     const response = await fetch(apiUrl)
@@ -29,6 +29,16 @@ const Profile = ({
   userEmail,
   userUID,
 }) => {
+  const [topUsers, setTopUsers] = useState([])
+  useEffect(() => {
+    async function fetchTopUsers() {
+      const users = await getTopUsers()
+      setTopUsers(users)
+    }
+
+    fetchTopUsers()
+  }, [])
+
   const user = [
     {
       userimg: '/assets/team/alvin.jpg',
@@ -84,7 +94,7 @@ const Profile = ({
   const containerStyles = {
     height: 30,
     width: '80%',
-    backgroundColor: "#e0e0de",
+    backgroundColor: '#e0e0de',
     borderRadius: 50,
     // border: '1px solid #333',
     margin: 50,
@@ -115,48 +125,53 @@ const Profile = ({
     width: '160px',
   }
 
-  const [showForm, setShowForm] = useState(false);
+  const [showForm, setShowForm] = useState(false)
   const [formData, setFormData] = useState({
-    selectedClass: '',   // Dropdown value
-    college: '',         // College input value
-    mobileNo: '',        // Mobile No. input value
-  });
+    selectedClass: '', // Dropdown value
+    college: '', // College input value
+    mobileNo: '', // Mobile No. input value
+  })
 
   const handleButtonClick = () => {
-    setShowForm((prevShowForm) => !prevShowForm); // Toggle the showForm state
-  };
+    setShowForm((prevShowForm) => !prevShowForm) // Toggle the showForm state
+  }
 
   const handleFormSubmit = (e) => {
-    e.preventDefault();
-  
-    if (formData.selectedClass === '' || formData.college === '' || formData.selectedClass === '---' || formData.college === '---') {
-      alert('Please select a valid class and college.'); // You can use a more user-friendly notification method
-      return; // Prevent further processing if validation fails
+    e.preventDefault()
+
+    if (
+      formData.selectedClass === '' ||
+      formData.college === '' ||
+      formData.selectedClass === '---' ||
+      formData.college === '---'
+    ) {
+      alert('Please select a valid class and college.') // You can use a more user-friendly notification method
+      return // Prevent further processing if validation fails
     }
 
     // Validate the mobile number length
     if (formData.mobileNo.length !== 10) {
-      alert('Please enter a 10-digit mobile number.'); // You can use a more user-friendly notification method
-      return; // Prevent further processing if validation fails
+      alert('Please enter a 10-digit mobile number.') // You can use a more user-friendly notification method
+      return // Prevent further processing if validation fails
     }
-  
-    setShowForm(false);
+
+    setShowForm(false)
     // Access the form data in formData object
-    console.log(formData);
+    console.log(formData)
     // Reset the form fields to their initial state
     setFormData({
       selectedClass: '', // Reset dropdown value
-      college: '',       // Reset college input
-      mobileNo: '',      // Reset mobile no. input
-    });
-  };
+      college: '', // Reset college input
+      mobileNo: '', // Reset mobile no. input
+    })
+  }
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData({
       ...formData,
       [name]: value,
-    });
-  };
+    })
+  }
 
   return (
     <div>
@@ -224,18 +239,31 @@ const Profile = ({
           <span style={labelStyles}>{`${completed}%`}</span>
         </div>
       </div>
-      <button style={{ backgroundColor: 'blue',padding: '10px',marginLeft: '3rem' , color: 'white', margin: '10px', border: '1px solid darkblue', borderRadius: '20px',}} onClick={handleButtonClick} >{showForm ? 'Hide Form' : 'Complete Profile'}</button>
+      <button
+        style={{
+          backgroundColor: 'blue',
+          padding: '10px',
+          marginLeft: '3rem',
+          color: 'white',
+          margin: '10px',
+          border: '1px solid darkblue',
+          borderRadius: '20px',
+        }}
+        onClick={handleButtonClick}
+      >
+        {showForm ? 'Hide Form' : 'Complete Profile'}
+      </button>
 
       {showForm && (
         <form onSubmit={handleFormSubmit}>
-          <label className='profile_form_label'>
+          <label className="profile_form_label">
             Class:
             <br />
             <select
               name="selectedClass"
               value={formData.selectedClass}
               onChange={handleInputChange}
-              className='profile_input_style'
+              className="profile_input_style"
               required
             >
               <option value="---">---</option>
@@ -264,14 +292,14 @@ const Profile = ({
 
           <br />
           <hr />
-          <label className='profile_form_label'>
+          <label className="profile_form_label">
             College:
             <br />
             <select
               name="college"
               value={formData.college}
               onChange={handleInputChange}
-              className='profile_input_style'
+              className="profile_input_style"
               required
             >
               <option value="---">---</option>
@@ -282,7 +310,7 @@ const Profile = ({
 
           <br />
           <hr />
-          <label className='profile_form_label'>
+          <label className="profile_form_label">
             Mobile No:
             <br />
             <input
@@ -290,7 +318,7 @@ const Profile = ({
               name="mobileNo"
               value={formData.mobileNo}
               onChange={handleInputChange}
-              className='profile_input_style'
+              className="profile_input_style"
               required
             />
           </label>
@@ -298,7 +326,6 @@ const Profile = ({
           <button type="submit">Submit</button>
         </form>
       )}
-      
 
       <div className="mx-auto w-[75%]">
         <div className="mt-6 grid justify-center gap-8 md:grid-cols-2">
@@ -453,118 +480,42 @@ const Profile = ({
       <br />
       <div className="mx-auto w-[75%]">
         {/* Top three cards */}
-        <div className="mt-6 grid gap-8 md:grid-cols-1">
-          <div className="x-shadow-yellow feature-card relative overflow-hidden p-5 ">
-            <div className="flex items-start justify-between">
-              <h5 className="font-inter text-3xl font-bold tracking-tight text-black dark:text-white">
-                Name:
-              </h5>
-              <h5 className="font-inter text-3xl font-bold tracking-tight text-black dark:text-white">
-                Rank: 1
-              </h5>
+        {topUsers.slice(0, 10).map((user, index) => (
+          <div key={index} className="mt-6 grid gap-8 md:grid-cols-1">
+            <div
+              className={`x-shadow-${
+                [
+                  'yellow',
+                  'blue',
+                  'red',
+                  'gray',
+                  'gray',
+                  'gray',
+                  'gray',
+                  'gray',
+                  'gray',
+                  'gray',
+                  'gray',
+                  'gray',
+                ][index]
+              } feature-card relative overflow-hidden p-5 `}
+            >
+              <div className="flex items-start justify-between">
+                <h5 className="font-inter text-3xl font-bold tracking-tight text-black dark:text-white">
+                  Name: {user.userName}
+                </h5>
+                <h5 className="font-inter text-3xl font-bold tracking-tight text-black dark:text-white">
+                  Rank: {index + 1}
+                </h5>
+              </div>
+              <p className="font-inter text-3xl text-black dark:text-gray-400">
+                Tags: {user.tags}
+              </p>
             </div>
-            <p className="font-inter text-3xl text-black dark:text-gray-400">
-              Tags:
-            </p>
           </div>
-        </div>
-
-        <div className="mt-6 grid gap-8 md:grid-cols-1">
-          <div className="x-shadow-blue feature-card relative overflow-hidden p-5 ">
-            <div className="flex items-start justify-between">
-              <h5 className="font-inter text-3xl font-bold tracking-tight text-black dark:text-white">
-                Name:
-              </h5>
-              <h5 className="font-inter text-3xl font-bold tracking-tight text-black dark:text-white">
-                Rank: 2
-              </h5>
-            </div>
-            <p className="font-inter text-3xl text-black dark:text-gray-400">
-              Tags:
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-6 grid gap-8 md:grid-cols-1">
-          <div className="x-shadow-red feature-card relative overflow-hidden p-5 ">
-            <div className="flex items-start justify-between">
-              <h5 className="font-inter text-3xl font-bold tracking-tight text-black dark:text-white">
-                Name:
-              </h5>
-              <h5 className="font-inter text-3xl font-bold tracking-tight text-black dark:text-white">
-                Rank: 3
-              </h5>
-            </div>
-            <p className="font-inter text-3xl text-black dark:text-gray-400">
-              Tags:
-            </p>
-          </div>
-        </div>
-
-        {/* rest rank cards */}
-
-        {Array.from({ length: 7 }, (_, index) => (
-          <LeaderBoardCard key={index} rank={index + 4} />
         ))}
       </div>
     </div>
-
-    // If only single user with name, rank and Tags have to be displayed
-    // {user.slice(0, 3).map((values, index) => (
-    //   <div key={index} className="relative overflow-hidden x-shadow-yellow feature-card p-5">
-    //     <div className="flex justify-between items-start">
-    //       <h5 className="font-inter font-bold text-3xl tracking-tight text-black dark:text-white">
-    //         Name: {values.username}
-    //       </h5>
-    //       <h5 className="font-inter font-bold text-3xl tracking-tight text-black dark:text-white">
-    //         Rank: {values.userranking}
-    //       </h5>
-    //     </div>
-    //     <p className="font-inter text-3xl text-black dark:text-gray-400">
-    //       Tags: {values.rank}
-    //     </p>
-    //   </div>
-    // ))}
-
-    // {/* Rest of the rank cards */}
-    // {user.slice(3).map((values, index) => (
-    //   <LeaderBoardCard key={index} username={values.username} rank={values.userranking} totalEventTagsn={values.rank} />
-    // ))}
   )
 }
-
-// Replace with your HTML element ID
-// window.onload = function(){
-//   // getImageFromAPI(apiUrl)
-//   // .then(imageURL => {
-//   //   if (imageURL) {
-//   //     // Set the image source
-//   //     imageElement.src = imageURL;
-//   //   }
-//   // });
-
-// }
-
-// const container = document.getElementById('img-cont');
-// const img_1 = document.getElementById('img-1');
-// const img_2 = document.getElementById('img-2');
-
-// console.log(img_1);
-// console.log(img_2);
-
-// img_1.onclick = function () {
-//   // img_1.style.transform = 'scale(0)';
-//   // img_2.style.transform = 'scale(1)';
-//   // img_2.style.opacity = '1';
-//   // img_1.style.opacity = '0';
-//   // container.style.borderRadius = '0';
-//   // img_2.style.borderRadius = '0';
-// };
-
-// img_2.onclick = function () {
-//   // img_2.style.transform = 'scale(0)';
-//   // img_1.style.transform = 'scale(1)';
-//   // img_1.style.opacity = '1';
-//   // img_2.style.opacity = '0';
-// };
 export default Profile
