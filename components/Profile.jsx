@@ -173,7 +173,11 @@ const Profile = ({ userDisplayName, userProfilePic, userEmail, userUID }) => {
         {user2.map((values, index) => (
           <div key={index} className="flex flex-col items-center pb-10">
             <div id="img-cont" className="image-container">
-              <img
+              <Image
+                alt="ProfilePic"
+                width={1000}
+                height={1000}
+                priority
                 src={userProfilePic}
                 className="img-1"
                 id="img-1"
@@ -189,18 +193,21 @@ const Profile = ({ userDisplayName, userProfilePic, userEmail, userUID }) => {
                   img_2.style.borderRadius = '0'
                 }}
               />
-              <img
-                src="https://images.unsplash.com/photo-1682687982167-d7fb3ed8541d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw2fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=600&q=60"
+              <Image
+                alt="QR"
+                width={1000}
+                height={1000}
+                priority
+                src={Image.src}
                 className="img-2"
                 id="img-2"
                 onLoad={() => {
                   const apiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${userUID}` // Replace with the actual API URL
-                  const imageElement = document.getElementById('img-2')
 
                   getImageFromAPI(apiUrl).then((imageURL) => {
                     if (imageURL) {
                       // Set the image source
-                      imageElement.src = imageURL
+                      Image.src = imageURL
                     }
                   })
                 }}
