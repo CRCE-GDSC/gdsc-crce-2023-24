@@ -34,16 +34,6 @@ const Navbar = () => {
           { userName: user.displayName, userImage: user.photoURL },
           { merge: true }
         )
-        const tagsRef = doc(db, 'users', user.uid)
-        try {
-          const doc = await getDoc(tagsRef)
-
-          if (!doc.tags) {
-            await setDoc(userRef, { tags: '0' }, { merge: true })
-          }
-        } catch (e) {
-          console.error(e)
-        }
       }
     }
 
