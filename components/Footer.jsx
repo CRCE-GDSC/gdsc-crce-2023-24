@@ -71,19 +71,19 @@ const Footer = () => {
               <a className="p-3" href='https://www.instagram.com/gdsc_crce/' target='_blank'>
                 <FaInstagram
                   size={35}
-                  className="text-violet-500 hover:text-white hover:bg-blue-400 rounded-xl"
+                  className="text-white  hover:bg-blue-400 rounded-xl"
                 />
               </a>
               <a className="p-3">
                 <FaYoutube
                   size={35}
-                  className="text-red-600 hover:text-white hover:bg-blue-400 rounded-xl"
+                  className="text-white  hover:bg-blue-400 rounded-xl"
                 />
               </a>
               <a className="p-3">
                 <FaTwitter
                   size={35}
-                  className="text-sky-500 hover:text-white hover:bg-blue-400 rounded-xl"
+                  className="text-white  hover:bg-blue-400 rounded-xl"
                 />
               </a>
             </div>
