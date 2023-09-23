@@ -1,3 +1,4 @@
+'use client'
 import { db } from '@lib/firebase' // import your Firebase instance
 import { collection, query, orderBy, limit, getDocs } from 'firebase/firestore'
 
