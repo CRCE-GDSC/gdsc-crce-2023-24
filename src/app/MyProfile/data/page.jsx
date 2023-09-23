@@ -1,8 +1,7 @@
-'use client'
 import { db } from '@lib/firebase' // import your Firebase instance
 import { collection, query, orderBy, limit, getDocs } from 'firebase/firestore'
 
-export async function getTopUsers() {
+const getTopUsers = async () => {
   const usersRef = collection(db, 'users')
   const q = query(usersRef, orderBy('tags', 'desc'), limit(10))
   const snapshot = await getDocs(q)
@@ -12,3 +11,5 @@ export async function getTopUsers() {
   }))
   return topUsers
 }
+
+export default getTopUsers
