@@ -4,6 +4,9 @@ const nextConfig = {}
 module.exports = {
     images: {
         domains: ['media.giphy.com', 'lh3.googleusercontent.com', 'images.unsplash.com']
-    }
+    },
+    experimental: {
+        optimizePackageImports: ['package-name'],
+      },
 };
 

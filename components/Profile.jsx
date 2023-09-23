@@ -4,6 +4,11 @@ import { useEffect } from 'react'
 import { Bold } from 'lucide-react'
 import { getTopUsers } from '@src/app/MyProfile/data/page'
 import Question from './Question'
+import { db } from '@lib/firebase'
+import { doc, getDoc } from 'firebase/firestore'
+import { auth } from '@lib/firebase'
+import { useAuthState } from 'react-firebase-hooks/auth'
+
 async function getImageFromAPI(apiUrl) {
   try {
     const response = await fetch(apiUrl)
@@ -24,6 +29,8 @@ async function getImageFromAPI(apiUrl) {
 }
 
 const Profile = ({ userDisplayName, userProfilePic, userEmail, userUID }) => {
+  const [user, loading, error] = useAuthState(auth)
+  const [userData, setUserData] = useState(null)
   const [topUsers, setTopUsers] = useState([])
   useEffect(() => {
     async function fetchTopUsers() {
@@ -34,9 +41,25 @@ const Profile = ({ userDisplayName, userProfilePic, userEmail, userUID }) => {
     fetchTopUsers()
   }, [])
 
+  useEffect(() => {
+    if (user) {
+      const fetchUserData = async () => {
+        const docRef = doc(db, 'users', user.uid)
+        const docSnap = await getDoc(docRef)
+
+        if (docSnap.exists()) {
+          setUserData(docSnap.data())
+        } else {
+        }
+      }
+
+      fetchUserData()
+    }
+  }, [user])
+
   const user2 = [
     {
-      userimg: '/assets/team/alvin.jpg',
+      userimg: '/assets/team/Alvin.jpg',
       username: 'Alvin Dsouza',
       userclass: 'SE Comps A',
       useremail: 'alvindsouza2204@gmail.com',
@@ -48,13 +71,13 @@ const Profile = ({ userDisplayName, userProfilePic, userEmail, userUID }) => {
   const events = [
     {
       eventname: 'Web Dev Workshop',
-      eventpreview: '/assets/team/alvin.jpg',
+      eventpreview: '/assets/team/Alvin.jpg',
       eventstatus: 'Attended',
       eventTags: '50',
     },
     {
       eventname: 'C Programming Workshop',
-      eventpreview: '/assets/team/alvin.jpg',
+      eventpreview: '/assets/team/Alvin.jpg',
       eventstatus: 'Not Attended',
       eventTags: '25',
     },
@@ -143,7 +166,13 @@ const Profile = ({ userDisplayName, userProfilePic, userEmail, userUID }) => {
               {userDisplayName}
             </h5>
             <span className="text-sm uppercase text-[#F44336] dark:text-gray-400 ">
-              {values.userclass}
+              {userData ? (
+                <>
+                  {userData.userClass ? (
+                    <p>Your Class: {userData.userClass}</p>
+                  ) : null}
+                </>
+              ) : null}
             </span>
             <span className="text-sm text-gray-500 dark:text-gray-400">
               {userEmail}
@@ -160,7 +189,11 @@ const Profile = ({ userDisplayName, userProfilePic, userEmail, userUID }) => {
             </h5>
 
             <p className="font-inter text-3xl text-black dark:text-gray-400">
-              <strong className="font-bold">{totalEventTags}</strong> Tags
+              <strong className="font-bold">
+                {userData ? (
+                  <>{userData.tags ? <p>Tags: {userData.tags}</p> : null}</>
+                ) : null}
+              </strong>
             </p>
             <div>
               <Image
