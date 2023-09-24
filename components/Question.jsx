@@ -7,17 +7,22 @@ import { setDoc } from 'firebase/firestore'
 import { auth } from '@lib/firebase'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { useRouter } from 'next/navigation'
+import { useDocument } from 'react-firebase-hooks/firestore'
 
 const Question = () => {
   const completed = 50
 
   const [user, loading, error] = useAuthState(auth)
+  const [userDoc, userDocLoading, userDocError] = useDocument(
+    doc(db, 'users', auth.currentUser.uid)
+  )
   const [userData, setUserData] = useState(null)
   const [dataFetched, setDataFetched] = useState(false) // Add a state variable to track whether the data has been fetched
   const [showForm, setShowForm] = useState(false)
   const [showFull, setShowFull] = useState(true)
   const [isLoading, setIsLoading] = useState(true) // Add a loading state
   const router = useRouter()
+
   useEffect(() => {
     if (user) {
       const fetchUserData = async () => {
@@ -113,8 +118,9 @@ const Question = () => {
 
   return (
     <div>
-      {userData &&
-      (!userData.userClass || !userData.collegeName || !userData.phoneNo) ? (
+      {!userDocLoading &&
+      !userDocError &&
+      (!userDoc.data().userClass || !userDoc.data().collegeName || !userDoc.data().phoneNo) ? (
         <div className="m-10">
           <h2 className="mb-2 text-lg font-semibold">Profile Status</h2>
 
