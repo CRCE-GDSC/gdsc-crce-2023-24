@@ -2,9 +2,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import { useEffect } from 'react'
-import { Bold } from 'lucide-react'
-import getTopUsers from '@src/app/MyProfile/data/page'
-import Question from './Question'
+import getTopUsers from '@src/app/data/data'
 import { db } from '@lib/firebase'
 import { doc, getDoc } from 'firebase/firestore'
 import { auth } from '@lib/firebase'
@@ -29,10 +27,11 @@ async function getImageFromAPI(apiUrl) {
   }
 }
 
-const Profile = ({ userDisplayName, userProfilePic, userEmail, userUID }) => {
+const Profile = ({ userDoc }) => {
   const [user, loading, error] = useAuthState(auth)
   const [userData, setUserData] = useState(null)
   const [topUsers, setTopUsers] = useState([])
+
   useEffect(() => {
     async function fetchTopUsers() {
       const users = await getTopUsers()
@@ -110,7 +109,6 @@ const Profile = ({ userDisplayName, userProfilePic, userEmail, userUID }) => {
 
   return (
     <div>
-      <Question />
       <div className="mx-auto w-full rounded-lg bg-white">
         {user2.map((values, index) => (
           <div key={index} className="flex flex-col items-center pb-10">
@@ -120,7 +118,7 @@ const Profile = ({ userDisplayName, userProfilePic, userEmail, userUID }) => {
                 width={1000}
                 height={1000}
                 priority
-                src={userProfilePic}
+                src={userDoc.data().userImage}
                 className="img-1"
                 id="img-1"
                 onClick={() => {
@@ -144,7 +142,7 @@ const Profile = ({ userDisplayName, userProfilePic, userEmail, userUID }) => {
                 className="img-2"
                 id="img-2"
                 onLoad={() => {
-                  const apiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${userUID}` // Replace with the actual API URL
+                  const apiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${user.uid}` // Replace with the actual API URL
 
                   getImageFromAPI(apiUrl).then((imageURL) => {
                     if (imageURL) {
@@ -164,19 +162,13 @@ const Profile = ({ userDisplayName, userProfilePic, userEmail, userUID }) => {
               />
             </div>
             <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
-              {userDisplayName}
+              {userDoc.data().userName}
             </h5>
-            <span className="text-sm uppercase text-[#F44336] dark:text-gray-400 ">
-              {userData ? (
-                <>
-                  {userData.userClass ? (
-                    <p>Your Class: {userData.userClass}</p>
-                  ) : null}
-                </>
-              ) : null}
+            <span className="text-sm  text-[#F44336] dark:text-gray-400 ">
+              {user.email}
             </span>
             <span className="text-sm text-gray-500 dark:text-gray-400">
-              {userEmail}
+              {userDoc.data().userClass}
             </span>
           </div>
         ))}

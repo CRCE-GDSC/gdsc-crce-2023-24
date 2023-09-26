@@ -8,6 +8,7 @@ import { auth } from '@lib/firebase'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { useRouter } from 'next/navigation'
 import { useDocument } from 'react-firebase-hooks/firestore'
+import Profile from './Profile'
 
 const Question = () => {
   const completed = 50
@@ -120,7 +121,9 @@ const Question = () => {
     <div>
       {!userDocLoading &&
       !userDocError &&
-      (!userDoc.data().userClass || !userDoc.data().collegeName || !userDoc.data().phoneNo) ? (
+      (!userDoc.data().userClass ||
+        !userDoc.data().collegeName ||
+        !userDoc.data().phoneNo) ? (
         <div className="m-10">
           <h2 className="mb-2 text-lg font-semibold">Profile Status</h2>
 
@@ -218,7 +221,16 @@ const Question = () => {
           )}
         </div>
       ) : (
-        <div></div>
+        <div>
+          <div>
+            {/* Render AnotherComponent conditionally */}
+            {!userDocLoading &&
+              !userDocError &&
+              (userDoc.data().userClass ||
+                userDoc.data().collegeName ||
+                userDoc.data().phoneNo) && <Profile userDoc={userDoc} />}
+          </div>
+        </div>
       )}
     </div>
   )
