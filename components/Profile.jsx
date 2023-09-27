@@ -77,7 +77,7 @@ const Profile = ({ userDoc }) => {
       eventTags: '50',
     },
     {
-      eventname: 'C Programming Workshop',
+      eventname: 'Code Crafters',
       eventpreview: '/assets/MyProfile/codecrafters.webp',
       eventstatus: 'Not Attended',
       eventTags: '25',
