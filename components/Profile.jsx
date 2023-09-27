@@ -71,14 +71,14 @@ const Profile = ({ userDoc }) => {
 
   const events = [
     {
-      eventname: 'Web Dev Workshop',
-      eventpreview: '',
+      eventname: 'Future Forge',
+      eventpreview: '/assets/MyProfile/futureforge.webp',
       eventstatus: 'Not Attended',
       eventTags: '50',
     },
     {
       eventname: 'C Programming Workshop',
-      eventpreview: '',
+      eventpreview: '/assets/MyProfile/codecrafters.webp',
       eventstatus: 'Not Attended',
       eventTags: '25',
     },
@@ -202,7 +202,7 @@ const Profile = ({ userDoc }) => {
 
           <div className="x-shadow-red feature-card relative ml-auto h-[150px] max-w-[18rem] overflow-hidden p-5">
             <h5 className="mb-2 font-inter text-3xl font-bold tracking-tight text-[#F44336] dark:text-white">
-              LEADERBOARD
+              EVENTS ATTENDED
             </h5>
             {user2.map((values, index) => (
               <div
@@ -211,7 +211,7 @@ const Profile = ({ userDoc }) => {
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="font-semibold">Rank: {values.userranking}</p>
+                    <p className="font-semibold">{values.userranking}</p>
                   </div>
                 </div>
               </div>
