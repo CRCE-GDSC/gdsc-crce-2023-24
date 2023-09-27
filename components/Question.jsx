@@ -17,36 +17,9 @@ const Question = () => {
   const [userDoc, userDocLoading, userDocError] = useDocument(
     doc(db, 'users', auth.currentUser.uid)
   )
-  const [userData, setUserData] = useState(null)
-  const [dataFetched, setDataFetched] = useState(false) // Add a state variable to track whether the data has been fetched
+  // Add a state variable to track whether the data has been fetched
   const [showForm, setShowForm] = useState(false)
-  const [showFull, setShowFull] = useState(true)
-  const [isLoading, setIsLoading] = useState(true) // Add a loading state
   const router = useRouter()
-
-  useEffect(() => {
-    if (user) {
-      const fetchUserData = async () => {
-        setIsLoading(true) // Set loading state to true before fetching data
-        const docRef = doc(db, 'users', user.uid)
-        const docSnap = await getDoc(docRef)
-
-        if (docSnap.exists()) {
-          const userData = docSnap.data()
-          setUserData(userData)
-          // Update showForm based on whether userData is complete
-          setShowFull(
-            !userData.userClass || !userData.collegeName || !userData.phoneNo
-          )
-        } else {
-          console.log('No such document!')
-        }
-        setIsLoading(false) // Set loading state to false after fetching data
-      }
-
-      fetchUserData()
-    }
-  }, [user])
 
   const [formData, setFormData] = useState({
     selectedClass: '', // Dropdown value
@@ -101,7 +74,6 @@ const Question = () => {
       })
 
       setErrorMessage('')
-      setShowFull(false)
       // Clear the error message upon successful submission
       router.push('/')
     } catch (error) {
@@ -121,9 +93,7 @@ const Question = () => {
     <div>
       {!userDocLoading &&
       !userDocError &&
-      (!userDoc.data().userClass ||
-        !userDoc.data().collegeName ||
-        !userDoc.data().phoneNo) ? (
+      (!userDoc.data().userClass || !userDoc.data().collegeName) ? (
         <div className="m-10">
           <h2 className="mb-2 text-lg font-semibold">Profile Status</h2>
 
@@ -226,9 +196,9 @@ const Question = () => {
             {/* Render AnotherComponent conditionally */}
             {!userDocLoading &&
               !userDocError &&
-              (userDoc.data().userClass ||
-                userDoc.data().collegeName ||
-                userDoc.data().phoneNo) && <Profile userDoc={userDoc} />}
+              (userDoc.data().userClass || userDoc.data().collegeName) && (
+                <Profile userDoc={userDoc} />
+              )}
           </div>
         </div>
       )}
