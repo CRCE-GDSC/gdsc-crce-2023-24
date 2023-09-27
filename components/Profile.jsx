@@ -27,6 +27,7 @@ async function getImageFromAPI(apiUrl) {
   }
 }
 
+
 const Profile = ({ userDoc }) => {
   const [user, loading, error] = useAuthState(auth)
   const [userData, setUserData] = useState(null)
@@ -87,6 +88,19 @@ const Profile = ({ userDoc }) => {
     (sum, event) => sum + parseInt(event.eventTags),
     0
   )
+
+  const [qrImageURL, setQrImageURL] = useState(''); // State to store the QR image URL
+
+  useEffect(() => {
+    // Fetch the QR image URL once when the component mounts
+    const apiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${user.uid}`;
+
+    getImageFromAPI(apiUrl).then((imageURL) => {
+      if (imageURL) {
+        setQrImageURL(imageURL);
+      }
+    });
+  }, [user]);
   // const LeaderBoardCard = ({ username, userranking, totalEventTags, rank }) => {
   //   return (
   //     <div className="mt-6 grid gap-8 md:grid-cols-1">
@@ -112,7 +126,7 @@ const Profile = ({ userDoc }) => {
       <div className="mx-auto w-full rounded-lg bg-white">
         {user2.map((values, index) => (
           <div key={index} className="flex flex-col items-center pb-10">
-            <div id="img-cont" className="image-container">
+            <div id="img-cont" className="image-container my-2">
               <Image
                 alt="ProfilePic"
                 width={1000}
@@ -138,19 +152,10 @@ const Profile = ({ userDoc }) => {
                 width={1000}
                 height={1000}
                 priority
-                src={Image.src}
+                src={qrImageURL}
                 className="img-2"
                 id="img-2"
-                onLoad={() => {
-                  const apiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${user.uid}` // Replace with the actual API URL
-
-                  getImageFromAPI(apiUrl).then((imageURL) => {
-                    if (imageURL) {
-                      // Set the image source
-                      Image.src = imageURL
-                    }
-                  })
-                }}
+                
                 onClick={() => {
                   const img_1 = document.getElementById('img-1')
                   const img_2 = document.getElementById('img-2')
