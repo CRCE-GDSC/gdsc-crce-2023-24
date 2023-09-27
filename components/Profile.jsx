@@ -71,13 +71,13 @@ const Profile = ({ userDoc }) => {
   const events = [
     {
       eventname: 'Web Dev Workshop',
-      eventpreview: '/assets/team/Alvin.jpg',
-      eventstatus: 'Attended',
+      eventpreview: '',
+      eventstatus: 'Not Attended',
       eventTags: '50',
     },
     {
       eventname: 'C Programming Workshop',
-      eventpreview: '/assets/team/Alvin.jpg',
+      eventpreview: '',
       eventstatus: 'Not Attended',
       eventTags: '25',
     },
@@ -182,11 +182,7 @@ const Profile = ({ userDoc }) => {
             </h5>
 
             <p className="font-inter text-3xl text-black dark:text-gray-400">
-              <strong className="font-bold">
-                {userData ? (
-                  <>{userData.tags ? <p>Tags: {userData.tags}</p> : null}</>
-                ) : null}
-              </strong>
+              <strong className="font-bold">{userDoc.data().tags}</strong>
             </p>
             <div>
               <Image
