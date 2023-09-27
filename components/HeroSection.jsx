@@ -4,10 +4,12 @@ import Link from 'next/link'
 //import { Icons } from '../../components/icons'
 import { auth } from '../lib/firebase'
 import { useAuthState, useSignInWithGoogle } from 'react-firebase-hooks/auth'
+import { useRouter } from 'next/navigation'
 
 const HeroSection = () => {
   const [user, loading, error] = useAuthState(auth)
   const [signInWithGoogle] = useSignInWithGoogle(auth)
+  const router = useRouter()
   return (
     <div className="flex items-center justify-center px-6">
       <div className="z-shadow-yellow container mt-28 px-1 py-1 max-sm:mb-0 max-sm:hidden sm:mb-20">
@@ -83,9 +85,11 @@ const HeroSection = () => {
               href="https://gdsc.community.dev/fr-conceicao-rodrigues-college-of-engineering-mumbai/"
               className="pr-4"
             >
-              <div className="transform cursor-pointer rounded-full bg-blue-500 px-6 py-2 text-center text-xl font-bold text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl lg:text-left">
-                Join Us
-              </div>
+              {(loading || !user) && (
+                <div className="transform cursor-pointer rounded-full bg-blue-500 px-6 py-2 text-center text-xl font-bold text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl lg:text-left">
+                  Join Us
+                </div>
+              )}
             </Link>
             {(loading || !user) && (
               <button
@@ -102,6 +106,16 @@ const HeroSection = () => {
               >
                 Sign out
               </button>
+            )}
+            {user && (
+              <div className="pl-4">
+                <button
+                  className="transform cursor-pointer rounded-full bg-blue-500 px-6 py-2 text-center text-xl font-bold text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl lg:text-left"
+                  onClick={() => router.push('/MyProfile')}
+                >
+                  Profile
+                </button>
+              </div>
             )}
           </div>
         </div>

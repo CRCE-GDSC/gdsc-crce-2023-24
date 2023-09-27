@@ -59,11 +59,11 @@ const Profile = ({ userDoc }) => {
 
   const user2 = [
     {
-      userimg: '/assets/team/Alvin.jpg',
+      userimg: '',
       username: 'Alvin Dsouza',
       userclass: 'SE Comps A',
       useremail: 'alvindsouza2204@gmail.com',
-      userranking: 4,
+      userranking: '',
       rank: 0,
     },
   ]
@@ -225,7 +225,7 @@ const Profile = ({ userDoc }) => {
 
       <div className="mx-7 my-10">
         <h1 className="text-2xl font-semibold ">Event Status</h1>
-        <div className="x-shadow-blue mt-4">
+        <div className="x-shadow-blue mt-4 p-2">
           <div className="relative overflow-x-auto rounded-xl">
             <table className="w-full overflow-hidden rounded-xl border-2 text-left text-sm text-gray-500 dark:text-gray-400">
               <thead className="bg-gray-50 text-xl uppercase text-[#FFCA28] dark:bg-gray-700 dark:text-gray-400">
