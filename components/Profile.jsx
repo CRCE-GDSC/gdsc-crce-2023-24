@@ -27,7 +27,6 @@ async function getImageFromAPI(apiUrl) {
   }
 }
 
-
 const Profile = ({ userDoc }) => {
   const [user, loading, error] = useAuthState(auth)
   const [userData, setUserData] = useState(null)
@@ -89,18 +88,18 @@ const Profile = ({ userDoc }) => {
     0
   )
 
-  const [qrImageURL, setQrImageURL] = useState(''); // State to store the QR image URL
+  const [qrImageURL, setQrImageURL] = useState('') // State to store the QR image URL
 
   useEffect(() => {
     // Fetch the QR image URL once when the component mounts
-    const apiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${user.uid}`;
+    const apiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${user.uid}`
 
     getImageFromAPI(apiUrl).then((imageURL) => {
       if (imageURL) {
-        setQrImageURL(imageURL);
+        setQrImageURL(imageURL)
       }
-    });
-  }, [user]);
+    })
+  }, [user])
   // const LeaderBoardCard = ({ username, userranking, totalEventTags, rank }) => {
   //   return (
   //     <div className="mt-6 grid gap-8 md:grid-cols-1">
@@ -155,7 +154,6 @@ const Profile = ({ userDoc }) => {
                 src={qrImageURL}
                 className="img-2"
                 id="img-2"
-                
                 onClick={() => {
                   const img_1 = document.getElementById('img-1')
                   const img_2 = document.getElementById('img-2')
@@ -230,9 +228,9 @@ const Profile = ({ userDoc }) => {
 
       <div className="mx-7 my-10">
         <h1 className="text-2xl font-semibold ">Event Status</h1>
-        <div className="x-shadow-blue mt-4 p-2">
+        <div className="x-shadow-blue mt-4 p-0.5">
           <div className="relative overflow-x-auto rounded-xl">
-            <table className="w-full overflow-hidden rounded-xl border-2 text-left text-sm text-gray-500 dark:text-gray-400">
+            <table className="w-full overflow-hidden rounded-xl text-left text-sm text-gray-500 dark:text-gray-400">
               <thead className="bg-gray-50 text-xl uppercase text-[#FFCA28] dark:bg-gray-700 dark:text-gray-400">
                 <tr>
                   <th
