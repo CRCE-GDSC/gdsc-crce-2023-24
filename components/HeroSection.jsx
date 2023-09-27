@@ -44,6 +44,16 @@ const HeroSection = () => {
                   </button>
                 )}
                 {user && (
+                  <div className="pl-2 pr-4">
+                    <button
+                      className="transform cursor-pointer rounded-full bg-blue-500 px-6 py-2 text-center text-xl font-bold text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl lg:text-left"
+                      onClick={() => router.push('/MyProfile')}
+                    >
+                      Profile
+                    </button>
+                  </div>
+                )}
+                {user && (
                   <button
                     className="transform cursor-pointer rounded-full bg-blue-500 px-6 py-2 text-center text-xl font-bold text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl lg:text-left"
                     onClick={() => auth.signOut()}
