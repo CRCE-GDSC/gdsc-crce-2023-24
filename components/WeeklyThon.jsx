@@ -25,7 +25,7 @@ const WeeklyThon = () => {
             </div>
             <div className='flex mt-5 w-auto items-center justify-center flex-wrap'>
             <button
-                className="transform cursor-pointer rounded-full bg-blue-500 px-6 py-2 mr-4 text-center text-xl font-bold text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl lg:text-left flex items-center max-sm:text-xs max-sm:mt-2 max-md:mt-2"
+                className="transform cursor-pointer rounded-full bg-blue-500 px-6 py-2 mr-4 text-center text-xl font-bold text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl lg:text-left flex items-center max-sm:text-xs max-sm:mt-2 max-md:mt-2 max-sm:ml-3"
                 >
                 <img
                     src="/assets/gdoc.png"
