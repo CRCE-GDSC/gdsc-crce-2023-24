@@ -25,7 +25,17 @@ const WeeklyThon = () => {
             </div>
             <div className='flex mt-5 w-auto items-center justify-center flex-wrap'>
             <button
-                className="transform cursor-pointer rounded-full bg-blue-500 px-6 py-2 mr-4 text-center text-xl font-bold text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl lg:text-left flex items-center max-sm:text-xs max-sm:mt-2 max-md:mt-2 max-sm:ml-3"
+                className="transform cursor-pointer rounded-full bg-blue-500 px-6 py-2 mr-4 text-center text-xl font-bold text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl lg:text-left flex items-center max-sm:text-xs max-sm:mt-2 max-md:mt-2 max-sm:ml-3 max-lg:mt-2"
+              >
+                <img
+                    src="/assets/rsvp2.png"
+                    alt="Google Docs Icon"
+                    className="w-8 h-8 max-sm:w-4 max-sm:h-4 inline-block mr-2"
+                />
+                <span><a href="https://gdsc.community.dev/e/mg8avw/" target='_blank'>RSVP</a></span>
+              </button>
+            <button
+                className="transform cursor-pointer rounded-full bg-yellow-300 px-6 py-2 mr-4 text-center text-xl font-bold text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl lg:text-left flex items-center max-sm:text-xs max-sm:mt-2 max-md:mt-2 max-lg:mt-2"
                 >
                 <img
                     src="/assets/gdoc.png"
@@ -35,7 +45,7 @@ const WeeklyThon = () => {
                 <span><a href="https://docs.google.com/document/d/1BjlDhhBH8ws3B_jKV0OXJef6jHbF2KJOxQAKObhZu6A/edit?usp=sharing" target='_blank'>Instructions</a></span>
                 </button>
             <button
-                className="transform cursor-pointer rounded-full bg-green-500 px-6 py-2 mr-4 text-center text-xl font-bold text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl lg:text-left flex items-center max-sm:text-xs max-sm:mt-2 max-md:mt-2"
+                className="transform cursor-pointer rounded-full bg-green-500 px-6 py-2 mr-4 text-center text-xl font-bold text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl lg:text-left flex items-center max-sm:text-xs max-sm:mt-2 max-md:mt-2 max-lg:mt-2"
               >
                 <img
                     src="/assets/forms.png"
@@ -44,7 +54,7 @@ const WeeklyThon = () => {
                 />
                 <span><a href="https://docs.google.com/forms/d/e/1FAIpQLSeAW73awfJD3pNDJ_lI2HNexotFHBVWmzTGxN0SGKpr2j3SJA/viewform?usp=sf_link" target='_blank'>Submission Link</a></span>
               </button><button
-                className="transform cursor-pointer rounded-full bg-black px-6 py-2 mr-4 text-center text-xl font-bold text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl lg:text-left flex items-center max-sm:text-xs max-sm:mt-2 max-md:mt-2"
+                className="transform cursor-pointer rounded-full bg-black px-6 py-2 mr-4 text-center text-xl font-bold text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl lg:text-left flex items-center max-sm:text-xs max-sm:mt-2 max-md:mt-2 max-lg:mt-2"
               >
                 <img
                     src="/assets/github1.png"
