@@ -13,6 +13,7 @@ import Events from '../../components/Events'
 import Contact from '../../components/Contact'
 import HeroSection from '../../components/HeroSection'
 import WeeklyThon from '@components/WeeklyThon'
+import UpcomingEvents from '@components/UpcomingEvents'
 
 export default function Home() {
   const [ref1, inView1] = useInView({
@@ -41,6 +42,7 @@ export default function Home() {
         <div className="min-h-screen">
           <HeroSection />
         </div>
+        <UpcomingEvents />
         <WeeklyThon />
         <motion.div
           animate={inView1 ? 'visible' : 'hidden'}

@@ -4,12 +4,17 @@ import Image from 'next/image'
 const WeeklyThon = () => {
   return (
     <div>
-        <div className="flex justify-center">
-            <h3 className="text-gray-700 text-5xl max-lg:text-4xl max-md:text-4xl max-sm:text-3xl mb-6 py-3 px-4 font-poppins x-shadow-red text-center w-auto items-center justify-center max-sm:mt-0">
-                WeeklyThon
+        <div className="flex justify-center mt-24">
+            <h3 className="text-gray-700 text-5xl max-lg:text-4xl max-md:text-4xl max-sm:text-3xl mb-6 py-3 px-4 font-poppins x-shadow-red text-center w-auto items-center justify-center max-sm:mt-0 max-sm:mx-8">
+                Thank you for participating in WeeklyThon
+                <span>
+                  <h4 className='text-4xl mt-5 max-lg:text-3xl max-md:text-3xl max-sm:text-2xl'>
+                    Phase-1 Completed
+                  </h4>
+                </span>
             </h3>
         </div>
-        <div className='x-shadow-red text-center w-auto items-center justify-center mr-10 ml-10 pb-10 mb-5'>
+        {/* <div className='x-shadow-red text-center w-auto items-center justify-center mr-10 ml-10 pb-10 mb-5'>
             <h3 className="text-gray-700 pt-8 text-7xl max-lg:text-2xl max-md:text-2xl max-sm:text-2xl mb-6 py-3 px-4 font-poppins max-sm:mt-0">
                     Problem of the Week
             </h3>
@@ -64,7 +69,7 @@ const WeeklyThon = () => {
                 <span><a href="https://github.com/CRCE-GDSC/Weekly-thon" target='_blank'>Github</a></span>
               </button>
             </div>
-        </div>
+        </div> */}
     </div>
   )
 }
