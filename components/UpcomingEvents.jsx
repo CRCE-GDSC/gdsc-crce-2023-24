@@ -33,7 +33,7 @@ const UpcomingEvents = () => {
                     alt="Google Docs Icon"
                     className="w-8 h-8 max-sm:w-4 max-sm:h-4 inline-block mr-2"
                 />
-                <span><a href="https://gdsc.community.dev/e/mg8avw/" target='_blank'>RSVP NOW !!!</a></span>
+                <span><a href="https://gdsc.community.dev/e/mynfb6/" target='_blank'>RSVP NOW !!!</a></span>
               </button>
             </div>
         </div>
