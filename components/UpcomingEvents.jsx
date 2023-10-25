@@ -17,7 +17,7 @@ const UpcomingEvents = () => {
             <div className='flex w-auto items-center justify-center'>
                 <Image 
                 className='rounded-lg border max-md:w-96 max-sm:w-64'
-                src = '/assets/postman_event_poster.jpg'
+                src = '/assets/postman_event_poster2.jpg'
                 alt="Background Image"
                 width={500}
                 height={500}
@@ -33,7 +33,7 @@ const UpcomingEvents = () => {
                     alt="Google Docs Icon"
                     className="w-8 h-8 max-sm:w-4 max-sm:h-4 inline-block mr-2"
                 />
-                <span><a href="https://gdsc.community.dev/e/mynfb6/" target='_blank'>RSVP NOW !!!</a></span>
+                <span><a href="https://gdsc.community.dev/e/m89tk8/" target='_blank'>RSVP NOW !!!</a></span>
               </button>
             </div>
         </div>
