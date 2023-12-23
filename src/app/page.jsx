@@ -30,7 +30,10 @@ export default function Home() {
     threshold: 0,
     triggerOnce: false,
   })
-
+  const [refx, inViewx] = useInView({
+    threshold: 0,
+    triggerOnce: false,
+  })
   const variants = {
     visible: { opacity: 1, scale: 1 },
     hidden: { opacity: 0, scale: 0.65 },
@@ -43,7 +46,16 @@ export default function Home() {
         <div className="min-h-screen">
           <HeroSection />
         </div>
-        <Projects />
+        <motion.div
+          animate={inViewx ? 'visible' : 'hidden'}
+          variants={variants}
+          exit="hidden"
+          transition={{ duration: 0.5 }}
+          ref={refx}
+        >
+          {' '}
+          <Projects />
+        </motion.div>
         {/* <UpcomingEvents />  */}
         <WeeklyThon />
         <motion.div
