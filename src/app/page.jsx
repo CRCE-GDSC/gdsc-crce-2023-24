@@ -54,17 +54,6 @@ export default function Home() {
           ref={refx}
         >
           {' '}
-          <Projects />
-        </motion.div>
-        {/* <UpcomingEvents />  */}
-        <WeeklyThon />
-        <motion.div
-          animate={inView1 ? 'visible' : 'hidden'}
-          variants={variants}
-          exit="hidden"
-          transition={{ duration: 0.5 }}
-          ref={ref1}
-        >
           <AboutUs />
         </motion.div>
 
